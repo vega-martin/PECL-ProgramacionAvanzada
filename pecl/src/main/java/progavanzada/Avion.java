@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Avion extends Thread {
     
     // Recurso compartido --> variable atómica:
-    private static final AtomicInteger ultimoNum = new AtomicInteger(0);
+    private static final AtomicInteger varAtomAvion = new AtomicInteger(0);
     
     // Resto de atributos:
     private String id;
@@ -19,7 +19,7 @@ public class Avion extends Thread {
     
     // Incrementa var. atómica, y la devuelve con ceros a la izquierda:
     public int generarNumAvion(){
-        int numCompartido = ultimoNum.incrementAndGet();
+        int numCompartido = varAtomAvion.incrementAndGet();
         String numString = String.format("%04d", numCompartido);
         return Integer.parseInt(numString);
     }
@@ -36,6 +36,12 @@ public class Avion extends Thread {
         this.id = generarLetrasAvion() + "-" + generarNumAvion();
         this.maxPasajeros = r.nextInt(201) + 100;
         this.estado = estado;
-        this.aeropuerto = aeropuerto;
+        
+        /*
+        if (varAtomAvion.get() % 2 == 0){
+            this.aeropuerto = Barajas;
+        else {
+            this.aeropuerto = Prat;        
+        }*/
     }
 }
