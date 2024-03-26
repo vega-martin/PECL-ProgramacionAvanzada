@@ -9,7 +9,6 @@ public class Bus extends Thread {
     private static final AtomicInteger varAtomBus = new AtomicInteger(0);
     
     private String id;
-    private String estado;
     private int pasajeros;
     private Aeropuerto aeropuerto;
     
@@ -23,16 +22,49 @@ public class Bus extends Thread {
         return Integer.parseInt(numString);
     }
     
-    public Bus(String estado){
+    public Bus(Aeropuerto aeropuerto){
         this.id = "B-" + generarNumBus();
-        this.estado = estado;
-        this.pasajeros = r.nextInt(51);
-        /*
-        if (varAtomAvion.get() % 2 == 0){
-            this.aeropuerto = Barajas;
-        else {
-            this.aeropuerto = Prat;        
-        }*/
+        this.pasajeros = 0;
+        this.aeropuerto = aeropuerto;
+    }
+    
+    @Override
+    public void run() {
+     
+        try {
+            // Llegar al centro de la ciudad:
+            Thread.sleep(r.nextInt(5) + 1);  
+            
+            // Llenar el bus:
+            this.pasajeros = r.nextInt(51);
+            
+            // Viajar al aeropuerto:
+            Thread.sleep(r.nextInt(6) + 5);
+            
+            // Llegar al aeropuerto y vaciar bus:
+            /* ENVIAR EL VALOR DE this.pasajeros AL SISTEMA DEL AEROPUERTO */
+            this.pasajeros = 0;
+            
+            // Esperar a que se vuelva a llenar el bus:
+            Thread.sleep(r.nextInt(4) + 2);
+            
+            // Llenar el bus:
+            this.pasajeros = r.nextInt(51);
+            /* RESTAR EL VALOR DE this.pasajeros DEL SISTEMA DEL AEROPUERTO */
+            
+            // Viajar a la ciudad:
+            Thread.sleep(r.nextInt(6) + 5);
+            
+            // Llegar a la ciudad:
+            this.pasajeros = 0;
+            
+            // Esta última línea ya no hace falta porque el hilo debería morir
+            /* EN CASO DE NECESITARSE, LOS PASAJEROS DE ESTE ÚLTIMO VIAJE DESAPARECEN DEL SISTEMA */  
+            
+        }
+        catch (InterruptedException ie){
+            System.out.println("Se ha interrumpido el sistema");
+        }        
     }
     
 }
