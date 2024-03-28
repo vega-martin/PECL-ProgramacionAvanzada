@@ -96,6 +96,16 @@ public class Aeropuerto {
     public synchronized void setAerovias(Avion[] aerovias) {
         this.aerovias = aerovias;
     } 
+
+    public synchronized Queue<Avion> getColaPuertasEmbarque() {
+        return colaPuertasEmbarque;
+    }
+
+    public synchronized void setColaPuertasEmbarque(Queue<Avion> colaPuertasEmbarque) {
+        this.colaPuertasEmbarque = colaPuertasEmbarque;
+    }
+    
+   
     
     public Aeropuerto(String nombre){
         this.nombre = nombre;
