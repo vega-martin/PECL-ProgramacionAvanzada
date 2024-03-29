@@ -9,10 +9,10 @@ public class Main {
         Aeropuerto prat = new Aeropuerto("Prat");
         
         // Crear e iniciar el hilo de generación de aviones y buses con ambos aeropuertos
-        HiloGenAviones hiloGenAviones = new HiloGenAviones(barajas, prat);
+        //HiloGenAviones hiloGenAviones = new HiloGenAviones(barajas, prat);
         HiloGenBuses hiloGenBuses = new HiloGenBuses(barajas, prat);
         
-        hiloGenAviones.start();
+        //hiloGenAviones.start();
         hiloGenBuses.start();
         
         

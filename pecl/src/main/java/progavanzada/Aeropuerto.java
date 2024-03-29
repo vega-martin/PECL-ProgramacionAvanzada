@@ -3,9 +3,12 @@ package progavanzada;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Aeropuerto {
     
+    Lock lock = new ReentrantLock();
     private String nombre;
     private int viajeros;
 
@@ -105,10 +108,29 @@ public class Aeropuerto {
         this.colaPuertasEmbarque = colaPuertasEmbarque;
     }
     
-   
-    
     public Aeropuerto(String nombre){
         this.nombre = nombre;
     }
     
+    public void sumarViajerosBus(int pasajerosBus){
+        try {
+            lock.lock();
+            viajeros += pasajerosBus;  
+        }
+        //catch (InterruptedException ie) {}
+        finally {
+            lock.unlock();
+        }
+    }
+    
+    public void restarViajerosBus(int pasajerosBus){
+        try {
+            lock.lock();
+            viajeros -= pasajerosBus;  
+        }
+        //catch (InterruptedException ie) {}
+        finally {
+            lock.unlock();
+        }
+    }
 }

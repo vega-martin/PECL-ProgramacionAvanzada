@@ -17,7 +17,7 @@ public class HiloGenBuses extends Thread {
         
         Random r = new Random();
         
-        for (int i = 0; i < 4000; i++){
+        for (int i = 0; i < 1; i++){
             
             // Esperamos de 0.5 a 1 segundos:
             try {
