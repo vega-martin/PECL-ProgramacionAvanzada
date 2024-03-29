@@ -14,16 +14,40 @@ public class Bus extends Thread {
     
     // Objeto random:
     Random r = new Random();
-    
+
+    public String getIdBus() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getPasajeros() {
+        return pasajeros;
+    }
+
+    public void setPasajeros(int pasajeros) {
+        this.pasajeros = pasajeros;
+    }
+
+    public Aeropuerto getAeropuerto() {
+        return aeropuerto;
+    }
+
+    public void setAeropuerto(Aeropuerto aeropuerto) {
+        this.aeropuerto = aeropuerto;
+    }
+
     // Incrementa var. atómica, y la devuelve con ceros a la izquierda:
-    public int generarNumBus(){
-        int numCompartido = varAtomBus.incrementAndGet();
+    private String generarIdBus(){
+        int numCompartido = varAtomBus.getAndIncrement();
         String numString = String.format("%04d", numCompartido);
-        return Integer.parseInt(numString);
+        return "B-" + numString;
     }
     
     public Bus(Aeropuerto aeropuerto){
-        this.id = "B-" + generarNumBus();
+        this.id = generarIdBus();
         this.pasajeros = 0;
         this.aeropuerto = aeropuerto;
     }

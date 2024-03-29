@@ -2,13 +2,13 @@ package progavanzada;
 
 import java.util.Random;
 
-public class HiloGenAviones extends Thread {
+public class HiloGenBuses extends Thread {
     
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
     
     // Constructor que recibe Barajas y Prat:
-    public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat) {
+    public HiloGenBuses(Aeropuerto barajas, Aeropuerto prat) {
         this.barajas = barajas;
         this.prat = prat;
     }
@@ -17,34 +17,34 @@ public class HiloGenAviones extends Thread {
         
         Random r = new Random();
         
-        for (int i = 0; i < 8000; i++){
+        for (int i = 0; i < 4000; i++){
             
-            // Esperamos de 1 a 3 segundos:
+            // Esperamos de 0.5 a 1 segundos:
             try {
-                Thread.sleep(r.nextInt(2000) + 1000);
+                Thread.sleep(r.nextInt(500) + 500);
             }
             catch (InterruptedException ie) {}
             
-            // Se genera el avión...
+            // Se genera el bus...
             
-            Avion avion;
+            Bus bus;
             
             // Decidir a qué aeropuerto va:
             if (i % 2 == 0) {
-                avion = new Avion(barajas); // Barajas
+                bus = new Bus(barajas); // Barajas
             }
             
             else {
-                avion = new Avion(prat); // El Prat
+                bus = new Bus(prat); // El Prat
             }
             
             // TEST:
-            System.out.println("Avion " + i + " creado, va a " + avion.getAeropuerto().getNombre()
-                    + " Su id es " + avion.getIdAvion());
+            System.out.println("Bus " + i + " creado, va a " + bus.getAeropuerto().getNombre()
+                    + " Su id es " + bus.getIdBus());
             
             // Iniciar el hilo:
-            avion.start();  
+            bus.start();  
             
         }
-    } 
+    }
 }
