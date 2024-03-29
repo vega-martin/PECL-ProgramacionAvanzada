@@ -106,11 +106,7 @@ public class Avion extends Thread {
                 
                 // ...
                 
-            }
-            
-            
-            
-            
+            }            
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");

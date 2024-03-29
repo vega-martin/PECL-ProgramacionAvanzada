@@ -21,7 +21,7 @@ public class Aeropuerto {
     private final ArrayList<Avion> areaEstacionamiento = new ArrayList<>();
     
     private Avion[] taller = new Avion[20];
-    private final Avion[] puertasEmbarque = new Avion[6];
+    private Avion[] puertasEmbarque = new Avion[6];
     private Avion[] pistas = new Avion[4];
     
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
@@ -53,7 +53,15 @@ public class Aeropuerto {
         this.viajeros = viajeros;
     }
 
+    public Avion[] getPuertasEmbarque() {
+        return puertasEmbarque;
+    }
 
+    public void setPuertasEmbarque(Avion[] puertasEmbarque) {
+        this.puertasEmbarque = puertasEmbarque;
+    }
+
+    
     
     
     
