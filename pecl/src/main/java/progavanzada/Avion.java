@@ -35,9 +35,9 @@ public class Avion extends Thread {
     
     // Genera el ID completo del avión:
     private String generarIdAvion() {
-        char letra1 = (char) ('A' + r.nextInt(26));
-        char letra2 = (char) ('A' + r.nextInt(26));
-        int numCompartido = varAtomAvion.incrementAndGet();
+        String letra1 = Character.toString((char) ('A' + r.nextInt(26)));
+        String letra2 = Character.toString((char) ('A' + r.nextInt(26)));
+        int numCompartido = varAtomAvion.getAndIncrement();
         String numString = String.format("%04d", numCompartido);
         return letra1 + letra2 + "-" + numString;
     }
