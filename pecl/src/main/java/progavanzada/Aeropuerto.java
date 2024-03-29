@@ -8,25 +8,34 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Aeropuerto {
     
-    Lock lock = new ReentrantLock();
     private String nombre;
     private int viajeros;
-
+    
+    
     /* Estructuras de datos para las zonas de cada avión
         - ARRAYLIST --> CAPACIDAD ILIMITADA
         - ARRAY ESTATICO --> CAPACIDAD LIMITADA
     */
     
-    private ArrayList<Avion> hangar = new ArrayList<>();
+    private final ArrayList<Avion> hangar = new ArrayList<>();
+    private final ArrayList<Avion> areaEstacionamiento = new ArrayList<>();
+    
     private Avion[] taller = new Avion[20];
-    private Avion[] puertasEmbarque = new Avion[6];
+    private final Avion[] puertasEmbarque = new Avion[6];
     private Avion[] pistas = new Avion[4];
-    private ArrayList<Avion> areaEstacionamiento = new ArrayList<>();
+    
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
     private Avion[] aerovias = new Avion[2];
     
     // Cola (FIFO) para las puertas de embarque:
-    Queue<Avion> colaPuertasEmbarque = new LinkedList<>();
+    public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
+    
+    // MECANISMOS PARA PROTEGER LAS ESTRUCTURAS DE DATOS:
+    private final Lock lockViajeros = new ReentrantLock();
+    private final Lock lockHangar = new ReentrantLock();
+    private final Lock lockAreaEst = new ReentrantLock();
+    
+    //
 
     public synchronized String getNombre() {
         return nombre;
@@ -42,95 +51,81 @@ public class Aeropuerto {
 
     public synchronized void setViajeros(int viajeros) {
         this.viajeros = viajeros;
-    }    
-
-    public synchronized ArrayList<Avion> getHangar() {
-        return hangar;
     }
 
-    public synchronized void setHangar(ArrayList<Avion> hangar) {
-        this.hangar = hangar;
-    }
 
-    public synchronized Avion[] getTaller() {
-        return taller;
-    }
-
-    public synchronized void setTaller(Avion[] taller) {
-        this.taller = taller;
-    }
-
-    public synchronized Avion[] getPuertasEmbarque() {
-        return puertasEmbarque;
-    }
-
-    public synchronized void setPuertasEmbarque(Avion[] puertasEmbarque) {
-        this.puertasEmbarque = puertasEmbarque;
-    }
-
-    public synchronized Avion[] getPistas() {
-        return pistas;
-    }
-
-    public synchronized void setPistas(Avion[] pistas) {
-        this.pistas = pistas;
-    }
-
-    public synchronized ArrayList<Avion> getAreaEstacionamiento() {
-        return areaEstacionamiento;
-    }
-
-    public synchronized void setAreaEstacionamiento(ArrayList<Avion> areaEstacionamiento) {
-        this.areaEstacionamiento = areaEstacionamiento;
-    }
-
-    public synchronized ArrayList<Avion> getAreaRodaje() {
-        return areaRodaje;
-    }
-
-    public synchronized void setAreaRodaje(ArrayList<Avion> areaRodaje) {
-        this.areaRodaje = areaRodaje;
-    }
-
-    public synchronized Avion[] getAerovias() {
-        return aerovias;
-    }
-
-    public synchronized void setAerovias(Avion[] aerovias) {
-        this.aerovias = aerovias;
-    } 
-
-    public synchronized Queue<Avion> getColaPuertasEmbarque() {
-        return colaPuertasEmbarque;
-    }
-
-    public synchronized void setColaPuertasEmbarque(Queue<Avion> colaPuertasEmbarque) {
-        this.colaPuertasEmbarque = colaPuertasEmbarque;
-    }
+    
+    
     
     public Aeropuerto(String nombre){
         this.nombre = nombre;
     }
     
-    public void sumarViajerosBus(int pasajerosBus){
+    public void sumarViajerosBus(int pasajerosBus){ 
         try {
-            lock.lock();
+            lockViajeros.lock();
             viajeros += pasajerosBus;  
         }
-        //catch (InterruptedException ie) {}
         finally {
-            lock.unlock();
+            lockViajeros.unlock();
         }
     }
     
     public void restarViajerosBus(int pasajerosBus){
         try {
-            lock.lock();
+            lockViajeros.lock();
             viajeros -= pasajerosBus;  
         }
-        //catch (InterruptedException ie) {}
         finally {
-            lock.unlock();
+            lockViajeros.unlock();
         }
+    }
+    
+    public int contarAvionesHangar(){
+        return hangar.size();
+    }
+    
+    public int contarAvionesAreaEst(){
+        return areaEstacionamiento.size();
+    }
+
+    public void incluirAvionEnHangar(Avion avion){
+        try {
+            lockHangar.lock();
+            avion.getAeropuerto().hangar.add(avion);
+        }
+        finally {
+            lockHangar.unlock();
+        }  
+    }
+    
+    public void quitarAvionDeHangar(Avion avion){
+        try {
+            lockHangar.lock();
+            avion.getAeropuerto().hangar.remove(avion);
+        }
+        finally {
+            lockHangar.unlock();
+        }  
+    }
+    
+    public void incluirAvionEnAreaEst(Avion avion){
+        try {
+            lockAreaEst.lock();
+            avion.getAeropuerto().areaEstacionamiento.add(avion);
+        }
+        finally {
+            lockAreaEst.unlock();
+        }  
+    }
+    
+    public void quitarAvionDeAreaEst(Avion avion){
+        try {
+            lockAreaEst.lock();
+            avion.getAeropuerto().areaEstacionamiento.remove(avion);
+        }
+        finally {
+            lockAreaEst.unlock();
+        }  
     }
 }

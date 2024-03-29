@@ -49,9 +49,7 @@ public class Avion extends Thread {
         this.aeropuerto = aeropuerto;
         
         // Inclur el avion al hangar del aeropuerto:
-        ArrayList<Avion> oldHangar = this.aeropuerto.getHangar();
-        oldHangar.add(this);
-        this.aeropuerto.setHangar(oldHangar);
+        this.aeropuerto.incluirAvionEnHangar(this);
     }
     
     @Override
@@ -59,41 +57,52 @@ public class Avion extends Thread {
         try {
             
             // Eliminar el avion del hangar:
-            ArrayList<Avion> oldHangar = this.aeropuerto.getHangar();
-            oldHangar.add(this);
-            this.aeropuerto.setHangar(oldHangar);
+            this.aeropuerto.quitarAvionDeHangar(this);
             
             // Añadir el avion al area de estacionamiento:
-            ArrayList<Avion> oldAreaEst = this.aeropuerto.getAreaEstacionamiento();
-            oldAreaEst.add(this);
-            this.aeropuerto.setAreaEstacionamiento(oldAreaEst);
+            this.aeropuerto.incluirAvionEnAreaEst(this);
             
             // Esperar a que toque el turno al avion:
-            while (this.aeropuerto.getColaPuertasEmbarque().peek() != this)
-                Thread.sleep(1000); // ESTO ES UN MIERDÓN PERO POR SEGUIR HACIENDO COSAS DEBAJO
-            
-            // Encontrar la puerta de embarque libre:
-            for (int i = 0; i <=6 && i != 2; i++){
-                Avion[] puertas = this.aeropuerto.getPuertasEmbarque();
-                if (puertas[i] == null){
-                    puertas[i] = this;
-                    this.aeropuerto.setPuertasEmbarque(puertas);
-                    break;
+            synchronized (aeropuerto.colaEsperaPuertasEmbarque) {
+                
+                // Añadir el avion a la cola de espera:
+                aeropuerto.colaEsperaPuertasEmbarque.offer(this);
+                
+                // Mientras que no sea su turno, espera:
+                while (aeropuerto.colaEsperaPuertasEmbarque.peek() != this) {
+                    aeropuerto.colaEsperaPuertasEmbarque.wait();
                 }
             }
-            // TAMBIÉN ES UN POCO MOJÓN
+            
+            // Encontrar la puerta de embarque libre:
+            synchronized (aeropuerto.getPuertasEmbarque()) {
+                for (int i = 1; i <=6; i++){
+                    
+                    // La puerta 2 solo vale para desembarques:
+                    if (i == 2) {
+                        continue;                        
+                    }
+                    
+                    Avion[] puertas = this.aeropuerto.getPuertasEmbarque();
+                    if (puertas[i] == null){
+                        puertas[i] = this;
+                        this.aeropuerto.setPuertasEmbarque(puertas);
+                        break;
+                    }
+                }
+            }
             
             // Llenar el avión de pasajeros:
             if (this.getMaxPasajeros() <= this.aeropuerto.getViajeros()){ // Hay suficientes
                 this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.getMaxPasajeros());
-                Thread.sleep(r.nextInt(3) + 1);
+                Thread.sleep(r.nextInt(3000) + 1000);
             }
             
             else { // No hay suficientes
                 this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.getMaxPasajeros());
-                Thread.sleep(r.nextInt(3) + 1);
+                Thread.sleep(r.nextInt(3000) + 1000);
                 //Primera espera:
-                Thread.sleep(r.nextInt(5) + 1);
+                Thread.sleep(r.nextInt(5000) + 1000);
                 
                 // ...
                 
@@ -103,7 +112,6 @@ public class Avion extends Thread {
             
             
         }
-        // Da error porque todavía no hay sleep arriba
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
         }
