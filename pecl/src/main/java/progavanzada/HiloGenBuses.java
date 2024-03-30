@@ -7,6 +7,8 @@ public class HiloGenBuses extends Thread {
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
     
+    Log log = new Log("log.txt");
+    
     // Constructor que recibe Barajas y Prat:
     public HiloGenBuses(Aeropuerto barajas, Aeropuerto prat) {
         this.barajas = barajas;
@@ -17,7 +19,7 @@ public class HiloGenBuses extends Thread {
         
         Random r = new Random();
         
-        for (int i = 0; i < 1; i++){
+        for (int i = 0; i < 4; i++){
             
             // Esperamos de 0.5 a 1 segundos:
             try {
@@ -39,8 +41,11 @@ public class HiloGenBuses extends Thread {
             }
             
             // TEST:
-            System.out.println("Bus " + i + " creado, va a " + bus.getAeropuerto().getNombre()
+            
+            String str = ("Bus " + i + " creado, va a " + bus.getAeropuerto().getNombre()
                     + " Su id es " + bus.getIdBus());
+            
+            log.escribirEvento(str);
             
             // Iniciar el hilo:
             bus.start();  

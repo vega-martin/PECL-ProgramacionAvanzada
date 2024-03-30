@@ -14,6 +14,8 @@ public class Bus extends Thread {
     
     // Objeto random:
     Random r = new Random();
+    
+    Log log = new Log("log.txt");
 
     public String getIdBus() {
         return id;
@@ -60,43 +62,44 @@ public class Bus extends Thread {
             while (true) {
                 
                 // Llegar al centro de la ciudad:
-                Thread.sleep(r.nextInt(5000) + 1000);  
-                System.out.println("BUS " + this.getIdBus() + " llega a la ciudad");
+                Thread.sleep(r.nextInt(5000) + 1000);
+                
+                log.escribirEvento("BUS " + this.getIdBus() + " llega a la ciudad");
 
                 // Llenar el bus:
                 this.pasajeros = r.nextInt(51);
-                System.out.println("BUS " + this.getIdBus() + " llena pasajeros");
+                log.escribirEvento("BUS " + this.getIdBus() + " llena pasajeros");
 
                 // Viajar al aeropuerto:
                 Thread.sleep(r.nextInt(6000) + 5000);
-                System.out.println("BUS " + this.getIdBus() + " viaja al aeropuerto");
+                log.escribirEvento("BUS " + this.getIdBus() + " viaja al aeropuerto");
 
                 /* ENVIAR EL VALOR DE this.pasajeros AL SISTEMA DEL AEROPUERTO */
                 this.aeropuerto.sumarViajerosBus(this.pasajeros);
-                System.out.println("BUS " + this.getIdBus() + " dropea pasajeros");
+                log.escribirEvento("BUS " + this.getIdBus() + " dropea pasajeros");
 
                 // Llegar al aeropuerto y vaciar bus:
                 this.pasajeros = 0;
-                System.out.println("BUS " + this.getIdBus() + " queda vacio");
+                log.escribirEvento("BUS " + this.getIdBus() + " queda vacio");
 
                 // Esperar a que se vuelva a llenar el bus:
                 Thread.sleep(r.nextInt(4000) + 2000);
-                System.out.println("BUS " + this.getIdBus() + " espera que se llene");
+                log.escribirEvento("BUS " + this.getIdBus() + " espera que se llene");
 
                 // Llenar el bus:
                 this.pasajeros = r.nextInt(51);
-                System.out.println("BUS " + this.getIdBus() + " se llena");
+                log.escribirEvento("BUS " + this.getIdBus() + " se llena");
                 
                 /* RESTAR EL VALOR DE this.pasajeros DEL SISTEMA DEL AEROPUERTO */
                 this.aeropuerto.restarViajerosBus(this.pasajeros);
 
                 // Viajar a la ciudad:
                 Thread.sleep(r.nextInt(6000) + 5000);
-                System.out.println("BUS " + this.getIdBus() + " llega a la ciudad");
+                log.escribirEvento("BUS " + this.getIdBus() + " llega a la ciudad");
 
                 // Llegar a la ciudad:
                 this.pasajeros = 0;
-                System.out.println("BUS " + this.getIdBus() + " vacio en la ciudad");
+                log.escribirEvento("BUS " + this.getIdBus() + " vacio en la ciudad");
 
                 // REPETIR INFINITAMENTE EL BUCLE
             }

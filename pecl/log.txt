@@ -1,0 +1,25 @@
+BUS B-0003 llega a la ciudad
+BUS B-0003 llena pasajeros
+BUS B-0000 viaja al aeropuerto
+BUS B-0000 dropea pasajeros
+BUS B-0000 queda vacio
+BUS B-0000 espera que se llene
+BUS B-0000 se llena
+BUS B-0000 llega a la ciudad
+BUS B-0000 vacio en la ciudad
+BUS B-0002 llega a la ciudad
+BUS B-0002 llena pasajeros
+BUS B-0003 viaja al aeropuerto
+BUS B-0003 dropea pasajeros
+BUS B-0003 queda vacio
+BUS B-0003 espera que se llene
+BUS B-0003 se llena
+BUS B-0003 llega a la ciudad
+BUS B-0003 vacio en la ciudad
+BUS B-0003 llega a la ciudad
+BUS B-0003 llena pasajeros
+BUS B-0003 viaja al aeropuerto
+BUS B-0003 dropea pasajeros
+BUS B-0003 queda vacio
+BUS B-0003 espera que se llene
+BUS B-0003 se llena
