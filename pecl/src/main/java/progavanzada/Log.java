@@ -3,6 +3,8 @@ package progavanzada;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Log {
 
@@ -19,15 +21,17 @@ public class Log {
 
     public synchronized void escribirEvento(String evento) {
         try {
-            escritor.write(evento + "\n");
+            
+            // Tomar la fecha y hora actuales:
+            LocalDateTime fechaActual = LocalDateTime.now();
+            
+            // Formateamos la fecha a nuestro gusto:
+            DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyy HH:mm:ss");
+            String fechaFormateada = fechaActual.format(formato);
+            
+            // Escribimos en el fichero:
+            escritor.write("[" + fechaFormateada + "] " + evento + "\n");
             escritor.flush();
-        } 
-        catch (IOException e) {}
-    }
-
-    public synchronized void cerrarArchivo() {
-        try {
-            escritor.close();
         } 
         catch (IOException e) {}
     }
