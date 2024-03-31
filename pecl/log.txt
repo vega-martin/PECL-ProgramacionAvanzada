@@ -1,14 +1,30 @@
-[30-03-2024 19:12:48] BUS B-0003 llega a la ciudad
-[30-03-2024 19:12:48] BUS B-0003 llena pasajeros
-[30-03-2024 19:12:56] BUS B-0003 viaja al aeropuerto
-[30-03-2024 19:12:56] BUS B-0003 dropea pasajeros
-[30-03-2024 19:12:56] BUS B-0003 queda vacio
-[30-03-2024 19:13:02] BUS B-0003 espera que se llene
-[30-03-2024 19:13:02] BUS B-0003 se llena
-[30-03-2024 19:13:12] BUS B-0003 llega a la ciudad
-[30-03-2024 19:13:12] BUS B-0003 vacio en la ciudad
-[30-03-2024 19:13:14] BUS B-0003 llega a la ciudad
-[30-03-2024 19:13:14] BUS B-0003 llena pasajeros
-[30-03-2024 19:13:14] BUS B-0001 viaja al aeropuerto
-[30-03-2024 19:13:14] BUS B-0001 dropea pasajeros
-[30-03-2024 19:13:14] BUS B-0001 queda vacio
+[2024-03-31 12:42:52] Bus 0 creado, va a Barajas Su id es B-0000
+[2024-03-31 12:42:53] Bus 1 creado, va a Prat Su id es B-0001
+[2024-03-31 12:42:54] Bus 2 creado, va a Barajas Su id es B-0002
+[2024-03-31 12:42:54] BUS B-0001 llega a la ciudad
+[2024-03-31 12:42:54] BUS B-0001 llena pasajeros
+[2024-03-31 12:42:54] Bus 3 creado, va a Prat Su id es B-0003
+[2024-03-31 12:42:56] BUS B-0000 llega a la ciudad
+[2024-03-31 12:42:56] BUS B-0000 llena pasajeros
+[2024-03-31 12:42:57] BUS B-0003 llega a la ciudad
+[2024-03-31 12:42:57] BUS B-0003 llena pasajeros
+[2024-03-31 12:42:59] BUS B-0002 llega a la ciudad
+[2024-03-31 12:42:59] BUS B-0002 llena pasajeros
+[2024-03-31 12:43:02] BUS B-0001 viaja al aeropuerto
+[2024-03-31 12:43:02] BUS B-0001 dropea pasajeros
+[2024-03-31 12:43:02] BUS B-0001 queda vacio
+[2024-03-31 12:43:04] BUS B-0000 viaja al aeropuerto
+[2024-03-31 12:43:04] BUS B-0000 dropea pasajeros
+[2024-03-31 12:43:04] BUS B-0000 queda vacio
+[2024-03-31 12:43:05] BUS B-0001 espera que se llene
+[2024-03-31 12:43:05] BUS B-0001 se llena
+[2024-03-31 12:43:06] BUS B-0003 viaja al aeropuerto
+[2024-03-31 12:43:06] BUS B-0003 dropea pasajeros
+[2024-03-31 12:43:06] BUS B-0003 queda vacio
+[2024-03-31 12:43:09] BUS B-0000 espera que se llene
+[2024-03-31 12:43:09] BUS B-0000 se llena
+[2024-03-31 12:43:09] BUS B-0002 viaja al aeropuerto
+[2024-03-31 12:43:09] BUS B-0002 dropea pasajeros
+[2024-03-31 12:43:09] BUS B-0002 queda vacio
+[2024-03-31 12:43:09] BUS B-0003 espera que se llene
+[2024-03-31 12:43:09] BUS B-0003 se llena

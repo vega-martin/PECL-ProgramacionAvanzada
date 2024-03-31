@@ -1,6 +1,6 @@
-
 package progavanzada;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -9,31 +9,27 @@ import java.time.format.DateTimeFormatter;
 public class Log {
 
     private final String nombreArchivo;
-    private FileWriter escritor;
+    private final DateTimeFormatter formatter;
+    private final Object monitor = new Object();
 
-    public Log(String nombre) {
-        this.nombreArchivo = nombre;
-        try {
-            escritor = new FileWriter(nombreArchivo);
-        } 
-        catch (IOException e) {}
+    public Log(String nombreArchivo) {
+        this.nombreArchivo = nombreArchivo;
+        this.formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
+        // Crear el archivo de registro si no existe
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo, true))) {
+        } catch (IOException e) {}
     }
 
-    public synchronized void escribirEvento(String evento) {
-        try {
-            
-            // Tomar la fecha y hora actuales:
-            LocalDateTime fechaActual = LocalDateTime.now();
-            
-            // Formateamos la fecha a nuestro gusto:
-            DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyy HH:mm:ss");
-            String fechaFormateada = fechaActual.format(formato);
-            
-            // Escribimos en el fichero:
-            escritor.write("[" + fechaFormateada + "] " + evento + "\n");
-            escritor.flush();
-        } 
-        catch (IOException e) {}
+    public void escribirEvento(String evento) {
+        synchronized (monitor) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo, true))) {
+                String fechaHora = LocalDateTime.now().format(formatter);
+                writer.write("[" + fechaHora + "] " + evento + "\n");
+            } catch (IOException e) {}
+        }
     }
 }
+
+
 
