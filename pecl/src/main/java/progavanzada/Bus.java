@@ -1,16 +1,14 @@
 package progavanzada;
 
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Bus extends Thread {
     
-    // Recurso compartido --> variable atómica:
-    private static final AtomicInteger varAtomBus = new AtomicInteger(0);
+    // Recurso compartido
+    private Aeropuerto aeropuerto;
     
     private String id;
     private int pasajeros;
-    private Aeropuerto aeropuerto;
     
     // Objeto random:
     Random r = new Random();
@@ -42,14 +40,13 @@ public class Bus extends Thread {
     }
 
     // Incrementa var. atómica, y la devuelve con ceros a la izquierda:
-    private String generarIdBus(){
-        int numCompartido = varAtomBus.getAndIncrement();
-        String numString = String.format("%04d", numCompartido);
+    private String generarIdBus(int numBus){
+        String numString = String.format("%04d", numBus);
         return "B-" + numString;
     }
     
-    public Bus(Aeropuerto aeropuerto){
-        this.id = generarIdBus();
+    public Bus(Aeropuerto aeropuerto, int numCompartido){
+        this.id = generarIdBus(numCompartido);
         this.pasajeros = 0;
         this.aeropuerto = aeropuerto;
     }
@@ -61,45 +58,36 @@ public class Bus extends Thread {
             
             while (true) {
                 
-                // Llegar al centro de la ciudad:
+                // Llegar al centro de la ciudad y esperar a pasajeros:
+                log.escribirEvento("BUS " + this.getIdBus() + " llega a la ciudad.");
                 Thread.sleep(r.nextInt(5000) + 1000);
-                
-                log.escribirEvento("BUS " + this.getIdBus() + " llega a la ciudad");
 
                 // Llenar el bus:
                 this.pasajeros = r.nextInt(51);
-                log.escribirEvento("BUS " + this.getIdBus() + " llena pasajeros");
+                log.escribirEvento("BUS " + this.getIdBus() + " recoge pasajeros.");
 
                 // Viajar al aeropuerto:
+                log.escribirEvento("BUS " + this.getIdBus() + " viajando al aeropuerto.");
                 Thread.sleep(r.nextInt(6000) + 5000);
-                log.escribirEvento("BUS " + this.getIdBus() + " viaja al aeropuerto");
-
-                /* ENVIAR EL VALOR DE this.pasajeros AL SISTEMA DEL AEROPUERTO */
-                this.aeropuerto.sumarViajerosBus(this.pasajeros);
-                log.escribirEvento("BUS " + this.getIdBus() + " dropea pasajeros");
-
-                // Llegar al aeropuerto y vaciar bus:
-                this.pasajeros = 0;
-                log.escribirEvento("BUS " + this.getIdBus() + " queda vacio");
-
-                // Esperar a que se vuelva a llenar el bus:
-                Thread.sleep(r.nextInt(4000) + 2000);
-                log.escribirEvento("BUS " + this.getIdBus() + " espera que se llene");
-
-                // Llenar el bus:
-                this.pasajeros = r.nextInt(51);
-                log.escribirEvento("BUS " + this.getIdBus() + " se llena");
                 
-                /* RESTAR EL VALOR DE this.pasajeros DEL SISTEMA DEL AEROPUERTO */
-                this.aeropuerto.restarViajerosBus(this.pasajeros);
+                // Llegar al aeropuerto y vaciar bus:
+                this.aeropuerto.sumarViajerosBus(this.pasajeros); // Incorporar pasajeros al aeropuerto
+                this.pasajeros = 0;
+                log.escribirEvento("BUS " + this.getIdBus() + " deja los pasajeros en el aeropuerto y queda vacio.");
 
+                // Esperar y llenar el bus:
+                Thread.sleep(r.nextInt(4000) + 2000);
+                this.pasajeros = r.nextInt(51);
+                this.aeropuerto.restarViajerosBus(this.pasajeros); // Restar pasajeros del aeropuerto
+                log.escribirEvento("BUS " + this.getIdBus() + " se llena.");
+                
                 // Viajar a la ciudad:
+                log.escribirEvento("BUS " + this.getIdBus() + " viajando a la ciudad.");
                 Thread.sleep(r.nextInt(6000) + 5000);
-                log.escribirEvento("BUS " + this.getIdBus() + " llega a la ciudad");
 
                 // Llegar a la ciudad:
                 this.pasajeros = 0;
-                log.escribirEvento("BUS " + this.getIdBus() + " vacio en la ciudad");
+                log.escribirEvento("BUS " + this.getIdBus() + " vacio en la ciudad.");
 
                 // REPETIR INFINITAMENTE EL BUCLE
             }

@@ -1,8 +1,12 @@
 package progavanzada;
 
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HiloGenBuses extends Thread {
+    
+    // Recursos compartidos
+    private static final AtomicInteger contadorBus = new AtomicInteger(0);
     
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
@@ -21,29 +25,28 @@ public class HiloGenBuses extends Thread {
         
         for (int i = 0; i < 4; i++){
             
-            // Esperamos de 0.5 a 1 segundos:
+            // Esperar de 0.5 a 1 segundos:
             try {
                 Thread.sleep(r.nextInt(500) + 500);
             }
             catch (InterruptedException ie) {}
             
-            // Se genera el bus...
-            
+            // Generar el bus
             Bus bus;
             
             // Decidir a qué aeropuerto va:
             if (i % 2 == 0) {
-                bus = new Bus(barajas); // Barajas
+                bus = new Bus(barajas, contadorBus.getAndIncrement()); // Barajas
             }
             
             else {
-                bus = new Bus(prat); // El Prat
+                bus = new Bus(prat, contadorBus.getAndIncrement()); // El Prat
             }
             
             // TEST:
             
             String str = ("Bus " + i + " creado, va a " + bus.getAeropuerto().getNombre()
-                    + " Su id es " + bus.getIdBus());
+                    + ". Su id es " + bus.getIdBus());
             
             log.escribirEvento(str);
             
