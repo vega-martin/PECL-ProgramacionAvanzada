@@ -1,8 +1,12 @@
 package progavanzada;
 
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HiloGenAviones extends Thread {
+    
+    // Recursos compartidos
+    private static final AtomicInteger contadorAviones = new AtomicInteger(0);
     
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
@@ -31,16 +35,16 @@ public class HiloGenAviones extends Thread {
             
             // Decidir a qué aeropuerto va:
             if (i % 2 == 0) {
-                avion = new Avion(barajas); // Barajas
+                avion = new Avion(barajas, contadorAviones.getAndIncrement()); // Barajas
             }
             
             else {
-                avion = new Avion(prat); // El Prat
+                avion = new Avion(prat, contadorAviones.getAndIncrement()); // El Prat
             }
             
             // TEST:
             System.out.println("Avion " + i + " creado, va a " + avion.getAeropuerto().getNombre()
-                    + " Su id es " + avion.getIdAvion());
+                    + ". Su id es " + avion.getIdAvion());
             
             // Iniciar el hilo:
             avion.start();  

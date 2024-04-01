@@ -7,6 +7,7 @@ public class Bus extends Thread {
     // Recurso compartido
     private Aeropuerto aeropuerto;
     
+    // Resto de atributos:
     private String id;
     private int pasajeros;
     

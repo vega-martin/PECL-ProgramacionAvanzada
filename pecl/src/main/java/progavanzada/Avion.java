@@ -1,18 +1,15 @@
 package progavanzada;
 
-import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Avion extends Thread {
     
-    // Recurso compartido --> variable atómica:
-    private static final AtomicInteger varAtomAvion = new AtomicInteger(0);
+    // Recurso compartido
+    private Aeropuerto aeropuerto; 
     
     // Resto de atributos:
     private final String id;
-    private final int maxPasajeros;
-    private Aeropuerto aeropuerto;   
+    private final int maxPasajeros;  
     
     // Objeto random, usado en diferentes métodos:
     Random r = new Random();
@@ -34,17 +31,16 @@ public class Avion extends Thread {
     }    
     
     // Genera el ID completo del avión:
-    private String generarIdAvion() {
+    private String generarIdAvion(int numAvion) {
         String letra1 = Character.toString((char) ('A' + r.nextInt(26)));
         String letra2 = Character.toString((char) ('A' + r.nextInt(26)));
-        int numCompartido = varAtomAvion.getAndIncrement();
-        String numString = String.format("%04d", numCompartido);
+        String numString = String.format("%04d", numAvion);
         return letra1 + letra2 + "-" + numString;
     }
     
     // Constructor del objeto Avion:
-    public Avion(Aeropuerto aeropuerto){
-        this.id = generarIdAvion();
+    public Avion(Aeropuerto aeropuerto, int numCompartido){
+        this.id = generarIdAvion(numCompartido);
         this.maxPasajeros = r.nextInt(201) + 100;
         this.aeropuerto = aeropuerto;
         
