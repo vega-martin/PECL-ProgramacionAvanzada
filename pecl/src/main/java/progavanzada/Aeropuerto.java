@@ -3,6 +3,7 @@ package progavanzada;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -18,7 +19,7 @@ public class Aeropuerto {
     */
     
     private final ArrayList<Avion> hangar = new ArrayList<>();
-    private final ArrayList<Avion> areaEstacionamiento = new ArrayList<>();
+    private final Queue<Avion> areaEstacionamiento = new LinkedList<>();
     
     private Avion[] taller = new Avion[20];
     private Avion[] puertasEmbarque = new Avion[6];
@@ -28,12 +29,14 @@ public class Aeropuerto {
     private Avion[] aerovias = new Avion[2];
     
     // Cola (FIFO) para las puertas de embarque:
-    public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
+    //public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
     
     // MECANISMOS PARA PROTEGER LAS ESTRUCTURAS DE DATOS:
     private final Lock lockViajeros = new ReentrantLock();
     private final Lock lockHangar = new ReentrantLock();
     private final Lock lockAreaEst = new ReentrantLock();
+    private final Lock lockPuertasEmb = new ReentrantLock();
+    private final Semaphore semPuertasEmb = new Semaphore(6);
     
     //
 
@@ -57,10 +60,13 @@ public class Aeropuerto {
         return puertasEmbarque;
     }
 
-    public void setPuertasEmbarque(Avion[] puertasEmbarque) {
-        this.puertasEmbarque = puertasEmbarque;
+    public void setPuertasEmbarque(int puerta, Avion avion) throws InterruptedException {
+        semPuertasEmb.acquire();
+        lockPuertasEmb.lock();
+        this.puertasEmbarque[puerta] = avion;
+        lockPuertasEmb.unlock();
+        semPuertasEmb.release();
     }
-
     
     
     

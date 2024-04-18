@@ -9,7 +9,8 @@ public class Avion extends Thread {
     
     // Resto de atributos:
     private final String id;
-    private final int maxPasajeros;  
+    private final int maxPasajeros;
+    private int numPasajeros;
     
     // Objeto random, usado en diferentes métodos:
     Random r = new Random();
@@ -59,50 +60,64 @@ public class Avion extends Thread {
             this.aeropuerto.incluirAvionEnAreaEst(this);
             
             // Esperar a que toque el turno al avion:
-            synchronized (aeropuerto.colaEsperaPuertasEmbarque) {
+            //synchronized (aeropuerto.colaEsperaPuertasEmbarque) {
                 
                 // Añadir el avion a la cola de espera:
-                aeropuerto.colaEsperaPuertasEmbarque.offer(this);
+            //    aeropuerto.colaEsperaPuertasEmbarque.offer(this);
                 
                 // Mientras que no sea su turno, espera:
-                while (aeropuerto.colaEsperaPuertasEmbarque.peek() != this) {
-                    aeropuerto.colaEsperaPuertasEmbarque.wait();
-                }
-            }
+            //    while (aeropuerto.colaEsperaPuertasEmbarque.peek() != this) {
+            //        aeropuerto.colaEsperaPuertasEmbarque.wait();
+            //    }
+            //}
             
             // Encontrar la puerta de embarque libre:
+            int puertaElegida = -1;
             synchronized (aeropuerto.getPuertasEmbarque()) {
+                Avion[] puertas = this.aeropuerto.getPuertasEmbarque();
+                
                 for (int i = 1; i <=6; i++){
-                    
+
                     // La puerta 2 solo vale para desembarques:
                     if (i == 2) {
                         continue;                        
                     }
-                    
-                    Avion[] puertas = this.aeropuerto.getPuertasEmbarque();
+
                     if (puertas[i] == null){
-                        puertas[i] = this;
-                        this.aeropuerto.setPuertasEmbarque(puertas);
+                        puertaElegida = i;
+                        this.aeropuerto.setPuertasEmbarque(puertaElegida, this);
                         break;
                     }
                 }
             }
             
             // Llenar el avión de pasajeros:
-            if (this.getMaxPasajeros() <= this.aeropuerto.getViajeros()){ // Hay suficientes
-                this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.getMaxPasajeros());
+            if (this.maxPasajeros <= this.aeropuerto.getViajeros()){ // Hay suficientes
+                this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.maxPasajeros);
+                this.numPasajeros = this.maxPasajeros;
                 Thread.sleep(r.nextInt(3000) + 1000);
             }
-            
             else { // No hay suficientes
-                this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.getMaxPasajeros());
-                Thread.sleep(r.nextInt(3000) + 1000);
-                //Primera espera:
-                Thread.sleep(r.nextInt(5000) + 1000);
-                
-                // ...
-                
-            }            
+                int numViajerosRecogidos = 0;
+                for (int i = 1; i <= 3; i++) {
+                    int numViajeros = this.aeropuerto.getViajeros();
+                    if (numViajeros <= (this.maxPasajeros - this.numPasajeros)) {
+                        numViajerosRecogidos = numViajeros;
+                    } 
+                    else {
+                        numViajerosRecogidos = numViajeros - (this.maxPasajeros - this.numPasajeros);
+                    }
+                    this.aeropuerto.setViajeros(numViajeros - numViajerosRecogidos);
+                    this.numPasajeros += numViajerosRecogidos;
+                    Thread.sleep(r.nextInt(3000) + 1000);
+                    if (this.numPasajeros == this.maxPasajeros) {
+                        break;
+                    }
+                    Thread.sleep(r.nextInt(5000) + 1000);
+                }
+            } 
+            // Abandona la puerta de embarque
+            this.aeropuerto.setPuertasEmbarque(puertaElegida, null);
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
