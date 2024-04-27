@@ -27,7 +27,7 @@ public class Aeropuerto {
     private Avion[] pistas = new Avion[4];
     
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
-    private Avion[] aerovias = new Avion[2];
+    private ArrayList<Avion>[] aerovias = new ArrayList[2];
     
     // Cola (FIFO) para las puertas de embarque:
     //public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
@@ -43,6 +43,7 @@ public class Aeropuerto {
     private final Lock lockPistas = new ReentrantLock();
     private final Semaphore semPistas = new Semaphore(4, true);
     private final Condition esperarPistas = lockPistas.newCondition();
+    private final Lock lockAerovias = new ReentrantLock();
     
     //
 
@@ -177,15 +178,20 @@ public class Aeropuerto {
             avion.getAeropuerto().areaEstacionamiento.add(avion);
             long espera = (long) ((5000 * Math.random()) + 1000);
             Thread.sleep(espera);
-            while ((pistas[0] != null) && (pistas[1] != null) &&
-                   (pistas[2] != null) && (pistas[3] != null) ){
-                esperarPistas.await();
-            }
-            avion.getAeropuerto().areaRodaje.remove(avion);
+            buscarPista();
         } catch (InterruptedException e) {}
         finally {
             lockAreaRod.unlock();
         } 
+    }
+    
+    public void buscarPista(){
+        try {
+            while ((pistas[0] != null) && (pistas[1] != null) &&
+                   (pistas[2] != null) && (pistas[3] != null) ){
+                esperarPistas.await();
+            }
+        } catch (InterruptedException e) {}
     }
     
     public void entrarPista(Avion avion) throws InterruptedException {
@@ -220,6 +226,23 @@ public class Aeropuerto {
             esperarPistas.signal();
         } finally { lockPistas.unlock(); }
         semPistas.release();
+    }
+    
+    public void aerovia(Avion avion){
+        lockAerovias.lock();
+        try {
+            
+            avion.getAeropuerto().aerovias[0].add(avion);
+            
+            long viaje = (long) ((16000 * Math.random()) + 15000);
+            Thread.sleep(viaje);
+            
+            buscarPista();
+            
+        } catch (InterruptedException e) {}
+        finally {
+            lockAerovias.unlock();
+        }
     }
     
 }
