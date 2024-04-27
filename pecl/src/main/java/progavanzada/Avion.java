@@ -96,6 +96,13 @@ public class Avion extends Thread {
             
             // Abandona la puerta de embarque
             this.aeropuerto.quitarPuertasEmbarque(this);
+            
+            // Area de rodaje y pista
+            this.aeropuerto.areaDeRodaje(this);
+            this.aeropuerto.entrarPista(this);
+            this.aeropuerto.salirPista(this);
+            
+            // Entrar en aerovía
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");

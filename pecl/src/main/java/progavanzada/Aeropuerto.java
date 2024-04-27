@@ -39,6 +39,10 @@ public class Aeropuerto {
     private final Lock lockPuertasEmb = new ReentrantLock();
     private final Condition esperarPuertasEmb = lockPuertasEmb.newCondition();
     private final Semaphore semPuertasEmb = new Semaphore(6, true);
+    private final Lock lockAreaRod = new ReentrantLock();
+    private final Lock lockPistas = new ReentrantLock();
+    private final Semaphore semPistas = new Semaphore(4, true);
+    private final Condition esperarPistas = lockPistas.newCondition();
     
     //
 
@@ -70,6 +74,7 @@ public class Aeropuerto {
                 // Elige puerta
                 if (puertasEmbarque[i] == null ) {
                     this.puertasEmbarque[i] = avion;
+                    break;
                 }
             }
         } finally { lockPuertasEmb.unlock(); }
@@ -165,4 +170,56 @@ public class Aeropuerto {
             lockAreaEst.unlock();
         }  
     }
+    
+    public void areaDeRodaje(Avion avion){
+        try {
+            lockAreaRod.lock();
+            avion.getAeropuerto().areaEstacionamiento.add(avion);
+            long espera = (long) ((5000 * Math.random()) + 1000);
+            Thread.sleep(espera);
+            while ((pistas[0] != null) && (pistas[1] != null) &&
+                   (pistas[2] != null) && (pistas[3] != null) ){
+                esperarPistas.await();
+            }
+            avion.getAeropuerto().areaRodaje.remove(avion);
+        } catch (InterruptedException e) {}
+        finally {
+            lockAreaRod.unlock();
+        } 
+    }
+    
+    public void entrarPista(Avion avion) throws InterruptedException {
+        semPistas.acquire();
+        lockPistas.lock();
+        try {
+            for (int i = 1; i <= 6; i++){
+                // Elige pista
+                if (pistas[i] == null ) {
+                    this.pistas[i] = avion;
+                    // Últimas comprobaciones
+                    long espera = (long) ((3000 * Math.random()) + 1000);
+                    Thread.sleep(espera);
+                    // Despegue
+                    espera = (long) ((5000 * Math.random()) + 1000);
+                    Thread.sleep(espera);
+                    break;
+                }
+            }
+        } finally { lockPistas.unlock(); }
+    }
+    
+    public void salirPista(Avion avion) throws InterruptedException {
+        lockPistas.lock();
+        try {
+            for (int i = 1; i <= 6; i++){
+                if (this.pistas[i] == avion) {
+                    this.pistas[i] = null;
+                    break;
+                }
+            }
+            esperarPistas.signal();
+        } finally { lockPistas.unlock(); }
+        semPistas.release();
+    }
+    
 }
