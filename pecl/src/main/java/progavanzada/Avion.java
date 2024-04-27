@@ -73,13 +73,18 @@ public class Avion extends Thread {
                 int numViajerosRecogidosTotales = 0;
                 for (int i = 1; i <= 3; i++) {
                     int numViajerosIteracion = this.aeropuerto.getViajeros();
+                    // El numero de viajeros disponibles no permite llenar el avión
                     if (numViajerosIteracion <= (this.maxPasajeros - this.numPasajeros)) {
+                        // Recoger todos los viajeros disponibles
                         numViajerosRecogidosTotales = numViajerosIteracion;
-                    } 
+                    }
+                    // El numero de viajeros disponibles hace que se llene el avión
                     else {
+                        // Recoger viajeros hasta llenar avion
                         numViajerosRecogidosTotales = numViajerosIteracion - (this.maxPasajeros - this.numPasajeros);
                     }
-                    this.aeropuerto.setViajeros(numViajerosIteracion - numViajerosRecogidosTotales);
+                    // Actualizar viajeros del aeropuerto y del avión
+                    this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - numViajerosRecogidosTotales);
                     this.numPasajeros += numViajerosRecogidosTotales;
                     Thread.sleep(r.nextInt(2000) + 1000);
                     if (this.numPasajeros == this.maxPasajeros) {
