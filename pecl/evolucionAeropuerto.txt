@@ -1,0 +1,1684 @@
+[28-04-2024 19:24:26] Bus 0 creado, va a Barajas. Su id es B-0000
+[28-04-2024 19:24:26] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:24:27] Bus 1 creado, va a Prat. Su id es B-0001
+[28-04-2024 19:24:27] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:24:27] Bus 2 creado, va a Barajas. Su id es B-0002
+[28-04-2024 19:24:27] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:24:28] BUS B-0000 recoge pasajeros.
+[28-04-2024 19:24:28] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:24:28] Bus 3 creado, va a Prat. Su id es B-0003
+[28-04-2024 19:24:28] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:24:29] BUS B-0001 recoge pasajeros.
+[28-04-2024 19:24:29] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:24:29] Bus 4 creado, va a Barajas. Su id es B-0004
+[28-04-2024 19:24:29] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:24:30] Bus 5 creado, va a Prat. Su id es B-0005
+[28-04-2024 19:24:30] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:24:30] Bus 6 creado, va a Barajas. Su id es B-0006
+[28-04-2024 19:24:30] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:24:31] Bus 7 creado, va a Prat. Su id es B-0007
+[28-04-2024 19:24:31] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:24:31] BUS B-0005 recoge pasajeros.
+[28-04-2024 19:24:31] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:24:32] Bus 8 creado, va a Barajas. Su id es B-0008
+[28-04-2024 19:24:32] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:24:32] BUS B-0002 recoge pasajeros.
+[28-04-2024 19:24:32] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:24:32] Bus 9 creado, va a Prat. Su id es B-0009
+[28-04-2024 19:24:32] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:24:33] BUS B-0000 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:33] Bus 10 creado, va a Barajas. Su id es B-0010
+[28-04-2024 19:24:33] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:24:33] BUS B-0008 recoge pasajeros.
+[28-04-2024 19:24:33] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:24:33] BUS B-0004 recoge pasajeros.
+[28-04-2024 19:24:33] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:24:34] BUS B-0007 recoge pasajeros.
+[28-04-2024 19:24:34] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:24:34] BUS B-0003 recoge pasajeros.
+[28-04-2024 19:24:34] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:24:34] Bus 11 creado, va a Prat. Su id es B-0011
+[28-04-2024 19:24:34] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:24:34] BUS B-0001 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:35] Bus 12 creado, va a Barajas. Su id es B-0012
+[28-04-2024 19:24:35] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:24:35] Bus 13 creado, va a Prat. Su id es B-0013
+[28-04-2024 19:24:35] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:24:36] BUS B-0010 recoge pasajeros.
+[28-04-2024 19:24:36] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:24:36] Bus 14 creado, va a Barajas. Su id es B-0014
+[28-04-2024 19:24:36] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:24:36] BUS B-0006 recoge pasajeros.
+[28-04-2024 19:24:36] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:24:36] BUS B-0012 recoge pasajeros.
+[28-04-2024 19:24:36] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:24:36] Bus 15 creado, va a Prat. Su id es B-0015
+[28-04-2024 19:24:36] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:24:37] Bus 16 creado, va a Barajas. Su id es B-0016
+[28-04-2024 19:24:37] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:24:38] BUS B-0009 recoge pasajeros.
+[28-04-2024 19:24:38] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:24:38] Bus 17 creado, va a Prat. Su id es B-0017
+[28-04-2024 19:24:38] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:24:38] BUS B-0011 recoge pasajeros.
+[28-04-2024 19:24:38] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:24:38] BUS B-0000 se llena.
+[28-04-2024 19:24:38] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:24:38] BUS B-0002 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:39] BUS B-0016 recoge pasajeros.
+[28-04-2024 19:24:39] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:24:39] BUS B-0008 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:39] Bus 18 creado, va a Barajas. Su id es B-0018
+[28-04-2024 19:24:39] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:24:39] BUS B-0013 recoge pasajeros.
+[28-04-2024 19:24:39] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:24:39] BUS B-0004 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:39] BUS B-0001 se llena.
+[28-04-2024 19:24:39] BUS B-0001 viajando a la ciudad.
+[28-04-2024 19:24:40] BUS B-0014 recoge pasajeros.
+[28-04-2024 19:24:40] BUS B-0014 viajando al aeropuerto.
+[28-04-2024 19:24:40] Bus 19 creado, va a Prat. Su id es B-0019
+[28-04-2024 19:24:40] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:24:40] BUS B-0015 recoge pasajeros.
+[28-04-2024 19:24:40] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:24:41] Bus 20 creado, va a Barajas. Su id es B-0020
+[28-04-2024 19:24:41] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:24:41] BUS B-0017 recoge pasajeros.
+[28-04-2024 19:24:41] BUS B-0017 viajando al aeropuerto.
+[28-04-2024 19:24:41] BUS B-0007 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:41] BUS B-0003 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:41] Bus 21 creado, va a Prat. Su id es B-0021
+[28-04-2024 19:24:41] BUS B-0021 llega a la ciudad.
+[28-04-2024 19:24:42] BUS B-0008 se llena.
+[28-04-2024 19:24:42] BUS B-0008 viajando a la ciudad.
+[28-04-2024 19:24:42] BUS B-0005 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:42] BUS B-0004 se llena.
+[28-04-2024 19:24:42] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:24:42] Bus 22 creado, va a Barajas. Su id es B-0022
+[28-04-2024 19:24:42] BUS B-0022 llega a la ciudad.
+[28-04-2024 19:24:43] Bus 23 creado, va a Prat. Su id es B-0023
+[28-04-2024 19:24:43] BUS B-0023 llega a la ciudad.
+[28-04-2024 19:24:43] BUS B-0018 recoge pasajeros.
+[28-04-2024 19:24:43] BUS B-0018 viajando al aeropuerto.
+[28-04-2024 19:24:43] BUS B-0012 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:44] BUS B-0019 recoge pasajeros.
+[28-04-2024 19:24:44] BUS B-0019 viajando al aeropuerto.
+[28-04-2024 19:24:44] BUS B-0003 se llena.
+[28-04-2024 19:24:44] BUS B-0003 viajando a la ciudad.
+[28-04-2024 19:24:44] BUS B-0020 recoge pasajeros.
+[28-04-2024 19:24:44] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:24:44] Bus 24 creado, va a Barajas. Su id es B-0024
+[28-04-2024 19:24:44] BUS B-0024 llega a la ciudad.
+[28-04-2024 19:24:44] BUS B-0002 se llena.
+[28-04-2024 19:24:44] BUS B-0002 viajando a la ciudad.
+[28-04-2024 19:24:44] BUS B-0021 recoge pasajeros.
+[28-04-2024 19:24:44] BUS B-0021 viajando al aeropuerto.
+[28-04-2024 19:24:45] Bus 25 creado, va a Prat. Su id es B-0025
+[28-04-2024 19:24:45] BUS B-0025 llega a la ciudad.
+[28-04-2024 19:24:45] BUS B-0023 recoge pasajeros.
+[28-04-2024 19:24:45] BUS B-0023 viajando al aeropuerto.
+[28-04-2024 19:24:45] BUS B-0000 vacio en la ciudad.
+[28-04-2024 19:24:45] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:24:45] BUS B-0022 recoge pasajeros.
+[28-04-2024 19:24:45] BUS B-0022 viajando al aeropuerto.
+[28-04-2024 19:24:45] BUS B-0013 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:46] Bus 26 creado, va a Barajas. Su id es B-0026
+[28-04-2024 19:24:46] BUS B-0026 llega a la ciudad.
+[28-04-2024 19:24:46] BUS B-0007 se llena.
+[28-04-2024 19:24:46] BUS B-0007 viajando a la ciudad.
+[28-04-2024 19:24:46] BUS B-0005 se llena.
+[28-04-2024 19:24:46] BUS B-0005 viajando a la ciudad.
+[28-04-2024 19:24:46] Bus 27 creado, va a Prat. Su id es B-0027
+[28-04-2024 19:24:46] BUS B-0027 llega a la ciudad.
+[28-04-2024 19:24:46] BUS B-0010 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:47] BUS B-0012 se llena.
+[28-04-2024 19:24:47] BUS B-0012 viajando a la ciudad.
+[28-04-2024 19:24:47] BUS B-0024 recoge pasajeros.
+[28-04-2024 19:24:47] BUS B-0024 viajando al aeropuerto.
+[28-04-2024 19:24:47] BUS B-0006 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:47] Bus 28 creado, va a Barajas. Su id es B-0028
+[28-04-2024 19:24:47] BUS B-0028 llega a la ciudad.
+[28-04-2024 19:24:47] BUS B-0016 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:47] BUS B-0025 recoge pasajeros.
+[28-04-2024 19:24:47] BUS B-0025 viajando al aeropuerto.
+[28-04-2024 19:24:47] BUS B-0001 vacio en la ciudad.
+[28-04-2024 19:24:47] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:24:48] Bus 29 creado, va a Prat. Su id es B-0029
+[28-04-2024 19:24:48] BUS B-0029 llega a la ciudad.
+[28-04-2024 19:24:48] BUS B-0013 se llena.
+[28-04-2024 19:24:48] BUS B-0013 viajando a la ciudad.
+[28-04-2024 19:24:48] BUS B-0000 recoge pasajeros.
+[28-04-2024 19:24:48] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:24:48] BUS B-0014 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:48] Bus 30 creado, va a Barajas. Su id es B-0030
+[28-04-2024 19:24:48] BUS B-0030 llega a la ciudad.
+[28-04-2024 19:24:48] BUS B-0009 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:49] BUS B-0001 recoge pasajeros.
+[28-04-2024 19:24:49] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:24:49] BUS B-0010 se llena.
+[28-04-2024 19:24:49] BUS B-0010 viajando a la ciudad.
+[28-04-2024 19:24:49] BUS B-0011 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:49] BUS B-0028 recoge pasajeros.
+[28-04-2024 19:24:49] BUS B-0028 viajando al aeropuerto.
+[28-04-2024 19:24:49] BUS B-0019 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:49] Bus 31 creado, va a Prat. Su id es B-0031
+[28-04-2024 19:24:49] BUS B-0031 llega a la ciudad.
+[28-04-2024 19:24:49] BUS B-0002 vacio en la ciudad.
+[28-04-2024 19:24:49] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:24:49] BUS B-0003 vacio en la ciudad.
+[28-04-2024 19:24:49] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:24:49] BUS B-0026 recoge pasajeros.
+[28-04-2024 19:24:49] BUS B-0026 viajando al aeropuerto.
+[28-04-2024 19:24:50] BUS B-0030 recoge pasajeros.
+[28-04-2024 19:24:50] Bus 32 creado, va a Barajas. Su id es B-0032
+[28-04-2024 19:24:50] BUS B-0030 viajando al aeropuerto.
+[28-04-2024 19:24:50] BUS B-0032 llega a la ciudad.
+[28-04-2024 19:24:50] BUS B-0016 se llena.
+[28-04-2024 19:24:50] BUS B-0016 viajando a la ciudad.
+[28-04-2024 19:24:50] BUS B-0006 se llena.
+[28-04-2024 19:24:50] BUS B-0006 viajando a la ciudad.
+[28-04-2024 19:24:50] Bus 33 creado, va a Prat. Su id es B-0033
+[28-04-2024 19:24:50] BUS B-0033 llega a la ciudad.
+[28-04-2024 19:24:50] BUS B-0029 recoge pasajeros.
+[28-04-2024 19:24:50] BUS B-0029 viajando al aeropuerto.
+[28-04-2024 19:24:50] BUS B-0015 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:51] Bus 34 creado, va a Barajas. Su id es B-0034
+[28-04-2024 19:24:51] BUS B-0034 llega a la ciudad.
+[28-04-2024 19:24:51] BUS B-0022 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:51] BUS B-0017 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:51] BUS B-0018 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:51] BUS B-0032 recoge pasajeros.
+[28-04-2024 19:24:51] BUS B-0032 viajando al aeropuerto.
+[28-04-2024 19:24:52] Bus 35 creado, va a Prat. Su id es B-0035
+[28-04-2024 19:24:52] BUS B-0035 llega a la ciudad.
+[28-04-2024 19:24:52] BUS B-0009 se llena.
+[28-04-2024 19:24:52] BUS B-0009 viajando a la ciudad.
+[28-04-2024 19:24:52] BUS B-0004 vacio en la ciudad.
+[28-04-2024 19:24:52] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:24:52] BUS B-0027 recoge pasajeros.
+[28-04-2024 19:24:52] BUS B-0027 viajando al aeropuerto.
+[28-04-2024 19:24:52] BUS B-0033 recoge pasajeros.
+[28-04-2024 19:24:52] BUS B-0033 viajando al aeropuerto.
+[28-04-2024 19:24:52] BUS B-0023 deja los pasajeros en el aeropuerto y queda vacio.
+[28-04-2024 19:24:52] BUS B-0008 vacio en la ciudad.
+[28-04-2024 19:24:52] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:24:52] BUS B-0019 se llena.
+[28-04-2024 19:24:52] BUS B-0019 viajando a la ciudad.
+[28-04-2024 19:24:53] Bus 36 creado, va a Barajas. Su id es B-0036
+[28-04-2024 19:24:53] BUS B-0036 llega a la ciudad.
+[28-04-2024 19:24:53] BUS B-0005 vacio en la ciudad.
+[28-04-2024 19:24:53] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:24:53] BUS B-0014 se llena.
+[28-04-2024 19:24:53] BUS B-0014 viajando a la ciudad.
+[28-04-2024 19:24:53] BUS B-0003 recoge pasajeros.
+[28-04-2024 19:24:53] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:24:53] Bus 37 creado, va a Prat. Su id es B-0037
+[28-04-2024 19:24:53] BUS B-0037 llega a la ciudad.
+[28-04-2024 19:24:53] BUS B-0008 recoge pasajeros.
+[28-04-2024 19:24:53] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:30:53] Bus 0 creado, va a Barajas. Su id es B-0000
+[28-04-2024 19:30:53] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:30:53] Bus 1 creado, va a Prat. Su id es B-0001
+[28-04-2024 19:30:53] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:30:54] Bus 2 creado, va a Barajas. Su id es B-0002
+[28-04-2024 19:30:54] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:30:55] Bus 3 creado, va a Prat. Su id es B-0003
+[28-04-2024 19:30:55] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:30:55] BUS B-0000 recoge 49 pasajeros.
+[28-04-2024 19:30:55] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:30:55] Bus 4 creado, va a Barajas. Su id es B-0004
+[28-04-2024 19:30:55] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:30:56] BUS B-0003 recoge 27 pasajeros.
+[28-04-2024 19:30:56] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:30:56] Bus 5 creado, va a Prat. Su id es B-0005
+[28-04-2024 19:30:56] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:30:57] Bus 6 creado, va a Barajas. Su id es B-0006
+[28-04-2024 19:30:57] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:30:57] BUS B-0004 recoge 23 pasajeros.
+[28-04-2024 19:30:57] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:30:57] BUS B-0001 recoge 37 pasajeros.
+[28-04-2024 19:30:57] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:30:58] Bus 7 creado, va a Prat. Su id es B-0007
+[28-04-2024 19:30:58] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:30:58] BUS B-0002 recoge 36 pasajeros.
+[28-04-2024 19:30:58] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:30:58] Bus 8 creado, va a Barajas. Su id es B-0008
+[28-04-2024 19:30:58] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:30:58] BUS B-0005 recoge 28 pasajeros.
+[28-04-2024 19:30:58] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:30:59] Bus 9 creado, va a Prat. Su id es B-0009
+[28-04-2024 19:30:59] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:30:59] BUS B-0007 recoge 39 pasajeros.
+[28-04-2024 19:30:59] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:31:00] Bus 10 creado, va a Barajas. Su id es B-0010
+[28-04-2024 19:31:00] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:31:00] Bus 11 creado, va a Prat. Su id es B-0011
+[28-04-2024 19:31:00] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:31:01] BUS B-0008 recoge 4 pasajeros.
+[28-04-2024 19:31:01] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:31:01] Bus 12 creado, va a Barajas. Su id es B-0012
+[28-04-2024 19:31:01] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:31:02] BUS B-0006 recoge 1 pasajeros.
+[28-04-2024 19:31:02] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:31:02] Bus 13 creado, va a Prat. Su id es B-0013
+[28-04-2024 19:31:02] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:31:02] BUS B-0000 deja 49 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:03] BUS B-0004 deja 23 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:03] Bus 14 creado, va a Barajas. Su id es B-0014
+[28-04-2024 19:31:03] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:31:04] BUS B-0011 recoge 47 pasajeros.
+[28-04-2024 19:31:04] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:31:04] BUS B-0010 recoge 12 pasajeros.
+[28-04-2024 19:31:04] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:31:04] Bus 15 creado, va a Prat. Su id es B-0015
+[28-04-2024 19:31:04] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:31:04] BUS B-0009 recoge 21 pasajeros.
+[28-04-2024 19:31:04] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:31:05] BUS B-0012 recoge 40 pasajeros.
+[28-04-2024 19:31:05] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:31:05] BUS B-0007 deja 39 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:05] Bus 16 creado, va a Barajas. Su id es B-0016
+[28-04-2024 19:31:05] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:31:05] BUS B-0000 se llena.
+[28-04-2024 19:31:05] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:31:05] BUS B-0002 deja 36 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:06] BUS B-0014 recoge 0 pasajeros.
+[28-04-2024 19:31:06] BUS B-0014 viajando al aeropuerto.
+[28-04-2024 19:31:06] Bus 17 creado, va a Prat. Su id es B-0017
+[28-04-2024 19:31:06] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:31:07] BUS B-0003 deja 27 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:07] BUS B-0008 deja 4 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:07] Bus 18 creado, va a Barajas. Su id es B-0018
+[28-04-2024 19:31:07] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:31:07] BUS B-0015 recoge 14 pasajeros.
+[28-04-2024 19:31:07] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:31:07] BUS B-0016 recoge 22 pasajeros.
+[28-04-2024 19:31:07] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:31:08] BUS B-0013 recoge 12 pasajeros.
+[28-04-2024 19:31:08] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:31:08] BUS B-0001 deja 37 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:08] Bus 19 creado, va a Prat. Su id es B-0019
+[28-04-2024 19:31:08] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:31:08] BUS B-0004 se llena.
+[28-04-2024 19:31:08] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:31:08] Bus 20 creado, va a Barajas. Su id es B-0020
+[28-04-2024 19:31:08] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:31:09] Bus 21 creado, va a Prat. Su id es B-0021
+[28-04-2024 19:31:09] BUS B-0021 llega a la ciudad.
+[28-04-2024 19:31:09] BUS B-0005 deja 28 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:09] BUS B-0017 recoge 26 pasajeros.
+[28-04-2024 19:31:09] BUS B-0017 viajando al aeropuerto.
+[28-04-2024 19:31:09] BUS B-0007 se llena.
+[28-04-2024 19:31:09] BUS B-0007 viajando a la ciudad.
+[28-04-2024 19:31:10] Bus 22 creado, va a Barajas. Su id es B-0022
+[28-04-2024 19:31:10] BUS B-0022 llega a la ciudad.
+[28-04-2024 19:31:10] BUS B-0008 se llena.
+[28-04-2024 19:31:10] BUS B-0008 viajando a la ciudad.
+[28-04-2024 19:31:10] BUS B-0020 recoge 24 pasajeros.
+[28-04-2024 19:31:10] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:31:10] BUS B-0006 deja 1 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:10] BUS B-0021 recoge 4 pasajeros.
+[28-04-2024 19:31:10] BUS B-0021 viajando al aeropuerto.
+[28-04-2024 19:31:10] BUS B-0001 se llena.
+[28-04-2024 19:31:10] BUS B-0001 viajando a la ciudad.
+[28-04-2024 19:31:10] BUS B-0002 se llena.
+[28-04-2024 19:31:10] BUS B-0002 viajando a la ciudad.
+[28-04-2024 19:31:10] BUS B-0009 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:11] Bus 23 creado, va a Prat. Su id es B-0023
+[28-04-2024 19:31:11] BUS B-0023 llega a la ciudad.
+[28-04-2024 19:31:11] Bus 24 creado, va a Barajas. Su id es B-0024
+[28-04-2024 19:31:11] BUS B-0024 llega a la ciudad.
+[28-04-2024 19:31:12] BUS B-0003 se llena.
+[28-04-2024 19:31:12] BUS B-0003 viajando a la ciudad.
+[28-04-2024 19:31:12] Bus 25 creado, va a Prat. Su id es B-0025
+[28-04-2024 19:31:12] BUS B-0025 llega a la ciudad.
+[28-04-2024 19:31:12] BUS B-0024 recoge 14 pasajeros.
+[28-04-2024 19:31:12] BUS B-0024 viajando al aeropuerto.
+[28-04-2024 19:31:12] BUS B-0018 recoge 21 pasajeros.
+[28-04-2024 19:31:12] BUS B-0018 viajando al aeropuerto.
+[28-04-2024 19:31:13] BUS B-0014 deja 0 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:13] BUS B-0022 recoge 27 pasajeros.
+[28-04-2024 19:31:13] BUS B-0022 viajando al aeropuerto.
+[28-04-2024 19:31:13] Bus 26 creado, va a Barajas. Su id es B-0026
+[28-04-2024 19:31:13] BUS B-0026 llega a la ciudad.
+[28-04-2024 19:31:13] Bus 27 creado, va a Prat. Su id es B-0027
+[28-04-2024 19:31:13] BUS B-0027 llega a la ciudad.
+[28-04-2024 19:31:13] BUS B-0019 recoge 44 pasajeros.
+[28-04-2024 19:31:13] BUS B-0019 viajando al aeropuerto.
+[28-04-2024 19:31:14] BUS B-0011 deja 47 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:14] BUS B-0012 deja 40 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:14] Bus 28 creado, va a Barajas. Su id es B-0028
+[28-04-2024 19:31:14] BUS B-0028 llega a la ciudad.
+[28-04-2024 19:31:14] BUS B-0005 se llena.
+[28-04-2024 19:31:14] BUS B-0005 viajando a la ciudad.
+[28-04-2024 19:31:14] BUS B-0009 se llena.
+[28-04-2024 19:31:14] BUS B-0009 viajando a la ciudad.
+[28-04-2024 19:31:14] BUS B-0016 deja 22 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:15] BUS B-0010 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:15] BUS B-0025 recoge 30 pasajeros.
+[28-04-2024 19:31:15] BUS B-0025 viajando al aeropuerto.
+[28-04-2024 19:31:15] BUS B-0027 recoge 21 pasajeros.
+[28-04-2024 19:31:15] BUS B-0027 viajando al aeropuerto.
+[28-04-2024 19:31:15] Bus 29 creado, va a Prat. Su id es B-0029
+[28-04-2024 19:31:15] BUS B-0029 llega a la ciudad.
+[28-04-2024 19:31:15] BUS B-0014 se llena.
+[28-04-2024 19:31:15] BUS B-0014 viajando a la ciudad.
+[28-04-2024 19:31:15] BUS B-0004 deja 39 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:15] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:31:15] BUS B-0006 se llena.
+[28-04-2024 19:31:15] BUS B-0006 viajando a la ciudad.
+[28-04-2024 19:31:15] BUS B-0013 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:15] BUS B-0000 deja 50 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:15] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:31:15] BUS B-0020 deja 24 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:16] BUS B-0023 recoge 20 pasajeros.
+[28-04-2024 19:31:16] BUS B-0023 viajando al aeropuerto.
+[28-04-2024 19:31:16] BUS B-0011 se llena.
+[28-04-2024 19:31:16] BUS B-0011 viajando a la ciudad.
+[28-04-2024 19:31:16] Bus 30 creado, va a Barajas. Su id es B-0030
+[28-04-2024 19:31:16] BUS B-0030 llega a la ciudad.
+[28-04-2024 19:31:16] BUS B-0015 deja 14 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:16] BUS B-0028 recoge 43 pasajeros.
+[28-04-2024 19:31:16] BUS B-0028 viajando al aeropuerto.
+[28-04-2024 19:31:16] Bus 31 creado, va a Prat. Su id es B-0031
+[28-04-2024 19:31:16] BUS B-0031 llega a la ciudad.
+[28-04-2024 19:31:17] BUS B-0004 recoge 16 pasajeros.
+[28-04-2024 19:31:17] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:31:17] Bus 32 creado, va a Barajas. Su id es B-0032
+[28-04-2024 19:31:17] BUS B-0032 llega a la ciudad.
+[28-04-2024 19:31:17] BUS B-0016 se llena.
+[28-04-2024 19:31:17] BUS B-0016 viajando a la ciudad.
+[28-04-2024 19:31:17] BUS B-0001 deja 49 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:17] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:31:18] Bus 33 creado, va a Prat. Su id es B-0033
+[28-04-2024 19:31:18] BUS B-0033 llega a la ciudad.
+[28-04-2024 19:31:18] BUS B-0020 se llena.
+[28-04-2024 19:31:18] BUS B-0020 viajando a la ciudad.
+[28-04-2024 19:31:18] BUS B-0026 recoge 44 pasajeros.
+[28-04-2024 19:31:18] BUS B-0026 viajando al aeropuerto.
+[28-04-2024 19:31:18] BUS B-0002 deja 42 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:18] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:31:18] BUS B-0012 se llena.
+[28-04-2024 19:31:18] BUS B-0012 viajando a la ciudad.
+[28-04-2024 19:31:19] Bus 34 creado, va a Barajas. Su id es B-0034
+[28-04-2024 19:31:19] BUS B-0034 llega a la ciudad.
+[28-04-2024 19:31:19] BUS B-0000 recoge 15 pasajeros.
+[28-04-2024 19:31:19] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:31:19] Bus 35 creado, va a Prat. Su id es B-0035
+[28-04-2024 19:31:19] BUS B-0035 llega a la ciudad.
+[28-04-2024 19:31:19] BUS B-0015 se llena.
+[28-04-2024 19:31:19] BUS B-0015 viajando a la ciudad.
+[28-04-2024 19:31:19] BUS B-0021 deja 4 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:19] BUS B-0018 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:19] BUS B-0017 deja 26 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:19] BUS B-0024 deja 14 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:19] BUS B-0010 se llena.
+[28-04-2024 19:31:19] BUS B-0010 viajando a la ciudad.
+[28-04-2024 19:31:20] BUS B-0022 deja 27 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:20] BUS B-0008 deja 6 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:20] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:31:20] BUS B-0001 recoge 44 pasajeros.
+[28-04-2024 19:31:20] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:31:20] Bus 36 creado, va a Barajas. Su id es B-0036
+[28-04-2024 19:31:20] BUS B-0036 llega a la ciudad.
+[28-04-2024 19:31:20] BUS B-0007 deja 10 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:20] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:31:20] BUS B-0003 deja 22 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:20] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:31:21] BUS B-0029 recoge 23 pasajeros.
+[28-04-2024 19:31:21] BUS B-0029 viajando al aeropuerto.
+[28-04-2024 19:31:21] BUS B-0014 deja 49 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:21] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:31:21] Bus 37 creado, va a Prat. Su id es B-0037
+[28-04-2024 19:31:21] BUS B-0037 llega a la ciudad.
+[28-04-2024 19:31:21] BUS B-0013 se llena.
+[28-04-2024 19:31:21] BUS B-0013 viajando a la ciudad.
+[28-04-2024 19:31:21] BUS B-0030 recoge 9 pasajeros.
+[28-04-2024 19:31:21] BUS B-0030 viajando al aeropuerto.
+[28-04-2024 19:31:21] BUS B-0033 recoge 31 pasajeros.
+[28-04-2024 19:31:21] BUS B-0033 viajando al aeropuerto.
+[28-04-2024 19:31:21] BUS B-0006 deja 26 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:21] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:31:21] BUS B-0007 recoge 26 pasajeros.
+[28-04-2024 19:31:21] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:31:21] BUS B-0031 recoge 5 pasajeros.
+[28-04-2024 19:31:21] BUS B-0031 viajando al aeropuerto.
+[28-04-2024 19:31:21] BUS B-0019 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:21] Bus 38 creado, va a Barajas. Su id es B-0038
+[28-04-2024 19:31:21] BUS B-0038 llega a la ciudad.
+[28-04-2024 19:31:21] BUS B-0009 deja 13 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:21] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:31:22] BUS B-0025 deja 30 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:22] BUS B-0032 recoge 9 pasajeros.
+[28-04-2024 19:31:22] BUS B-0032 viajando al aeropuerto.
+[28-04-2024 19:31:22] BUS B-0027 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:22] Bus 39 creado, va a Prat. Su id es B-0039
+[28-04-2024 19:31:22] BUS B-0039 llega a la ciudad.
+[28-04-2024 19:31:23] BUS B-0034 recoge 48 pasajeros.
+[28-04-2024 19:31:23] BUS B-0034 viajando al aeropuerto.
+[28-04-2024 19:31:23] BUS B-0004 deja 16 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:23] BUS B-0023 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:23] BUS B-0003 recoge 14 pasajeros.
+[28-04-2024 19:31:23] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:31:23] BUS B-0005 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:23] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:31:23] BUS B-0017 se llena.
+[28-04-2024 19:31:23] BUS B-0017 viajando a la ciudad.
+[28-04-2024 19:31:23] Bus 40 creado, va a Barajas. Su id es B-0040
+[28-04-2024 19:31:23] BUS B-0040 llega a la ciudad.
+[28-04-2024 19:31:23] BUS B-0016 deja 18 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:23] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:31:24] BUS B-0037 recoge 31 pasajeros.
+[28-04-2024 19:31:24] BUS B-0037 viajando al aeropuerto.
+[28-04-2024 19:31:24] BUS B-0020 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:24] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:31:24] Bus 41 creado, va a Prat. Su id es B-0041
+[28-04-2024 19:31:24] BUS B-0041 llega a la ciudad.
+[28-04-2024 19:31:24] BUS B-0039 recoge 44 pasajeros.
+[28-04-2024 19:31:24] BUS B-0039 viajando al aeropuerto.
+[28-04-2024 19:31:24] BUS B-0038 recoge 13 pasajeros.
+[28-04-2024 19:31:24] BUS B-0038 viajando al aeropuerto.
+[28-04-2024 19:31:24] BUS B-0036 recoge 30 pasajeros.
+[28-04-2024 19:31:24] BUS B-0036 viajando al aeropuerto.
+[28-04-2024 19:31:24] BUS B-0008 recoge 40 pasajeros.
+[28-04-2024 19:31:24] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:31:24] BUS B-0024 se llena.
+[28-04-2024 19:31:24] BUS B-0024 viajando a la ciudad.
+[28-04-2024 19:31:24] BUS B-0002 recoge 44 pasajeros.
+[28-04-2024 19:31:24] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:31:25] Bus 42 creado, va a Barajas. Su id es B-0042
+[28-04-2024 19:31:25] BUS B-0042 llega a la ciudad.
+[28-04-2024 19:31:25] BUS B-0011 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:25] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:31:25] BUS B-0018 se llena.
+[28-04-2024 19:31:25] BUS B-0018 viajando a la ciudad.
+[28-04-2024 19:31:25] BUS B-0023 se llena.
+[28-04-2024 19:31:25] BUS B-0023 viajando a la ciudad.
+[28-04-2024 19:31:25] BUS B-0035 recoge 18 pasajeros.
+[28-04-2024 19:31:25] BUS B-0035 viajando al aeropuerto.
+[28-04-2024 19:31:25] Bus 43 creado, va a Prat. Su id es B-0043
+[28-04-2024 19:31:25] BUS B-0043 llega a la ciudad.
+[28-04-2024 19:31:25] BUS B-0021 se llena.
+[28-04-2024 19:31:25] BUS B-0021 viajando a la ciudad.
+[28-04-2024 19:31:25] BUS B-0009 recoge 16 pasajeros.
+[28-04-2024 19:31:25] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:31:25] BUS B-0014 recoge 20 pasajeros.
+[28-04-2024 19:31:25] BUS B-0014 viajando al aeropuerto.
+[28-04-2024 19:31:26] BUS B-0022 se llena.
+[28-04-2024 19:31:26] BUS B-0022 viajando a la ciudad.
+[28-04-2024 19:31:26] BUS B-0000 deja 15 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:26] BUS B-0005 recoge 1 pasajeros.
+[28-04-2024 19:31:26] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:31:26] Bus 44 creado, va a Barajas. Su id es B-0044
+[28-04-2024 19:31:26] BUS B-0044 llega a la ciudad.
+[28-04-2024 19:31:26] BUS B-0028 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:26] BUS B-0006 recoge 12 pasajeros.
+[28-04-2024 19:31:26] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:31:26] BUS B-0011 recoge 44 pasajeros.
+[28-04-2024 19:31:26] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:31:26] BUS B-0001 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:26] BUS B-0019 se llena.
+[28-04-2024 19:31:26] BUS B-0019 viajando a la ciudad.
+[28-04-2024 19:31:26] Bus 45 creado, va a Prat. Su id es B-0045
+[28-04-2024 19:31:26] BUS B-0045 llega a la ciudad.
+[28-04-2024 19:31:26] BUS B-0041 recoge 24 pasajeros.
+[28-04-2024 19:31:26] BUS B-0041 viajando al aeropuerto.
+[28-04-2024 19:31:26] BUS B-0010 deja 2 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:26] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:31:26] BUS B-0025 se llena.
+[28-04-2024 19:31:26] BUS B-0025 viajando a la ciudad.
+[28-04-2024 19:31:27] BUS B-0027 se llena.
+[28-04-2024 19:31:27] BUS B-0027 viajando a la ciudad.
+[28-04-2024 19:31:27] BUS B-0007 deja 26 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:27] BUS B-0040 recoge 35 pasajeros.
+[28-04-2024 19:31:27] BUS B-0040 viajando al aeropuerto.
+[28-04-2024 19:31:27] BUS B-0012 deja 45 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:27] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:31:27] Bus 46 creado, va a Barajas. Su id es B-0046
+[28-04-2024 19:31:27] BUS B-0046 llega a la ciudad.
+[28-04-2024 19:31:27] BUS B-0026 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:27] BUS B-0020 recoge 17 pasajeros.
+[28-04-2024 19:31:27] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:31:28] BUS B-0015 deja 50 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:28] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:31:28] BUS B-0004 se llena.
+[28-04-2024 19:31:28] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:31:28] Bus 47 creado, va a Prat. Su id es B-0047
+[28-04-2024 19:31:28] BUS B-0047 llega a la ciudad.
+[28-04-2024 19:31:28] BUS B-0033 deja 31 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:29] Bus 48 creado, va a Barajas. Su id es B-0048
+[28-04-2024 19:31:29] BUS B-0048 llega a la ciudad.
+[28-04-2024 19:31:29] BUS B-0000 se llena.
+[28-04-2024 19:31:29] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:31:29] BUS B-0028 se llena.
+[28-04-2024 19:31:29] BUS B-0028 viajando a la ciudad.
+[28-04-2024 19:31:29] BUS B-0042 recoge 20 pasajeros.
+[28-04-2024 19:31:29] BUS B-0042 viajando al aeropuerto.
+[28-04-2024 19:31:29] BUS B-0016 recoge 48 pasajeros.
+[28-04-2024 19:31:29] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:31:29] BUS B-0012 recoge 46 pasajeros.
+[28-04-2024 19:31:29] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:31:29] Bus 49 creado, va a Prat. Su id es B-0049
+[28-04-2024 19:31:29] BUS B-0049 llega a la ciudad.
+[28-04-2024 19:31:30] BUS B-0046 recoge 36 pasajeros.
+[28-04-2024 19:31:30] BUS B-0046 viajando al aeropuerto.
+[28-04-2024 19:31:30] BUS B-0001 se llena.
+[28-04-2024 19:31:30] BUS B-0001 viajando a la ciudad.
+[28-04-2024 19:31:30] BUS B-0030 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:30] Bus 50 creado, va a Barajas. Su id es B-0050
+[28-04-2024 19:31:30] BUS B-0050 llega a la ciudad.
+[28-04-2024 19:31:30] BUS B-0002 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:30] BUS B-0043 recoge 26 pasajeros.
+[28-04-2024 19:31:30] BUS B-0043 viajando al aeropuerto.
+[28-04-2024 19:31:31] BUS B-0045 recoge 39 pasajeros.
+[28-04-2024 19:31:31] BUS B-0045 viajando al aeropuerto.
+[28-04-2024 19:31:31] BUS B-0003 deja 14 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:31] BUS B-0013 deja 35 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:31] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:31:31] Bus 51 creado, va a Prat. Su id es B-0051
+[28-04-2024 19:31:31] BUS B-0051 llega a la ciudad.
+[28-04-2024 19:31:31] BUS B-0029 deja 23 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:31] BUS B-0034 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:31] BUS B-0049 recoge 20 pasajeros.
+[28-04-2024 19:31:31] BUS B-0049 viajando al aeropuerto.
+[28-04-2024 19:31:31] BUS B-0022 deja 18 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:31] BUS B-0022 llega a la ciudad.
+[28-04-2024 19:31:32] BUS B-0010 recoge 35 pasajeros.
+[28-04-2024 19:31:32] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:31:32] BUS B-0044 recoge 7 pasajeros.
+[28-04-2024 19:31:32] BUS B-0044 viajando al aeropuerto.
+[28-04-2024 19:31:32] BUS B-0032 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:32] Bus 52 creado, va a Barajas. Su id es B-0052
+[28-04-2024 19:31:32] BUS B-0052 llega a la ciudad.
+[28-04-2024 19:31:32] BUS B-0031 deja 5 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:32] BUS B-0019 deja 44 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:32] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:31:32] BUS B-0051 recoge 11 pasajeros.
+[28-04-2024 19:31:32] BUS B-0051 viajando al aeropuerto.
+[28-04-2024 19:31:32] BUS B-0039 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:32] BUS B-0025 deja 49 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:32] BUS B-0025 llega a la ciudad.
+[28-04-2024 19:31:33] Bus 53 creado, va a Prat. Su id es B-0053
+[28-04-2024 19:31:33] BUS B-0053 llega a la ciudad.
+[28-04-2024 19:31:33] BUS B-0040 deja 35 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:33] BUS B-0026 se llena.
+[28-04-2024 19:31:33] BUS B-0026 viajando a la ciudad.
+[28-04-2024 19:31:33] BUS B-0036 deja 30 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:33] BUS B-0003 se llena.
+[28-04-2024 19:31:33] BUS B-0003 viajando a la ciudad.
+[28-04-2024 19:31:33] BUS B-0007 se llena.
+[28-04-2024 19:31:33] BUS B-0007 viajando a la ciudad.
+[28-04-2024 19:31:33] BUS B-0022 recoge 43 pasajeros.
+[28-04-2024 19:31:33] BUS B-0022 viajando al aeropuerto.
+[28-04-2024 19:31:33] BUS B-0050 recoge 24 pasajeros.
+[28-04-2024 19:31:33] BUS B-0050 viajando al aeropuerto.
+[28-04-2024 19:31:33] Bus 54 creado, va a Barajas. Su id es B-0054
+[28-04-2024 19:31:33] BUS B-0054 llega a la ciudad.
+[28-04-2024 19:31:33] BUS B-0033 se llena.
+[28-04-2024 19:31:33] BUS B-0033 viajando a la ciudad.
+[28-04-2024 19:31:33] BUS B-0020 deja 17 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:33] BUS B-0006 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0015 recoge 15 pasajeros.
+[28-04-2024 19:31:34] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:31:34] BUS B-0047 recoge 41 pasajeros.
+[28-04-2024 19:31:34] BUS B-0047 viajando al aeropuerto.
+[28-04-2024 19:31:34] BUS B-0037 deja 31 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0005 deja 1 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0017 deja 43 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:34] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:31:34] BUS B-0052 recoge 31 pasajeros.
+[28-04-2024 19:31:34] BUS B-0052 viajando al aeropuerto.
+[28-04-2024 19:31:34] Bus 55 creado, va a Prat. Su id es B-0055
+[28-04-2024 19:31:34] BUS B-0055 llega a la ciudad.
+[28-04-2024 19:31:34] BUS B-0002 se llena.
+[28-04-2024 19:31:34] BUS B-0002 viajando a la ciudad.
+[28-04-2024 19:31:34] BUS B-0048 recoge 48 pasajeros.
+[28-04-2024 19:31:34] BUS B-0048 viajando al aeropuerto.
+[28-04-2024 19:31:34] BUS B-0035 deja 18 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0039 se llena.
+[28-04-2024 19:31:34] BUS B-0039 viajando a la ciudad.
+[28-04-2024 19:31:34] BUS B-0008 deja 40 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0023 deja 15 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:34] BUS B-0023 llega a la ciudad.
+[28-04-2024 19:31:34] BUS B-0011 deja 44 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:34] BUS B-0027 deja 29 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:34] BUS B-0027 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0038 deja 13 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:35] BUS B-0032 se llena.
+[28-04-2024 19:31:35] BUS B-0032 viajando a la ciudad.
+[28-04-2024 19:31:35] BUS B-0024 deja 3 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:35] BUS B-0024 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0034 se llena.
+[28-04-2024 19:31:35] BUS B-0034 viajando a la ciudad.
+[28-04-2024 19:31:35] BUS B-0030 se llena.
+[28-04-2024 19:31:35] BUS B-0030 viajando a la ciudad.
+[28-04-2024 19:31:35] BUS B-0000 deja 28 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:35] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:31:35] Bus 56 creado, va a Barajas. Su id es B-0056
+[28-04-2024 19:31:35] BUS B-0056 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0036 se llena.
+[28-04-2024 19:31:35] BUS B-0036 viajando a la ciudad.
+[28-04-2024 19:31:35] BUS B-0041 deja 24 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:35] BUS B-0009 deja 16 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:35] BUS B-0018 deja 19 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:35] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0028 deja 9 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:35] BUS B-0028 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0004 deja 17 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:35] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:31:35] BUS B-0040 se llena.
+[28-04-2024 19:31:35] BUS B-0040 viajando a la ciudad.
+[28-04-2024 19:31:35] BUS B-0016 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:36] BUS B-0013 recoge 38 pasajeros.
+[28-04-2024 19:31:36] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:31:36] BUS B-0014 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:36] Bus 57 creado, va a Prat. Su id es B-0057
+[28-04-2024 19:31:36] BUS B-0057 llega a la ciudad.
+[28-04-2024 19:31:36] BUS B-0043 deja 26 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:36] BUS B-0029 se llena.
+[28-04-2024 19:31:36] BUS B-0029 viajando a la ciudad.
+[28-04-2024 19:31:36] BUS B-0021 deja 10 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:36] BUS B-0021 llega a la ciudad.
+[28-04-2024 19:31:36] BUS B-0005 se llena.
+[28-04-2024 19:31:36] BUS B-0005 viajando a la ciudad.
+[28-04-2024 19:31:36] BUS B-0001 deja 31 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:36] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:31:36] BUS B-0017 recoge 19 pasajeros.
+[28-04-2024 19:31:36] BUS B-0017 viajando al aeropuerto.
+[28-04-2024 19:31:36] BUS B-0049 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:36] Bus 58 creado, va a Barajas. Su id es B-0058
+[28-04-2024 19:31:36] BUS B-0058 llega a la ciudad.
+[28-04-2024 19:31:36] BUS B-0027 recoge 38 pasajeros.
+[28-04-2024 19:31:36] BUS B-0027 viajando al aeropuerto.
+[28-04-2024 19:31:36] BUS B-0046 deja 36 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:36] BUS B-0025 recoge 20 pasajeros.
+[28-04-2024 19:31:36] BUS B-0025 viajando al aeropuerto.
+[28-04-2024 19:31:36] BUS B-0006 se llena.
+[28-04-2024 19:31:36] BUS B-0006 viajando a la ciudad.
+[28-04-2024 19:31:37] Bus 59 creado, va a Prat. Su id es B-0059
+[28-04-2024 19:31:37] BUS B-0059 llega a la ciudad.
+[28-04-2024 19:31:37] BUS B-0004 recoge 9 pasajeros.
+[28-04-2024 19:31:37] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:31:37] BUS B-0056 recoge 26 pasajeros.
+[28-04-2024 19:31:37] BUS B-0056 viajando al aeropuerto.
+[28-04-2024 19:31:37] BUS B-0023 recoge 4 pasajeros.
+[28-04-2024 19:31:37] BUS B-0023 viajando al aeropuerto.
+[28-04-2024 19:31:37] BUS B-0031 se llena.
+[28-04-2024 19:31:37] BUS B-0031 viajando a la ciudad.
+[28-04-2024 19:31:37] BUS B-0019 recoge 7 pasajeros.
+[28-04-2024 19:31:37] BUS B-0019 viajando al aeropuerto.
+[28-04-2024 19:31:37] Bus 60 creado, va a Barajas. Su id es B-0060
+[28-04-2024 19:31:37] BUS B-0060 llega a la ciudad.
+[28-04-2024 19:31:38] BUS B-0053 recoge 41 pasajeros.
+[28-04-2024 19:31:38] BUS B-0053 viajando al aeropuerto.
+[28-04-2024 19:31:38] BUS B-0037 se llena.
+[28-04-2024 19:31:38] BUS B-0037 viajando a la ciudad.
+[28-04-2024 19:31:38] BUS B-0012 deja 46 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:38] BUS B-0045 deja 39 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:38] BUS B-0028 recoge 35 pasajeros.
+[28-04-2024 19:31:38] BUS B-0028 viajando al aeropuerto.
+[28-04-2024 19:31:38] BUS B-0011 se llena.
+[28-04-2024 19:31:38] BUS B-0011 viajando a la ciudad.
+[28-04-2024 19:31:38] Bus 61 creado, va a Prat. Su id es B-0061
+[28-04-2024 19:31:38] BUS B-0061 llega a la ciudad.
+[28-04-2024 19:31:38] BUS B-0018 recoge 38 pasajeros.
+[28-04-2024 19:31:38] BUS B-0018 viajando al aeropuerto.
+[28-04-2024 19:31:38] BUS B-0007 deja 19 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:38] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:31:39] BUS B-0047 deja 41 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:39] BUS B-0020 se llena.
+[28-04-2024 19:31:39] BUS B-0020 viajando a la ciudad.
+[28-04-2024 19:31:39] BUS B-0041 se llena.
+[28-04-2024 19:31:39] BUS B-0041 viajando a la ciudad.
+[28-04-2024 19:31:39] BUS B-0024 recoge 41 pasajeros.
+[28-04-2024 19:31:39] BUS B-0024 viajando al aeropuerto.
+[28-04-2024 19:31:39] BUS B-0054 recoge 13 pasajeros.
+[28-04-2024 19:31:39] BUS B-0054 viajando al aeropuerto.
+[28-04-2024 19:31:39] BUS B-0042 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:39] BUS B-0015 deja 15 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:39] BUS B-0057 recoge 6 pasajeros.
+[28-04-2024 19:31:39] BUS B-0057 viajando al aeropuerto.
+[28-04-2024 19:31:39] BUS B-0038 se llena.
+[28-04-2024 19:31:39] BUS B-0038 viajando a la ciudad.
+[28-04-2024 19:31:39] Bus 62 creado, va a Barajas. Su id es B-0062
+[28-04-2024 19:31:39] BUS B-0062 llega a la ciudad.
+[28-04-2024 19:31:39] BUS B-0035 se llena.
+[28-04-2024 19:31:39] BUS B-0035 viajando a la ciudad.
+[28-04-2024 19:31:39] BUS B-0049 se llena.
+[28-04-2024 19:31:39] BUS B-0049 viajando a la ciudad.
+[28-04-2024 19:31:39] BUS B-0051 deja 11 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:39] BUS B-0050 deja 24 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:39] BUS B-0010 deja 35 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:40] BUS B-0007 recoge 46 pasajeros.
+[28-04-2024 19:31:40] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:31:40] BUS B-0009 se llena.
+[28-04-2024 19:31:40] BUS B-0009 viajando a la ciudad.
+[28-04-2024 19:31:40] BUS B-0055 recoge 27 pasajeros.
+[28-04-2024 19:31:40] BUS B-0055 viajando al aeropuerto.
+[28-04-2024 19:31:40] BUS B-0026 deja 33 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:40] BUS B-0026 llega a la ciudad.
+[28-04-2024 19:31:40] BUS B-0008 se llena.
+[28-04-2024 19:31:40] BUS B-0008 viajando a la ciudad.
+[28-04-2024 19:31:40] Bus 63 creado, va a Prat. Su id es B-0063
+[28-04-2024 19:31:40] BUS B-0063 llega a la ciudad.
+[28-04-2024 19:31:40] BUS B-0052 deja 31 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:40] BUS B-0059 recoge 37 pasajeros.
+[28-04-2024 19:31:40] BUS B-0059 viajando al aeropuerto.
+[28-04-2024 19:31:40] BUS B-0033 deja 35 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:40] BUS B-0033 llega a la ciudad.
+[28-04-2024 19:31:40] BUS B-0036 deja 22 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:40] BUS B-0036 llega a la ciudad.
+[28-04-2024 19:31:40] BUS B-0014 se llena.
+[28-04-2024 19:31:40] BUS B-0014 viajando a la ciudad.
+[28-04-2024 19:31:41] BUS B-0000 recoge 27 pasajeros.
+[28-04-2024 19:31:41] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:31:41] BUS B-0002 deja 23 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:41] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:31:41] Bus 64 creado, va a Barajas. Su id es B-0064
+[28-04-2024 19:31:41] BUS B-0064 llega a la ciudad.
+[28-04-2024 19:31:41] BUS B-0045 se llena.
+[28-04-2024 19:31:41] BUS B-0045 viajando a la ciudad.
+[28-04-2024 19:31:41] BUS B-0016 se llena.
+[28-04-2024 19:31:41] BUS B-0016 viajando a la ciudad.
+[28-04-2024 19:31:41] BUS B-0043 se llena.
+[28-04-2024 19:31:41] BUS B-0043 viajando a la ciudad.
+[28-04-2024 19:31:41] BUS B-0058 recoge 9 pasajeros.
+[28-04-2024 19:31:41] BUS B-0058 viajando al aeropuerto.
+[28-04-2024 19:31:41] BUS B-0046 se llena.
+[28-04-2024 19:31:41] BUS B-0046 viajando a la ciudad.
+[28-04-2024 19:31:41] BUS B-0030 deja 5 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:41] BUS B-0030 llega a la ciudad.
+[28-04-2024 19:31:41] BUS B-0006 deja 38 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:41] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:31:41] Bus 65 creado, va a Prat. Su id es B-0065
+[28-04-2024 19:31:41] BUS B-0065 llega a la ciudad.
+[28-04-2024 19:31:41] BUS B-0012 se llena.
+[28-04-2024 19:31:41] BUS B-0012 viajando a la ciudad.
+[28-04-2024 19:31:42] BUS B-0039 deja 19 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:42] BUS B-0039 llega a la ciudad.
+[28-04-2024 19:31:42] BUS B-0026 recoge 21 pasajeros.
+[28-04-2024 19:31:42] BUS B-0026 viajando al aeropuerto.
+[28-04-2024 19:31:42] BUS B-0021 recoge 29 pasajeros.
+[28-04-2024 19:31:42] BUS B-0021 viajando al aeropuerto.
+[28-04-2024 19:31:42] BUS B-0001 recoge 26 pasajeros.
+[28-04-2024 19:31:42] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:31:42] Bus 66 creado, va a Barajas. Su id es B-0066
+[28-04-2024 19:31:42] BUS B-0066 llega a la ciudad.
+[28-04-2024 19:31:42] BUS B-0044 deja 7 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:42] BUS B-0003 deja 50 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:42] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:31:42] BUS B-0064 recoge 43 pasajeros.
+[28-04-2024 19:31:42] BUS B-0064 viajando al aeropuerto.
+[28-04-2024 19:31:42] BUS B-0004 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:42] BUS B-0063 recoge 49 pasajeros.
+[28-04-2024 19:31:42] BUS B-0063 viajando al aeropuerto.
+[28-04-2024 19:31:42] BUS B-0032 deja 33 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:42] BUS B-0032 llega a la ciudad.
+[28-04-2024 19:31:42] BUS B-0036 recoge 43 pasajeros.
+[28-04-2024 19:31:42] BUS B-0036 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0039 recoge 12 pasajeros.
+[28-04-2024 19:31:43] BUS B-0039 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0048 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:43] BUS B-0030 recoge 25 pasajeros.
+[28-04-2024 19:31:43] BUS B-0030 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0033 recoge 16 pasajeros.
+[28-04-2024 19:31:43] BUS B-0033 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0002 recoge 30 pasajeros.
+[28-04-2024 19:31:43] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:31:43] Bus 67 creado, va a Prat. Su id es B-0067
+[28-04-2024 19:31:43] BUS B-0067 llega a la ciudad.
+[28-04-2024 19:31:43] BUS B-0022 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:43] BUS B-0034 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:43] BUS B-0034 llega a la ciudad.
+[28-04-2024 19:31:43] BUS B-0060 recoge 8 pasajeros.
+[28-04-2024 19:31:43] BUS B-0060 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0061 recoge 11 pasajeros.
+[28-04-2024 19:31:43] BUS B-0061 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0066 recoge 11 pasajeros.
+[28-04-2024 19:31:43] BUS B-0066 viajando al aeropuerto.
+[28-04-2024 19:31:43] BUS B-0010 se llena.
+[28-04-2024 19:31:43] BUS B-0010 viajando a la ciudad.
+[28-04-2024 19:31:44] Bus 68 creado, va a Barajas. Su id es B-0068
+[28-04-2024 19:31:44] BUS B-0068 llega a la ciudad.
+[28-04-2024 19:31:44] BUS B-0052 se llena.
+[28-04-2024 19:31:44] BUS B-0052 viajando a la ciudad.
+[28-04-2024 19:31:44] BUS B-0042 se llena.
+[28-04-2024 19:31:44] BUS B-0042 viajando a la ciudad.
+[28-04-2024 19:31:44] BUS B-0057 deja 6 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:44] BUS B-0015 se llena.
+[28-04-2024 19:31:44] BUS B-0015 viajando a la ciudad.
+[28-04-2024 19:31:44] BUS B-0024 deja 41 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:44] BUS B-0004 se llena.
+[28-04-2024 19:31:44] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:31:44] BUS B-0062 recoge 18 pasajeros.
+[28-04-2024 19:31:44] BUS B-0062 viajando al aeropuerto.
+[28-04-2024 19:31:45] BUS B-0065 recoge 44 pasajeros.
+[28-04-2024 19:31:45] BUS B-0065 viajando al aeropuerto.
+[28-04-2024 19:31:45] BUS B-0029 deja 43 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:45] BUS B-0029 llega a la ciudad.
+[28-04-2024 19:31:45] BUS B-0040 deja 9 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:45] BUS B-0040 llega a la ciudad.
+[28-04-2024 19:31:45] BUS B-0047 se llena.
+[28-04-2024 19:31:45] BUS B-0047 viajando a la ciudad.
+[28-04-2024 19:31:45] BUS B-0041 deja 38 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:45] BUS B-0041 llega a la ciudad.
+[28-04-2024 19:31:45] Bus 69 creado, va a Prat. Su id es B-0069
+[28-04-2024 19:31:45] BUS B-0069 llega a la ciudad.
+[28-04-2024 19:31:45] BUS B-0027 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:45] BUS B-0050 se llena.
+[28-04-2024 19:31:45] BUS B-0050 viajando a la ciudad.
+[28-04-2024 19:31:45] BUS B-0051 se llena.
+[28-04-2024 19:31:45] BUS B-0051 viajando a la ciudad.
+[28-04-2024 19:31:45] BUS B-0056 deja 26 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:45] BUS B-0005 deja 46 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:45] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:31:45] BUS B-0003 recoge 22 pasajeros.
+[28-04-2024 19:31:45] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:31:45] BUS B-0011 deja 5 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:45] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:31:45] BUS B-0034 recoge 31 pasajeros.
+[28-04-2024 19:31:45] BUS B-0034 viajando al aeropuerto.
+[28-04-2024 19:31:45] BUS B-0053 deja 41 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] Bus 70 creado, va a Barajas. Su id es B-0070
+[28-04-2024 19:31:46] BUS B-0070 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0025 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] BUS B-0037 deja 2 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:46] BUS B-0037 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0059 deja 37 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] BUS B-0049 deja 16 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:46] BUS B-0049 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0017 deja 19 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] BUS B-0019 deja 7 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] BUS B-0020 deja 42 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:46] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0043 deja 35 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:46] BUS B-0043 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0013 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:46] Bus 71 creado, va a Prat. Su id es B-0071
+[28-04-2024 19:31:46] BUS B-0071 llega a la ciudad.
+[28-04-2024 19:31:46] BUS B-0016 deja 18 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:46] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:31:47] BUS B-0044 se llena.
+[28-04-2024 19:31:47] BUS B-0044 viajando a la ciudad.
+[28-04-2024 19:31:47] BUS B-0068 recoge 49 pasajeros.
+[28-04-2024 19:31:47] BUS B-0068 viajando al aeropuerto.
+[28-04-2024 19:31:47] BUS B-0035 deja 30 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:47] BUS B-0035 llega a la ciudad.
+[28-04-2024 19:31:47] BUS B-0058 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:47] BUS B-0057 se llena.
+[28-04-2024 19:31:47] BUS B-0057 viajando a la ciudad.
+[28-04-2024 19:31:47] BUS B-0000 deja 27 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:47] BUS B-0067 recoge 28 pasajeros.
+[28-04-2024 19:31:47] BUS B-0067 viajando al aeropuerto.
+[28-04-2024 19:31:47] Bus 72 creado, va a Barajas. Su id es B-0072
+[28-04-2024 19:31:47] BUS B-0072 llega a la ciudad.
+[28-04-2024 19:31:47] BUS B-0006 recoge 50 pasajeros.
+[28-04-2024 19:31:47] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:31:47] BUS B-0070 recoge 17 pasajeros.
+[28-04-2024 19:31:47] BUS B-0070 viajando al aeropuerto.
+[28-04-2024 19:31:47] BUS B-0027 se llena.
+[28-04-2024 19:31:47] BUS B-0027 viajando a la ciudad.
+[28-04-2024 19:31:47] BUS B-0028 deja 35 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:47] BUS B-0055 deja 27 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:48] BUS B-0022 se llena.
+[28-04-2024 19:31:48] BUS B-0022 viajando a la ciudad.
+[28-04-2024 19:31:48] Bus 73 creado, va a Prat. Su id es B-0073
+[28-04-2024 19:31:48] BUS B-0073 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0056 se llena.
+[28-04-2024 19:31:48] BUS B-0056 viajando a la ciudad.
+[28-04-2024 19:31:48] BUS B-0032 recoge 28 pasajeros.
+[28-04-2024 19:31:48] BUS B-0032 viajando al aeropuerto.
+[28-04-2024 19:31:48] BUS B-0008 deja 39 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:48] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0048 se llena.
+[28-04-2024 19:31:48] BUS B-0048 viajando a la ciudad.
+[28-04-2024 19:31:48] BUS B-0023 deja 4 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:48] BUS B-0012 deja 32 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:48] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0024 se llena.
+[28-04-2024 19:31:48] BUS B-0024 viajando a la ciudad.
+[28-04-2024 19:31:48] BUS B-0026 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:48] BUS B-0031 deja 25 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:48] BUS B-0031 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0036 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:48] BUS B-0029 recoge 11 pasajeros.
+[28-04-2024 19:31:48] BUS B-0029 viajando al aeropuerto.
+[28-04-2024 19:31:48] Bus 74 creado, va a Barajas. Su id es B-0074
+[28-04-2024 19:31:48] BUS B-0074 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0072 recoge 3 pasajeros.
+[28-04-2024 19:31:48] BUS B-0072 viajando al aeropuerto.
+[28-04-2024 19:31:48] BUS B-0038 deja 11 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:48] BUS B-0038 llega a la ciudad.
+[28-04-2024 19:31:48] BUS B-0021 deja 29 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:48] BUS B-0041 recoge 10 pasajeros.
+[28-04-2024 19:31:48] BUS B-0041 viajando al aeropuerto.
+[28-04-2024 19:31:49] BUS B-0045 deja 28 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:49] BUS B-0045 llega a la ciudad.
+[28-04-2024 19:31:49] BUS B-0060 deja 8 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:49] BUS B-0018 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:49] Bus 75 creado, va a Prat. Su id es B-0075
+[28-04-2024 19:31:49] BUS B-0075 llega a la ciudad.
+[28-04-2024 19:31:49] BUS B-0069 recoge 43 pasajeros.
+[28-04-2024 19:31:49] BUS B-0069 viajando al aeropuerto.
+[28-04-2024 19:31:49] BUS B-0040 recoge 32 pasajeros.
+[28-04-2024 19:31:49] BUS B-0040 viajando al aeropuerto.
+[28-04-2024 19:31:49] BUS B-0020 recoge 25 pasajeros.
+[28-04-2024 19:31:49] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:31:49] BUS B-0064 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:49] BUS B-0025 se llena.
+[28-04-2024 19:31:49] BUS B-0053 se llena.
+[28-04-2024 19:31:49] BUS B-0025 viajando a la ciudad.
+[28-04-2024 19:31:49] BUS B-0053 viajando a la ciudad.
+[28-04-2024 19:31:49] BUS B-0008 recoge 35 pasajeros.
+[28-04-2024 19:31:49] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0000 se llena.
+[28-04-2024 19:31:50] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:31:50] BUS B-0011 recoge 29 pasajeros.
+[28-04-2024 19:31:50] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0054 deja 13 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:50] BUS B-0005 recoge 44 pasajeros.
+[28-04-2024 19:31:50] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0035 recoge 49 pasajeros.
+[28-04-2024 19:31:50] BUS B-0035 viajando al aeropuerto.
+[28-04-2024 19:31:50] Bus 76 creado, va a Barajas. Su id es B-0076
+[28-04-2024 19:31:50] BUS B-0076 llega a la ciudad.
+[28-04-2024 19:31:50] BUS B-0002 deja 30 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:50] BUS B-0043 recoge 43 pasajeros.
+[28-04-2024 19:31:50] BUS B-0043 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0039 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:50] BUS B-0007 deja 46 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:50] BUS B-0019 se llena.
+[28-04-2024 19:31:50] BUS B-0019 viajando a la ciudad.
+[28-04-2024 19:31:50] BUS B-0049 recoge 49 pasajeros.
+[28-04-2024 19:31:50] BUS B-0049 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0010 deja 20 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:50] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:31:50] BUS B-0038 recoge 29 pasajeros.
+[28-04-2024 19:31:50] BUS B-0038 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0074 recoge 41 pasajeros.
+[28-04-2024 19:31:50] BUS B-0074 viajando al aeropuerto.
+[28-04-2024 19:31:50] BUS B-0028 se llena.
+[28-04-2024 19:31:50] BUS B-0028 viajando a la ciudad.
+[28-04-2024 19:31:50] BUS B-0009 deja 31 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:50] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:31:50] BUS B-0017 se llena.
+[28-04-2024 19:31:50] BUS B-0017 viajando a la ciudad.
+[28-04-2024 19:31:51] BUS B-0014 deja 16 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:31:51] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:31:51] BUS B-0063 deja 49 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:51] BUS B-0016 recoge 35 pasajeros.
+[28-04-2024 19:31:51] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:31:51] Bus 77 creado, va a Prat. Su id es B-0077
+[28-04-2024 19:31:51] BUS B-0077 llega a la ciudad.
+[28-04-2024 19:31:51] BUS B-0023 se llena.
+[28-04-2024 19:31:51] BUS B-0023 viajando a la ciudad.
+[28-04-2024 19:31:51] BUS B-0026 se llena.
+[28-04-2024 19:31:51] BUS B-0026 viajando a la ciudad.
+[28-04-2024 19:31:51] BUS B-0062 deja 18 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:31:51] BUS B-0045 recoge 39 pasajeros.
+[28-04-2024 19:31:51] BUS B-0045 viajando al aeropuerto.
+[28-04-2024 19:31:51] BUS B-0036 se llena.
+[28-04-2024 19:31:51] BUS B-0036 viajando a la ciudad.
+[28-04-2024 19:31:51] BUS B-0031 recoge 2 pasajeros.
+[28-04-2024 19:31:51] BUS B-0031 viajando al aeropuerto.
+[28-04-2024 19:31:51] BUS B-0037 recoge 7 pasajeros.
+[28-04-2024 19:31:51] BUS B-0037 viajando al aeropuerto.
+[28-04-2024 19:34:06] BUS 0 creado, va a Barajas. Su id es B-0000
+[28-04-2024 19:34:06] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:34:07] BUS 1 creado, va a Prat. Su id es B-0001
+[28-04-2024 19:34:07] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:34:08] BUS 2 creado, va a Barajas. Su id es B-0002
+[28-04-2024 19:34:08] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:34:08] BUS B-0001 recoge 49 pasajeros.
+[28-04-2024 19:34:08] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:34:08] BUS 3 creado, va a Prat. Su id es B-0003
+[28-04-2024 19:34:08] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:34:09] BUS 4 creado, va a Barajas. Su id es B-0004
+[28-04-2024 19:34:09] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:34:10] BUS B-0002 recoge 10 pasajeros.
+[28-04-2024 19:34:10] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:34:10] BUS B-0000 recoge 32 pasajeros.
+[28-04-2024 19:34:10] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:34:10] BUS 5 creado, va a Prat. Su id es B-0005
+[28-04-2024 19:34:10] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:34:10] BUS B-0003 recoge 1 pasajeros.
+[28-04-2024 19:34:10] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:34:11] BUS 6 creado, va a Barajas. Su id es B-0006
+[28-04-2024 19:34:11] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:34:12] BUS 7 creado, va a Prat. Su id es B-0007
+[28-04-2024 19:34:12] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:34:12] BUS B-0004 recoge 41 pasajeros.
+[28-04-2024 19:34:12] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:34:12] BUS 8 creado, va a Barajas. Su id es B-0008
+[28-04-2024 19:34:12] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:34:13] BUS 9 creado, va a Prat. Su id es B-0009
+[28-04-2024 19:34:13] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:34:13] BUS B-0007 recoge 12 pasajeros.
+[28-04-2024 19:34:13] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:34:13] BUS B-0001 deja 49 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:14] BUS B-0006 recoge 42 pasajeros.
+[28-04-2024 19:34:14] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:34:14] BUS 10 creado, va a Barajas. Su id es B-0010
+[28-04-2024 19:34:14] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:34:15] BUS 11 creado, va a Prat. Su id es B-0011
+[28-04-2024 19:34:15] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:34:15] BUS 12 creado, va a Barajas. Su id es B-0012
+[28-04-2024 19:34:15] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:34:16] BUS B-0005 recoge 21 pasajeros.
+[28-04-2024 19:34:16] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:34:16] BUS 13 creado, va a Prat. Su id es B-0013
+[28-04-2024 19:34:16] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:34:17] BUS 14 creado, va a Barajas. Su id es B-0014
+[28-04-2024 19:34:17] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:34:17] BUS B-0001 se llena.
+[28-04-2024 19:34:17] BUS B-0001 viajando a la ciudad.
+[28-04-2024 19:34:17] BUS B-0008 recoge 18 pasajeros.
+[28-04-2024 19:34:17] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:34:18] BUS B-0009 recoge 43 pasajeros.
+[28-04-2024 19:34:18] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:34:18] BUS B-0010 recoge 22 pasajeros.
+[28-04-2024 19:34:18] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:34:18] BUS 15 creado, va a Prat. Su id es B-0015
+[28-04-2024 19:34:18] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:34:19] BUS B-0003 deja 1 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:19] BUS 16 creado, va a Barajas. Su id es B-0016
+[28-04-2024 19:34:19] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:34:19] BUS B-0000 deja 32 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:19] BUS B-0004 deja 41 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:19] BUS 17 creado, va a Prat. Su id es B-0017
+[28-04-2024 19:34:19] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:34:19] BUS B-0007 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:20] BUS B-0012 recoge 5 pasajeros.
+[28-04-2024 19:34:20] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:34:20] BUS 18 creado, va a Barajas. Su id es B-0018
+[28-04-2024 19:34:20] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:34:21] BUS B-0011 recoge 37 pasajeros.
+[28-04-2024 19:34:21] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:34:21] BUS B-0002 deja 10 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:21] BUS 19 creado, va a Prat. Su id es B-0019
+[28-04-2024 19:34:21] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:34:22] BUS B-0013 recoge 16 pasajeros.
+[28-04-2024 19:34:22] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:34:22] BUS B-0018 recoge 10 pasajeros.
+[28-04-2024 19:34:22] BUS B-0018 viajando al aeropuerto.
+[28-04-2024 19:34:22] BUS 20 creado, va a Barajas. Su id es B-0020
+[28-04-2024 19:34:22] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:34:22] BUS B-0017 recoge 25 pasajeros.
+[28-04-2024 19:34:22] BUS B-0017 viajando al aeropuerto.
+[28-04-2024 19:34:23] BUS B-0015 recoge 36 pasajeros.
+[28-04-2024 19:34:23] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:34:23] BUS 21 creado, va a Prat. Su id es B-0021
+[28-04-2024 19:34:23] BUS B-0021 llega a la ciudad.
+[28-04-2024 19:34:23] BUS B-0014 recoge 38 pasajeros.
+[28-04-2024 19:34:23] BUS B-0014 viajando al aeropuerto.
+[28-04-2024 19:34:23] BUS B-0003 se llena.
+[28-04-2024 19:34:23] BUS B-0003 viajando a la ciudad.
+[28-04-2024 19:34:23] BUS B-0016 recoge 39 pasajeros.
+[28-04-2024 19:34:23] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:34:23] BUS B-0006 deja 42 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:23] BUS B-0009 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:23] BUS 22 creado, va a Barajas. Su id es B-0022
+[28-04-2024 19:34:23] BUS B-0022 llega a la ciudad.
+[28-04-2024 19:34:24] BUS B-0000 se llena.
+[28-04-2024 19:34:24] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:34:24] BUS B-0021 recoge 40 pasajeros.
+[28-04-2024 19:34:24] BUS B-0021 viajando al aeropuerto.
+[28-04-2024 19:34:24] BUS 23 creado, va a Prat. Su id es B-0023
+[28-04-2024 19:34:24] BUS B-0023 llega a la ciudad.
+[28-04-2024 19:34:24] BUS B-0002 se llena.
+[28-04-2024 19:34:24] BUS B-0002 viajando a la ciudad.
+[28-04-2024 19:34:25] BUS B-0004 se llena.
+[28-04-2024 19:34:25] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:34:25] BUS 24 creado, va a Barajas. Su id es B-0024
+[28-04-2024 19:34:25] BUS B-0024 llega a la ciudad.
+[28-04-2024 19:34:25] BUS B-0007 se llena.
+[28-04-2024 19:34:25] BUS B-0007 viajando a la ciudad.
+[28-04-2024 19:34:26] BUS B-0001 deja 6 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:26] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:34:26] BUS 25 creado, va a Prat. Su id es B-0025
+[28-04-2024 19:34:26] BUS B-0025 llega a la ciudad.
+[28-04-2024 19:34:26] BUS B-0019 recoge 3 pasajeros.
+[28-04-2024 19:34:26] BUS B-0019 viajando al aeropuerto.
+[28-04-2024 19:34:26] BUS B-0020 recoge 38 pasajeros.
+[28-04-2024 19:34:26] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:34:26] BUS B-0005 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:26] BUS B-0024 recoge 38 pasajeros.
+[28-04-2024 19:34:26] BUS B-0024 viajando al aeropuerto.
+[28-04-2024 19:34:26] BUS B-0023 recoge 9 pasajeros.
+[28-04-2024 19:34:26] BUS B-0023 viajando al aeropuerto.
+[28-04-2024 19:34:26] BUS B-0011 deja 37 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:27] BUS 26 creado, va a Barajas. Su id es B-0026
+[28-04-2024 19:34:27] BUS B-0026 llega a la ciudad.
+[28-04-2024 19:34:27] BUS B-0008 deja 18 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:27] BUS B-0012 deja 5 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:27] BUS B-0010 deja 22 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:27] BUS B-0006 se llena.
+[28-04-2024 19:34:27] BUS B-0006 viajando a la ciudad.
+[28-04-2024 19:34:27] BUS 27 creado, va a Prat. Su id es B-0027
+[28-04-2024 19:34:27] BUS B-0027 llega a la ciudad.
+[28-04-2024 19:34:28] BUS B-0013 deja 16 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:28] BUS B-0017 deja 25 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:28] BUS 28 creado, va a Barajas. Su id es B-0028
+[28-04-2024 19:34:28] BUS B-0028 llega a la ciudad.
+[28-04-2024 19:34:29] BUS B-0009 se llena.
+[28-04-2024 19:34:29] BUS B-0009 viajando a la ciudad.
+[28-04-2024 19:34:29] BUS B-0022 recoge 43 pasajeros.
+[28-04-2024 19:34:29] BUS B-0022 viajando al aeropuerto.
+[28-04-2024 19:34:29] BUS B-0001 recoge 7 pasajeros.
+[28-04-2024 19:34:29] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:34:29] BUS B-0010 se llena.
+[28-04-2024 19:34:29] BUS B-0010 viajando a la ciudad.
+[28-04-2024 19:34:29] BUS 29 creado, va a Prat. Su id es B-0029
+[28-04-2024 19:34:29] BUS B-0029 llega a la ciudad.
+[28-04-2024 19:34:29] BUS B-0011 se llena.
+[28-04-2024 19:34:29] BUS B-0011 viajando a la ciudad.
+[28-04-2024 19:34:30] BUS 30 creado, va a Barajas. Su id es B-0030
+[28-04-2024 19:34:30] BUS B-0030 llega a la ciudad.
+[28-04-2024 19:34:30] BUS B-0002 deja 3 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:30] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:34:30] BUS B-0015 deja 36 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:30] BUS B-0013 se llena.
+[28-04-2024 19:34:30] BUS B-0013 viajando a la ciudad.
+[28-04-2024 19:34:30] BUS B-0021 deja 40 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:30] BUS B-0025 recoge 48 pasajeros.
+[28-04-2024 19:34:30] BUS B-0025 viajando al aeropuerto.
+[28-04-2024 19:34:31] BUS B-0003 deja 32 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:31] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:34:31] BUS 31 creado, va a Prat. Su id es B-0031
+[28-04-2024 19:34:31] BUS B-0031 llega a la ciudad.
+[28-04-2024 19:34:31] BUS B-0005 se llena.
+[28-04-2024 19:34:31] BUS B-0005 viajando a la ciudad.
+[28-04-2024 19:34:31] BUS B-0026 recoge 23 pasajeros.
+[28-04-2024 19:34:31] BUS B-0026 viajando al aeropuerto.
+[28-04-2024 19:34:31] BUS B-0016 deja 39 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:31] BUS B-0004 deja 34 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:31] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:34:31] BUS 32 creado, va a Barajas. Su id es B-0032
+[28-04-2024 19:34:31] BUS B-0032 llega a la ciudad.
+[28-04-2024 19:34:32] BUS B-0017 se llena.
+[28-04-2024 19:34:32] BUS B-0017 viajando a la ciudad.
+[28-04-2024 19:34:32] BUS B-0014 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:32] BUS B-0012 se llena.
+[28-04-2024 19:34:32] BUS B-0012 viajando a la ciudad.
+[28-04-2024 19:34:32] BUS B-0008 se llena.
+[28-04-2024 19:34:32] BUS B-0008 viajando a la ciudad.
+[28-04-2024 19:34:32] BUS B-0030 recoge 32 pasajeros.
+[28-04-2024 19:34:32] BUS B-0030 viajando al aeropuerto.
+[28-04-2024 19:34:32] BUS B-0020 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:32] BUS B-0028 recoge 9 pasajeros.
+[28-04-2024 19:34:32] BUS B-0028 viajando al aeropuerto.
+[28-04-2024 19:34:32] BUS B-0007 deja 40 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:32] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:34:32] BUS B-0029 recoge 10 pasajeros.
+[28-04-2024 19:34:32] BUS B-0029 viajando al aeropuerto.
+[28-04-2024 19:34:32] BUS 33 creado, va a Prat. Su id es B-0033
+[28-04-2024 19:34:32] BUS B-0033 llega a la ciudad.
+[28-04-2024 19:34:33] BUS B-0018 deja 10 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:33] BUS B-0027 recoge 1 pasajeros.
+[28-04-2024 19:34:33] BUS B-0027 viajando al aeropuerto.
+[28-04-2024 19:34:33] BUS B-0002 recoge 35 pasajeros.
+[28-04-2024 19:34:33] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:34:33] BUS B-0003 recoge 8 pasajeros.
+[28-04-2024 19:34:33] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:34:33] BUS 34 creado, va a Barajas. Su id es B-0034
+[28-04-2024 19:34:33] BUS B-0034 llega a la ciudad.
+[28-04-2024 19:34:34] BUS B-0000 deja 26 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:34] BUS B-0004 recoge 16 pasajeros.
+[28-04-2024 19:34:34] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:34:34] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:34:34] BUS 35 creado, va a Prat. Su id es B-0035
+[28-04-2024 19:34:34] BUS B-0035 llega a la ciudad.
+[28-04-2024 19:34:35] BUS B-0031 recoge 38 pasajeros.
+[28-04-2024 19:34:35] BUS B-0031 viajando al aeropuerto.
+[28-04-2024 19:34:35] BUS 36 creado, va a Barajas. Su id es B-0036
+[28-04-2024 19:34:35] BUS B-0036 llega a la ciudad.
+[28-04-2024 19:34:35] BUS B-0000 recoge 22 pasajeros.
+[28-04-2024 19:34:35] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:34:35] BUS B-0014 se llena.
+[28-04-2024 19:34:35] BUS B-0014 viajando a la ciudad.
+[28-04-2024 19:34:35] BUS B-0015 se llena.
+[28-04-2024 19:34:35] BUS B-0015 viajando a la ciudad.
+[28-04-2024 19:34:35] BUS 37 creado, va a Prat. Su id es B-0037
+[28-04-2024 19:34:35] BUS B-0037 llega a la ciudad.
+[28-04-2024 19:34:35] BUS B-0013 deja 37 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:35] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:34:36] BUS B-0019 deja 3 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:36] BUS B-0021 se llena.
+[28-04-2024 19:34:36] BUS B-0021 viajando a la ciudad.
+[28-04-2024 19:34:36] BUS 38 creado, va a Barajas. Su id es B-0038
+[28-04-2024 19:34:36] BUS B-0038 llega a la ciudad.
+[28-04-2024 19:34:36] BUS B-0011 deja 23 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:36] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:34:36] BUS B-0035 recoge 48 pasajeros.
+[28-04-2024 19:34:36] BUS B-0035 viajando al aeropuerto.
+[28-04-2024 19:34:36] BUS B-0023 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:36] BUS 39 creado, va a Prat. Su id es B-0039
+[28-04-2024 19:34:36] BUS B-0039 llega a la ciudad.
+[28-04-2024 19:34:37] BUS B-0036 recoge 33 pasajeros.
+[28-04-2024 19:34:37] BUS B-0036 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS B-0034 recoge 11 pasajeros.
+[28-04-2024 19:34:37] BUS B-0034 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS B-0032 recoge 40 pasajeros.
+[28-04-2024 19:34:37] BUS B-0032 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS B-0024 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:37] BUS B-0016 se llena.
+[28-04-2024 19:34:37] BUS B-0016 viajando a la ciudad.
+[28-04-2024 19:34:37] BUS B-0006 deja 3 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:37] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:34:37] BUS B-0033 recoge 19 pasajeros.
+[28-04-2024 19:34:37] BUS B-0033 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS B-0038 recoge 41 pasajeros.
+[28-04-2024 19:34:37] BUS B-0038 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS 40 creado, va a Barajas. Su id es B-0040
+[28-04-2024 19:34:37] BUS B-0040 llega a la ciudad.
+[28-04-2024 19:34:37] BUS B-0018 se llena.
+[28-04-2024 19:34:37] BUS B-0018 viajando a la ciudad.
+[28-04-2024 19:34:37] BUS B-0025 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:37] BUS B-0037 recoge 0 pasajeros.
+[28-04-2024 19:34:37] BUS B-0037 viajando al aeropuerto.
+[28-04-2024 19:34:37] BUS B-0020 se llena.
+[28-04-2024 19:34:37] BUS B-0020 viajando a la ciudad.
+[28-04-2024 19:34:38] BUS 41 creado, va a Prat. Su id es B-0041
+[28-04-2024 19:34:38] BUS B-0041 llega a la ciudad.
+[28-04-2024 19:34:38] BUS B-0007 recoge 9 pasajeros.
+[28-04-2024 19:34:38] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:34:38] BUS B-0011 recoge 40 pasajeros.
+[28-04-2024 19:34:38] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:34:38] BUS B-0013 recoge 33 pasajeros.
+[28-04-2024 19:34:38] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:34:38] BUS B-0030 deja 32 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:39] BUS 42 creado, va a Barajas. Su id es B-0042
+[28-04-2024 19:34:39] BUS B-0042 llega a la ciudad.
+[28-04-2024 19:34:39] BUS B-0001 deja 7 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:39] BUS B-0040 recoge 12 pasajeros.
+[28-04-2024 19:34:39] BUS B-0040 viajando al aeropuerto.
+[28-04-2024 19:34:39] BUS B-0009 deja 12 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:39] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:34:39] BUS B-0041 recoge 2 pasajeros.
+[28-04-2024 19:34:39] BUS B-0041 viajando al aeropuerto.
+[28-04-2024 19:34:39] BUS B-0006 recoge 29 pasajeros.
+[28-04-2024 19:34:39] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:34:39] BUS 43 creado, va a Prat. Su id es B-0043
+[28-04-2024 19:34:39] BUS B-0043 llega a la ciudad.
+[28-04-2024 19:34:39] BUS B-0024 se llena.
+[28-04-2024 19:34:39] BUS B-0024 viajando a la ciudad.
+[28-04-2024 19:34:40] BUS B-0022 deja 43 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:40] BUS B-0010 deja 13 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:40] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:34:40] BUS B-0002 deja 35 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:40] BUS B-0019 se llena.
+[28-04-2024 19:34:40] BUS B-0019 viajando a la ciudad.
+[28-04-2024 19:34:40] BUS B-0039 recoge 42 pasajeros.
+[28-04-2024 19:34:40] BUS B-0039 viajando al aeropuerto.
+[28-04-2024 19:34:40] BUS 44 creado, va a Barajas. Su id es B-0044
+[28-04-2024 19:34:40] BUS B-0044 llega a la ciudad.
+[28-04-2024 19:34:40] BUS B-0042 recoge 6 pasajeros.
+[28-04-2024 19:34:40] BUS B-0042 viajando al aeropuerto.
+[28-04-2024 19:34:40] BUS B-0008 deja 45 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:40] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:34:40] BUS B-0025 se llena.
+[28-04-2024 19:34:40] BUS B-0025 viajando a la ciudad.
+[28-04-2024 19:34:41] BUS 45 creado, va a Prat. Su id es B-0045
+[28-04-2024 19:34:41] BUS B-0045 llega a la ciudad.
+[28-04-2024 19:34:41] BUS B-0026 deja 23 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:41] BUS B-0028 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:41] BUS B-0017 deja 29 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:41] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:34:41] BUS B-0027 deja 1 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:42] BUS 46 creado, va a Barajas. Su id es B-0046
+[28-04-2024 19:34:42] BUS B-0046 llega a la ciudad.
+[28-04-2024 19:34:42] BUS B-0003 deja 8 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:42] BUS B-0005 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:42] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:34:42] BUS B-0044 recoge 14 pasajeros.
+[28-04-2024 19:34:42] BUS B-0044 viajando al aeropuerto.
+[28-04-2024 19:34:42] BUS B-0034 deja 11 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:42] BUS B-0023 se llena.
+[28-04-2024 19:34:42] BUS B-0023 viajando a la ciudad.
+[28-04-2024 19:34:42] BUS B-0022 se llena.
+[28-04-2024 19:34:42] BUS B-0022 viajando a la ciudad.
+[28-04-2024 19:34:42] BUS B-0012 deja 10 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:42] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:34:42] BUS B-0010 recoge 19 pasajeros.
+[28-04-2024 19:34:42] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:34:43] BUS 47 creado, va a Prat. Su id es B-0047
+[28-04-2024 19:34:43] BUS B-0047 llega a la ciudad.
+[28-04-2024 19:34:43] BUS B-0016 deja 21 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:43] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:34:43] BUS B-0029 deja 10 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:43] BUS B-0005 recoge 8 pasajeros.
+[28-04-2024 19:34:43] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:34:43] BUS 48 creado, va a Barajas. Su id es B-0048
+[28-04-2024 19:34:43] BUS B-0048 llega a la ciudad.
+[28-04-2024 19:34:43] BUS B-0031 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:43] BUS B-0037 deja 0 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:43] BUS B-0015 deja 0 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:43] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:34:44] BUS B-0030 se llena.
+[28-04-2024 19:34:44] BUS B-0030 viajando a la ciudad.
+[28-04-2024 19:34:44] BUS B-0043 recoge 24 pasajeros.
+[28-04-2024 19:34:44] BUS B-0043 viajando al aeropuerto.
+[28-04-2024 19:34:44] BUS B-0046 recoge 17 pasajeros.
+[28-04-2024 19:34:44] BUS B-0046 viajando al aeropuerto.
+[28-04-2024 19:34:44] BUS B-0017 recoge 33 pasajeros.
+[28-04-2024 19:34:44] BUS B-0017 viajando al aeropuerto.
+[28-04-2024 19:34:44] BUS B-0004 deja 16 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:44] BUS B-0014 deja 26 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:44] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:34:44] BUS B-0012 recoge 20 pasajeros.
+[28-04-2024 19:34:44] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:34:44] BUS 49 creado, va a Prat. Su id es B-0049
+[28-04-2024 19:34:44] BUS B-0049 llega a la ciudad.
+[28-04-2024 19:34:44] BUS B-0018 deja 9 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:44] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:34:44] BUS B-0028 se llena.
+[28-04-2024 19:34:44] BUS B-0028 viajando a la ciudad.
+[28-04-2024 19:34:45] BUS B-0001 se llena.
+[28-04-2024 19:34:45] BUS B-0001 viajando a la ciudad.
+[28-04-2024 19:34:45] BUS B-0024 deja 19 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:45] BUS B-0024 llega a la ciudad.
+[28-04-2024 19:34:45] BUS B-0026 se llena.
+[28-04-2024 19:34:45] BUS B-0026 viajando a la ciudad.
+[28-04-2024 19:34:45] BUS B-0009 recoge 21 pasajeros.
+[28-04-2024 19:34:45] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:34:45] BUS B-0020 deja 42 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:45] BUS B-0020 llega a la ciudad.
+[28-04-2024 19:34:45] BUS B-0002 se llena.
+[28-04-2024 19:34:45] BUS B-0002 viajando a la ciudad.
+[28-04-2024 19:34:45] BUS 50 creado, va a Barajas. Su id es B-0050
+[28-04-2024 19:34:45] BUS B-0050 llega a la ciudad.
+[28-04-2024 19:34:45] BUS B-0006 deja 29 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:45] BUS B-0047 recoge 0 pasajeros.
+[28-04-2024 19:34:45] BUS B-0047 viajando al aeropuerto.
+[28-04-2024 19:34:45] BUS B-0013 deja 33 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0000 deja 22 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0011 deja 40 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0049 recoge 48 pasajeros.
+[28-04-2024 19:34:46] BUS B-0049 viajando al aeropuerto.
+[28-04-2024 19:34:46] BUS B-0021 deja 5 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:46] BUS B-0021 llega a la ciudad.
+[28-04-2024 19:34:46] BUS 51 creado, va a Prat. Su id es B-0051
+[28-04-2024 19:34:46] BUS B-0051 llega a la ciudad.
+[28-04-2024 19:34:46] BUS B-0027 se llena.
+[28-04-2024 19:34:46] BUS B-0027 viajando a la ciudad.
+[28-04-2024 19:34:46] BUS B-0007 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0038 deja 41 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0008 recoge 23 pasajeros.
+[28-04-2024 19:34:46] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:34:46] BUS B-0015 recoge 1 pasajeros.
+[28-04-2024 19:34:46] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:34:46] BUS B-0035 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0045 recoge 38 pasajeros.
+[28-04-2024 19:34:46] BUS B-0045 viajando al aeropuerto.
+[28-04-2024 19:34:46] BUS B-0036 deja 33 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:46] BUS B-0016 recoge 13 pasajeros.
+[28-04-2024 19:34:46] BUS B-0016 viajando al aeropuerto.
+[28-04-2024 19:34:47] BUS B-0034 se llena.
+[28-04-2024 19:34:47] BUS B-0034 viajando a la ciudad.
+[28-04-2024 19:34:47] BUS B-0018 recoge 34 pasajeros.
+[28-04-2024 19:34:47] BUS B-0018 viajando al aeropuerto.
+[28-04-2024 19:34:47] BUS B-0004 se llena.
+[28-04-2024 19:34:47] BUS B-0004 viajando a la ciudad.
+[28-04-2024 19:34:47] BUS 52 creado, va a Barajas. Su id es B-0052
+[28-04-2024 19:34:47] BUS B-0052 llega a la ciudad.
+[28-04-2024 19:34:47] BUS B-0031 se llena.
+[28-04-2024 19:34:47] BUS B-0031 viajando a la ciudad.
+[28-04-2024 19:34:47] BUS B-0025 deja 45 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:47] BUS B-0025 llega a la ciudad.
+[28-04-2024 19:34:47] BUS B-0041 deja 2 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:47] BUS B-0003 se llena.
+[28-04-2024 19:34:47] BUS B-0003 viajando a la ciudad.
+[28-04-2024 19:34:47] BUS B-0032 deja 40 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:48] BUS 53 creado, va a Prat. Su id es B-0053
+[28-04-2024 19:34:48] BUS B-0053 llega a la ciudad.
+[28-04-2024 19:34:48] BUS B-0033 deja 19 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:48] BUS B-0014 recoge 39 pasajeros.
+[28-04-2024 19:34:48] BUS B-0014 viajando al aeropuerto.
+[28-04-2024 19:34:48] BUS B-0052 recoge 1 pasajeros.
+[28-04-2024 19:34:48] BUS B-0052 viajando al aeropuerto.
+[28-04-2024 19:34:48] BUS B-0029 se llena.
+[28-04-2024 19:34:48] BUS B-0029 viajando a la ciudad.
+[28-04-2024 19:34:48] BUS B-0038 se llena.
+[28-04-2024 19:34:48] BUS B-0038 viajando a la ciudad.
+[28-04-2024 19:34:48] BUS B-0006 se llena.
+[28-04-2024 19:34:48] BUS B-0006 viajando a la ciudad.
+[28-04-2024 19:34:48] BUS B-0011 se llena.
+[28-04-2024 19:34:48] BUS B-0011 viajando a la ciudad.
+[28-04-2024 19:34:48] BUS B-0050 recoge 36 pasajeros.
+[28-04-2024 19:34:48] BUS B-0050 viajando al aeropuerto.
+[28-04-2024 19:34:48] BUS B-0048 recoge 39 pasajeros.
+[28-04-2024 19:34:48] BUS B-0048 viajando al aeropuerto.
+[28-04-2024 19:34:48] BUS 54 creado, va a Barajas. Su id es B-0054
+[28-04-2024 19:34:48] BUS B-0054 llega a la ciudad.
+[28-04-2024 19:34:49] BUS B-0040 deja 12 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:49] BUS B-0010 deja 19 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:49] BUS B-0037 se llena.
+[28-04-2024 19:34:49] BUS B-0037 viajando a la ciudad.
+[28-04-2024 19:34:49] BUS B-0039 deja 42 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:49] BUS B-0000 se llena.
+[28-04-2024 19:34:49] BUS B-0000 viajando a la ciudad.
+[28-04-2024 19:34:49] BUS B-0020 recoge 39 pasajeros.
+[28-04-2024 19:34:49] BUS B-0020 viajando al aeropuerto.
+[28-04-2024 19:34:49] BUS B-0046 deja 17 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:49] BUS B-0007 se llena.
+[28-04-2024 19:34:49] BUS B-0007 viajando a la ciudad.
+[28-04-2024 19:34:49] BUS 55 creado, va a Prat. Su id es B-0055
+[28-04-2024 19:34:49] BUS B-0055 llega a la ciudad.
+[28-04-2024 19:34:49] BUS B-0021 recoge 20 pasajeros.
+[28-04-2024 19:34:49] BUS B-0021 viajando al aeropuerto.
+[28-04-2024 19:34:50] BUS B-0042 deja 6 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:50] BUS B-0019 deja 14 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:50] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:34:50] BUS 56 creado, va a Barajas. Su id es B-0056
+[28-04-2024 19:34:50] BUS B-0056 llega a la ciudad.
+[28-04-2024 19:34:50] BUS B-0041 se llena.
+[28-04-2024 19:34:50] BUS B-0041 viajando a la ciudad.
+[28-04-2024 19:34:50] BUS B-0043 deja 24 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:50] BUS B-0035 se llena.
+[28-04-2024 19:34:50] BUS B-0035 viajando a la ciudad.
+[28-04-2024 19:34:50] BUS B-0055 recoge 37 pasajeros.
+[28-04-2024 19:34:50] BUS B-0055 viajando al aeropuerto.
+[28-04-2024 19:34:50] BUS B-0024 recoge 5 pasajeros.
+[28-04-2024 19:34:50] BUS B-0024 viajando al aeropuerto.
+[28-04-2024 19:34:51] BUS 57 creado, va a Prat. Su id es B-0057
+[28-04-2024 19:34:51] BUS B-0057 llega a la ciudad.
+[28-04-2024 19:34:51] BUS B-0025 recoge 17 pasajeros.
+[28-04-2024 19:34:51] BUS B-0025 viajando al aeropuerto.
+[28-04-2024 19:34:51] BUS B-0002 deja 23 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:51] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:34:51] BUS B-0013 se llena.
+[28-04-2024 19:34:51] BUS B-0013 viajando a la ciudad.
+[28-04-2024 19:34:51] BUS B-0054 recoge 34 pasajeros.
+[28-04-2024 19:34:51] BUS B-0054 viajando al aeropuerto.
+[28-04-2024 19:34:51] BUS 58 creado, va a Barajas. Su id es B-0058
+[28-04-2024 19:34:51] BUS B-0058 llega a la ciudad.
+[28-04-2024 19:34:51] BUS B-0051 recoge 26 pasajeros.
+[28-04-2024 19:34:51] BUS B-0051 viajando al aeropuerto.
+[28-04-2024 19:34:52] BUS B-0015 deja 1 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:52] BUS B-0036 se llena.
+[28-04-2024 19:34:52] BUS B-0036 viajando a la ciudad.
+[28-04-2024 19:34:52] BUS B-0010 se llena.
+[28-04-2024 19:34:52] BUS B-0010 viajando a la ciudad.
+[28-04-2024 19:34:52] BUS B-0005 deja 8 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:52] BUS B-0049 deja 48 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:52] BUS B-0044 deja 14 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:52] BUS 59 creado, va a Prat. Su id es B-0059
+[28-04-2024 19:34:52] BUS B-0059 llega a la ciudad.
+[28-04-2024 19:34:52] BUS B-0028 deja 41 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:52] BUS B-0028 llega a la ciudad.
+[28-04-2024 19:34:52] BUS B-0016 deja 13 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:52] BUS B-0039 se llena.
+[28-04-2024 19:34:52] BUS B-0039 viajando a la ciudad.
+[28-04-2024 19:34:53] BUS B-0045 deja 38 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:53] BUS B-0046 se llena.
+[28-04-2024 19:34:53] BUS B-0046 viajando a la ciudad.
+[28-04-2024 19:34:53] BUS B-0022 deja 50 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:53] BUS B-0022 llega a la ciudad.
+[28-04-2024 19:34:53] BUS 60 creado, va a Barajas. Su id es B-0060
+[28-04-2024 19:34:53] BUS B-0060 llega a la ciudad.
+[28-04-2024 19:34:53] BUS B-0033 se llena.
+[28-04-2024 19:34:53] BUS B-0033 viajando a la ciudad.
+[28-04-2024 19:34:53] BUS B-0053 recoge 10 pasajeros.
+[28-04-2024 19:34:53] BUS B-0023 deja 48 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:53] BUS B-0012 deja 20 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:53] BUS B-0053 viajando al aeropuerto.
+[28-04-2024 19:34:53] BUS B-0023 llega a la ciudad.
+[28-04-2024 19:34:53] BUS B-0027 deja 29 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:53] BUS B-0027 llega a la ciudad.
+[28-04-2024 19:34:53] BUS B-0008 deja 23 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:53] BUS B-0030 deja 40 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:53] BUS B-0030 llega a la ciudad.
+[28-04-2024 19:34:53] BUS B-0032 se llena.
+[28-04-2024 19:34:53] BUS B-0032 viajando a la ciudad.
+[28-04-2024 19:34:53] BUS 61 creado, va a Prat. Su id es B-0061
+[28-04-2024 19:34:53] BUS B-0061 llega a la ciudad.
+[28-04-2024 19:34:54] BUS B-0028 recoge 9 pasajeros.
+[28-04-2024 19:34:54] BUS B-0028 viajando al aeropuerto.
+[28-04-2024 19:34:54] BUS B-0002 recoge 0 pasajeros.
+[28-04-2024 19:34:54] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:34:54] BUS B-0043 se llena.
+[28-04-2024 19:34:54] BUS B-0043 viajando a la ciudad.
+[28-04-2024 19:34:54] BUS B-0034 deja 42 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:54] BUS B-0034 llega a la ciudad.
+[28-04-2024 19:34:54] BUS B-0015 se llena.
+[28-04-2024 19:34:54] BUS B-0015 viajando a la ciudad.
+[28-04-2024 19:34:54] BUS B-0037 deja 15 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:54] BUS B-0037 llega a la ciudad.
+[28-04-2024 19:34:54] BUS 62 creado, va a Barajas. Su id es B-0062
+[28-04-2024 19:34:54] BUS B-0062 llega a la ciudad.
+[28-04-2024 19:34:54] BUS B-0001 deja 35 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:54] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:34:54] BUS B-0019 recoge 33 pasajeros.
+[28-04-2024 19:34:54] BUS B-0019 viajando al aeropuerto.
+[28-04-2024 19:34:54] BUS B-0040 se llena.
+[28-04-2024 19:34:54] BUS B-0040 viajando a la ciudad.
+[28-04-2024 19:34:54] BUS B-0005 se llena.
+[28-04-2024 19:34:54] BUS B-0005 viajando a la ciudad.
+[28-04-2024 19:34:54] BUS B-0056 recoge 9 pasajeros.
+[28-04-2024 19:34:54] BUS B-0056 viajando al aeropuerto.
+[28-04-2024 19:34:54] BUS B-0017 deja 33 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:54] BUS B-0031 deja 25 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:54] BUS B-0031 llega a la ciudad.
+[28-04-2024 19:34:55] BUS B-0060 recoge 28 pasajeros.
+[28-04-2024 19:34:55] BUS B-0060 viajando al aeropuerto.
+[28-04-2024 19:34:55] BUS B-0042 se llena.
+[28-04-2024 19:34:55] BUS B-0042 viajando a la ciudad.
+[28-04-2024 19:34:55] BUS B-0050 deja 36 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:55] BUS 63 creado, va a Prat. Su id es B-0063
+[28-04-2024 19:34:55] BUS B-0063 llega a la ciudad.
+[28-04-2024 19:34:55] BUS B-0045 se llena.
+[28-04-2024 19:34:55] BUS B-0045 viajando a la ciudad.
+[28-04-2024 19:34:55] BUS B-0059 recoge 47 pasajeros.
+[28-04-2024 19:34:55] BUS B-0059 viajando al aeropuerto.
+[28-04-2024 19:34:55] BUS B-0022 recoge 40 pasajeros.
+[28-04-2024 19:34:55] BUS B-0022 viajando al aeropuerto.
+[28-04-2024 19:34:55] BUS B-0020 deja 39 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:55] BUS 64 creado, va a Barajas. Su id es B-0064
+[28-04-2024 19:34:55] BUS B-0064 llega a la ciudad.
+[28-04-2024 19:34:55] BUS B-0038 deja 10 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:55] BUS B-0038 llega a la ciudad.
+[28-04-2024 19:34:55] BUS B-0030 recoge 42 pasajeros.
+[28-04-2024 19:34:55] BUS B-0009 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:55] BUS B-0030 viajando al aeropuerto.
+[28-04-2024 19:34:55] BUS B-0049 se llena.
+[28-04-2024 19:34:55] BUS B-0049 viajando a la ciudad.
+[28-04-2024 19:34:55] BUS B-0026 deja 35 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:55] BUS B-0026 llega a la ciudad.
+[28-04-2024 19:34:55] BUS B-0041 deja 23 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:55] BUS B-0041 llega a la ciudad.
+[28-04-2024 19:34:56] BUS B-0029 deja 4 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:56] BUS B-0029 llega a la ciudad.
+[28-04-2024 19:34:56] BUS B-0006 deja 23 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:56] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:34:56] BUS 65 creado, va a Prat. Su id es B-0065
+[28-04-2024 19:34:56] BUS B-0065 llega a la ciudad.
+[28-04-2024 19:34:56] BUS B-0018 deja 34 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:34:56] BUS B-0011 deja 4 pasajeros y queda vacío en la ciudad.
+[28-04-2024 19:34:56] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:34:56] BUS B-0031 recoge 16 pasajeros.
+[28-04-2024 19:34:56] BUS B-0031 viajando al aeropuerto.
+[28-04-2024 19:34:56] BUS B-0063 recoge 10 pasajeros.
+[28-04-2024 19:34:56] BUS B-0063 viajando al aeropuerto.
+[28-04-2024 19:34:56] BUS B-0058 recoge 1 pasajeros.
+[28-04-2024 19:34:56] BUS B-0058 viajando al aeropuerto.
+[28-04-2024 19:36:00] BUS 0 creado, va a Barajas. Su id es B-0000
+[28-04-2024 19:36:00] BUS B-0000 llega a la ciudad.
+[28-04-2024 19:36:01] BUS 1 creado, va a Prat. Su id es B-0001
+[28-04-2024 19:36:01] BUS B-0001 llega a la ciudad.
+[28-04-2024 19:36:01] AVION 0 creado, va a Barajas. Su id es JA-0000
+[28-04-2024 19:36:01] BUS 2 creado, va a Barajas. Su id es B-0002
+[28-04-2024 19:36:01] BUS B-0002 llega a la ciudad.
+[28-04-2024 19:36:02] BUS 3 creado, va a Prat. Su id es B-0003
+[28-04-2024 19:36:02] BUS B-0003 llega a la ciudad.
+[28-04-2024 19:36:02] AVION 1 creado, va a Prat. Su id es RY-0001
+[28-04-2024 19:36:02] BUS B-0000 recoge 21 pasajeros.
+[28-04-2024 19:36:02] BUS B-0000 viajando al aeropuerto.
+[28-04-2024 19:36:03] BUS 4 creado, va a Barajas. Su id es B-0004
+[28-04-2024 19:36:03] BUS B-0004 llega a la ciudad.
+[28-04-2024 19:36:03] BUS 5 creado, va a Prat. Su id es B-0005
+[28-04-2024 19:36:03] BUS B-0005 llega a la ciudad.
+[28-04-2024 19:36:04] BUS 6 creado, va a Barajas. Su id es B-0006
+[28-04-2024 19:36:04] BUS B-0006 llega a la ciudad.
+[28-04-2024 19:36:04] AVION 2 creado, va a Barajas. Su id es IO-0002
+[28-04-2024 19:36:04] BUS 7 creado, va a Prat. Su id es B-0007
+[28-04-2024 19:36:04] BUS B-0007 llega a la ciudad.
+[28-04-2024 19:36:05] BUS 8 creado, va a Barajas. Su id es B-0008
+[28-04-2024 19:36:05] BUS B-0008 llega a la ciudad.
+[28-04-2024 19:36:05] BUS B-0003 recoge 11 pasajeros.
+[28-04-2024 19:36:05] BUS B-0003 viajando al aeropuerto.
+[28-04-2024 19:36:05] AVION 3 creado, va a Prat. Su id es CK-0003
+[28-04-2024 19:36:05] BUS B-0004 recoge 10 pasajeros.
+[28-04-2024 19:36:05] BUS B-0004 viajando al aeropuerto.
+[28-04-2024 19:36:06] BUS B-0001 recoge 39 pasajeros.
+[28-04-2024 19:36:06] BUS B-0001 viajando al aeropuerto.
+[28-04-2024 19:36:06] BUS 9 creado, va a Prat. Su id es B-0009
+[28-04-2024 19:36:06] BUS B-0009 llega a la ciudad.
+[28-04-2024 19:36:06] BUS 10 creado, va a Barajas. Su id es B-0010
+[28-04-2024 19:36:06] BUS B-0010 llega a la ciudad.
+[28-04-2024 19:36:06] BUS B-0002 recoge 9 pasajeros.
+[28-04-2024 19:36:06] BUS B-0002 viajando al aeropuerto.
+[28-04-2024 19:36:07] BUS B-0005 recoge 4 pasajeros.
+[28-04-2024 19:36:07] BUS B-0005 viajando al aeropuerto.
+[28-04-2024 19:36:07] BUS 11 creado, va a Prat. Su id es B-0011
+[28-04-2024 19:36:07] BUS B-0011 llega a la ciudad.
+[28-04-2024 19:36:07] BUS B-0006 recoge 29 pasajeros.
+[28-04-2024 19:36:07] BUS B-0006 viajando al aeropuerto.
+[28-04-2024 19:36:08] AVION 4 creado, va a Barajas. Su id es BG-0004
+[28-04-2024 19:36:08] BUS B-0008 recoge 20 pasajeros.
+[28-04-2024 19:36:08] BUS B-0008 viajando al aeropuerto.
+[28-04-2024 19:36:08] BUS 12 creado, va a Barajas. Su id es B-0012
+[28-04-2024 19:36:08] BUS B-0012 llega a la ciudad.
+[28-04-2024 19:36:09] BUS B-0007 recoge 32 pasajeros.
+[28-04-2024 19:36:09] BUS B-0007 viajando al aeropuerto.
+[28-04-2024 19:36:09] BUS 13 creado, va a Prat. Su id es B-0013
+[28-04-2024 19:36:09] BUS B-0013 llega a la ciudad.
+[28-04-2024 19:36:10] BUS B-0011 recoge 4 pasajeros.
+[28-04-2024 19:36:10] BUS B-0011 viajando al aeropuerto.
+[28-04-2024 19:36:10] BUS B-0010 recoge 19 pasajeros.
+[28-04-2024 19:36:10] BUS B-0010 viajando al aeropuerto.
+[28-04-2024 19:36:10] BUS 14 creado, va a Barajas. Su id es B-0014
+[28-04-2024 19:36:10] BUS B-0014 llega a la ciudad.
+[28-04-2024 19:36:10] BUS B-0013 recoge 27 pasajeros.
+[28-04-2024 19:36:10] BUS B-0013 viajando al aeropuerto.
+[28-04-2024 19:36:10] AVION 5 creado, va a Prat. Su id es YH-0005
+[28-04-2024 19:36:11] BUS 15 creado, va a Prat. Su id es B-0015
+[28-04-2024 19:36:11] BUS B-0015 llega a la ciudad.
+[28-04-2024 19:36:11] BUS 16 creado, va a Barajas. Su id es B-0016
+[28-04-2024 19:36:11] BUS B-0016 llega a la ciudad.
+[28-04-2024 19:36:11] BUS B-0003 deja 11 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:36:12] BUS B-0012 recoge 46 pasajeros.
+[28-04-2024 19:36:12] BUS B-0012 viajando al aeropuerto.
+[28-04-2024 19:36:12] BUS B-0009 recoge 23 pasajeros.
+[28-04-2024 19:36:12] BUS B-0009 viajando al aeropuerto.
+[28-04-2024 19:36:12] BUS B-0000 deja 21 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:36:12] BUS 17 creado, va a Prat. Su id es B-0017
+[28-04-2024 19:36:12] BUS B-0017 llega a la ciudad.
+[28-04-2024 19:36:13] BUS B-0002 deja 9 pasajeros en el aeropuerto y queda vacío.
+[28-04-2024 19:36:13] BUS 18 creado, va a Barajas. Su id es B-0018
+[28-04-2024 19:36:13] BUS B-0018 llega a la ciudad.
+[28-04-2024 19:36:13] BUS B-0015 recoge 32 pasajeros.
+[28-04-2024 19:36:13] BUS B-0015 viajando al aeropuerto.
+[28-04-2024 19:36:13] AVION 6 creado, va a Barajas. Su id es RW-0006
+[28-04-2024 19:36:13] BUS 19 creado, va a Prat. Su id es B-0019
+[28-04-2024 19:36:13] BUS B-0019 llega a la ciudad.
+[28-04-2024 19:36:14] BUS B-0007 deja 32 pasajeros en el aeropuerto y queda vacío.

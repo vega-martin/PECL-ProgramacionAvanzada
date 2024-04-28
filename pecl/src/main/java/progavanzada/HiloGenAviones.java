@@ -11,6 +11,8 @@ public class HiloGenAviones extends Thread {
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
     
+    Log log = new Log("evolucionAeropuerto.txt");
+    
     // Constructor que recibe Barajas y Prat:
     public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat) {
         this.barajas = barajas;
@@ -42,9 +44,12 @@ public class HiloGenAviones extends Thread {
                 avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas); // El Prat
             }
             
-            // TEST:
-            System.out.println("Avion " + i + " creado, va a " + avion.getAeropuerto().getNombre()
+            // Registrar en el log
+            
+            String str = ("AVION " + i + " creado, va a " + avion.getAeropuerto().getNombre()
                     + ". Su id es " + avion.getIdAvion());
+            
+            log.escribirEvento(str);
             
             // Iniciar el hilo:
             avion.start();  

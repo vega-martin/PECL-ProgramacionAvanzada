@@ -14,7 +14,7 @@ public class Bus extends Thread {
     // Objeto random:
     Random r = new Random();
     
-    Log log = new Log("log.txt");
+    Log log = new Log("evolucionAeropuerto.txt");
 
     public String getIdBus() {
         return id;
@@ -65,7 +65,7 @@ public class Bus extends Thread {
 
                 // Llenar el bus:
                 this.pasajeros = r.nextInt(51);
-                log.escribirEvento("BUS " + this.getIdBus() + " recoge pasajeros.");
+                log.escribirEvento("BUS " + this.getIdBus() + " recoge " + this.pasajeros + " pasajeros.");
 
                 // Viajar al aeropuerto:
                 log.escribirEvento("BUS " + this.getIdBus() + " viajando al aeropuerto.");
@@ -73,8 +73,8 @@ public class Bus extends Thread {
                 
                 // Llegar al aeropuerto y vaciar bus:
                 this.aeropuerto.sumarViajerosBus(this.pasajeros); // Incorporar pasajeros al aeropuerto
+                log.escribirEvento("BUS " + this.getIdBus() + " deja " + this.pasajeros + " pasajeros en el aeropuerto y queda vacío.");
                 this.pasajeros = 0;
-                log.escribirEvento("BUS " + this.getIdBus() + " deja los pasajeros en el aeropuerto y queda vacio.");
 
                 // Esperar y llenar el bus:
                 Thread.sleep(r.nextInt(4000) + 2000);
@@ -87,8 +87,8 @@ public class Bus extends Thread {
                 Thread.sleep(r.nextInt(6000) + 5000);
 
                 // Llegar a la ciudad:
+                log.escribirEvento("BUS " + this.getIdBus() + " deja " + this.pasajeros + " pasajeros y queda vacío en la ciudad.");
                 this.pasajeros = 0;
-                log.escribirEvento("BUS " + this.getIdBus() + " vacio en la ciudad.");
 
                 // REPETIR INFINITAMENTE EL BUCLE
             }
