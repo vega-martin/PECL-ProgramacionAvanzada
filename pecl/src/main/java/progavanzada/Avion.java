@@ -11,6 +11,7 @@ public class Avion extends Thread {
     private final String id;
     private final int maxPasajeros;
     private int numPasajeros = 0;
+    private boolean despegando = true;
     
     // Objeto random, usado en diferentes métodos:
     Random r = new Random();
@@ -58,9 +59,9 @@ public class Avion extends Thread {
             
             // Añadir el avion al area de estacionamiento:
             this.aeropuerto.incluirAvionEnAreaEst(this);
-            this.aeropuerto.quitarAvionDeAreaEst(this);
+            this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
             
-            // Añadri el avion a las puertas de embarque
+            // Añadir el avion a las puertas de embarque
             this.aeropuerto.insertarPuertasEmbarque(this, true);
             
             // Llenar el avión de pasajeros:
@@ -98,7 +99,8 @@ public class Avion extends Thread {
             this.aeropuerto.quitarPuertasEmbarque(this);
             
             // Area de rodaje y pista
-            this.aeropuerto.areaDeRodaje(this);
+            this.aeropuerto.entrarAreaDeRodaje(this);
+            this.aeropuerto.salirAreaDeRodaje(this, despegando);
             this.aeropuerto.entrarPista(this);
             this.aeropuerto.salirPista(this);
             
