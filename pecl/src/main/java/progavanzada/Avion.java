@@ -17,6 +17,8 @@ public class Avion extends Thread {
     
     // Objeto random, usado en diferentes métodos:
     Random r = new Random();
+    
+    Log log = new Log("evolucionAeropuerto.txt");
 
     public String getIdAvion() {
         return id;
@@ -62,31 +64,36 @@ public class Avion extends Thread {
 
                 // Eliminar el avion del hangar:
                 this.aeropuerto.quitarAvionDeHangar(this);
+                log.escribirEvento("AVION " + this.getIdAvion() + " sale del hangar de " + this.aeropuerto.getNombre() + " y se dirige al área de estacionamiento.");
 
                 // Añadir el avion al area de estacionamiento:
                 this.aeropuerto.incluirAvionEnAreaEst(this);
+                log.escribirEvento("AVION " + this.getIdAvion() + " entra al área de estacionamiento y espera a que haya una puerta de embarque libre.");
                 this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
 
                 // Añadir el avion a las puertas de embarque
                 this.aeropuerto.insertarPuertasEmbarque(this, despegando);
-
+                
                 // Llenar el avión de pasajeros:
                 recogerPasajeros();
-
+                log.escribirEvento("AVION " + this.getIdAvion() + " accede a una puerta de embarque y recoge " + this.numPasajeros + " pasajeros.");
                 // Abandona la puerta de embarque
                 this.aeropuerto.quitarPuertasEmbarque(this);
 
                 // Area de rodaje
+                log.escribirEvento("AVION " + this.getIdAvion() + " accede a un area de rodaje y espera pista para despegue.");
                 this.aeropuerto.entrarAreaDeRodaje(this);
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 
                 // Pista
+                log.escribirEvento("AVION " + this.getIdAvion() + " accede a una pista y se prepara para despegar.");
                 this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(2000) + 1000);
                 Thread.sleep(r.nextInt(4000) + 1000);
                 this.aeropuerto.salirPista(this);
 
                 // Aerovía
+                log.escribirEvento("AVION " + this.getIdAvion() + " en el aire, aerovía " + this.aeropuerto.getNombre() + "-" + this.destino.getNombre() + ".");
                 this.aeropuerto.entrarAerovia(this, despegando);
                 // Cambiar aeropuerto, estatus (despegando), entrar en aerovia destino
                 Aeropuerto temp = aeropuerto;
@@ -98,26 +105,31 @@ public class Avion extends Thread {
                 Thread.sleep(r.nextInt(15000) + 15000);
                 // Buscar pista -> espera activa?
                 /*
+                log.escribirEvento("AVION " + this.getIdAvion() + " busca una pista libre en " + this.aeropuerto.getNombre() + ".");
                 while(pistas ocupadas){
                     Thread.sleep(r.nextInt(4000) + 1000);
                 }
+                log.escribirEvento("AVION " + this.getIdAvion() + " ha encontrado una pista libre en " + this.aeropuerto.getNombre() + ", procede a aterrizar.");
                 */
                 // Salir aerovias
                 this.destino.salirAerovia(this);
                 this.aeropuerto.salirAerovia(this);
 
                 // Pista
+                log.escribirEvento("AVION " + this.getIdAvion() + " ha aterrizado exitosamente en " + this.aeropuerto.getNombre() + ".");
                 this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(4000) + 1000);
                 this.aeropuerto.salirPista(this);
 
                 // Area de rodaje
+                log.escribirEvento("AVION " + this.getIdAvion() + " accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.");
                 this.aeropuerto.entrarAreaDeRodaje(this);
                 Thread.sleep(r.nextInt(2000) + 3000);
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 
                 // Añadir el avion a las puertas de embarque
                 this.aeropuerto.insertarPuertasEmbarque(this, despegando);
+                log.escribirEvento("AVION " + this.getIdAvion() + " desembarca " + this.numPasajeros + " pasajeros.");
                 Thread.sleep(r.nextInt(4000) + 1000);
                 this.aeropuerto.sumarViajerosAvion(numPasajeros);
                 numPasajeros = 0;
@@ -125,28 +137,36 @@ public class Avion extends Thread {
 
                 // Añadir el avion al area de estacionamiento:
                 this.aeropuerto.incluirAvionEnAreaEst(this);
+                log.escribirEvento("AVION " + this.getIdAvion() + " se dirije al área de estacionamiento y se pone a la cola para entrar al taller.");
                 Thread.sleep(r.nextInt(4000) + 1000);
                 this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
 
                 // Añadir el avion al taller
                 this.aeropuerto.entrarTaller(this);
+                log.escribirEvento("AVION " + this.getIdAvion() + " entrando al taller.");
                 Thread.sleep(1000);
 
                 // Elegir tipo de revision
                 if ((numViajes % 15) == 0) {
                     // Inspeccion en profuncidad
+                    log.escribirEvento("AVION " + this.getIdAvion() + " tiene " + this.numViajes + " viajes totales. Llevando a cabo una inspección en profuncidad.");
                     Thread.sleep(r.nextInt(5000) + 5000);
                 } else {
                     // Inspeccion rutinaria
+                    log.escribirEvento("AVION " + this.getIdAvion() + " tiene " + this.numViajes + " viajes totales. Llevando a cabo una inspección rutinaria.");
                     Thread.sleep(r.nextInt(4000) + 1000);
                 }
-
+                
+                log.escribirEvento("AVION " + this.getIdAvion() + " saliendo del taller.");
+                Thread.sleep(1000);
                 this.aeropuerto.salirTaller(this);
 
                 // Añadir avion al hangar y decirdir si esperar o continar
                 this.aeropuerto.incluirAvionEnHangar(this);
+                log.escribirEvento("AVION " + this.getIdAvion() + " entrando en el hangar de " + this.aeropuerto.getNombre() + ".");
                 double decision = r.nextDouble();
                 if (decision < 0.5){
+                    log.escribirEvento("AVION " + this.getIdAvion() + " reposa en el hangar de " + this.aeropuerto.getNombre() + ".");
                     Thread.sleep(r.nextInt(15000) + 15000);
                 }
                 else {
