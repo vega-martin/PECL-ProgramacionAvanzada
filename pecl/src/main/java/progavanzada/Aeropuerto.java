@@ -160,9 +160,9 @@ public class Aeropuerto {
         semPuertasEmb.acquire();
         lockPuertasEmb.lock();
         try {
-            for (int i = 1; i <= 6; i++){
+            for (int i = 0; i < 6; i++){
                 // La puerta 1 solo vale para embarques y la 2 solo vale para desembarques:
-                if (((i == 1) && (!embarcando)) || ((i == 2) && (embarcando))){
+                if (((i == 0) && (!embarcando)) || ((i == 1) && (embarcando))){
                     continue;                        
                 }
                 // Elige puerta
@@ -197,7 +197,7 @@ public class Aeropuerto {
     public void quitarPuertasEmbarque(Avion avion) throws InterruptedException {
         lockPuertasEmb.lock();
         try {
-            for (int i = 1; i <= 6; i++){
+            for (int i = 0; i < 6; i++){
                 if (this.puertasEmbarque[i] == avion) {
                     this.puertasEmbarque[i] = null;
                     break;
@@ -254,7 +254,7 @@ public class Aeropuerto {
         semPistas.acquire();
         lockPistas.lock();
         try {
-            for (int i = 1; i <= 4; i++){
+            for (int i = 0; i < 4; i++){
                 // Si la pista está desactivada se pasaría al siguiente
                 // todavia no está es opcion implementada
                 
@@ -270,7 +270,7 @@ public class Aeropuerto {
     public void salirPista(Avion avion) throws InterruptedException {
         lockPistas.lock();
         try {
-            for (int i = 1; i <= 4; i++){
+            for (int i = 0; i < 4; i++){
                 if (this.pistas[i] == avion) {
                     this.pistas[i] = null;
                     break;
@@ -322,9 +322,46 @@ public class Aeropuerto {
         }
     }
     
+    public void entrarTaller(Avion avion) throws InterruptedException {
+        semTaller.acquire();
+        lockTaller.lock();
+        try {
+            for (int i = 0; i < 20; i++){
+                // Elige puesto en el taller
+                if (taller[i] == null) {
+                    this.taller[i] = avion;
+                    break;
+                }
+            }
+        } finally { lockTaller.unlock(); }
+    }
+    
+    public void salirTaller(Avion avion) throws InterruptedException {
+        lockTaller.lock();
+        try {
+            for (int i = 0; i < 20; i++){
+                if (this.taller[i] == avion) {
+                    this.taller[i] = null;
+                    break;
+                }
+            }
+            esperarTaller.signal();
+        } finally { lockTaller.unlock(); }
+        semTaller.release();
+    }
+    
     // Para comporbar si el taller esta completo (el nombre es raro xd)
     public boolean esTallerCompleto(){ 
-        return true;
+        boolean completo = true;
+        
+        for(Avion a : taller) {
+            if (a == null){
+                completo = false;
+                break;
+            }
+        }
+        
+        return completo;
     }
     
 }

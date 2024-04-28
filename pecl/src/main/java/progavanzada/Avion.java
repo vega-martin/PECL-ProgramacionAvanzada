@@ -13,6 +13,7 @@ public class Avion extends Thread {
     private final int maxPasajeros;
     private int numPasajeros = 0;
     private boolean despegando = true;
+    private int numViajes = 0;
     
     // Objeto random, usado en diferentes métodos:
     Random r = new Random();
@@ -55,62 +56,103 @@ public class Avion extends Thread {
     @Override
     public void run(){
         try {
-            
-            // Eliminar el avion del hangar:
-            this.aeropuerto.quitarAvionDeHangar(this);
-            
-            // Añadir el avion al area de estacionamiento:
-            this.aeropuerto.incluirAvionEnAreaEst(this);
-            this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
-            
-            // Añadir el avion a las puertas de embarque
-            this.aeropuerto.insertarPuertasEmbarque(this, despegando);
-            
-            // Llenar el avión de pasajeros:
-            recogerPasajeros();
-            
-            // Abandona la puerta de embarque
-            this.aeropuerto.quitarPuertasEmbarque(this);
-            
-            // Area de rodaje
-            this.aeropuerto.entrarAreaDeRodaje(this);
-            this.aeropuerto.salirAreaDeRodaje(this, despegando);
-            
-            // Pista
-            this.aeropuerto.entrarPista(this);
-            Thread.sleep(r.nextInt(2000) + 1000);
-            Thread.sleep(r.nextInt(4000) + 1000);
-            this.aeropuerto.salirPista(this);
-            
-            // Aerovía
-            this.aeropuerto.entrarAerovia(this, despegando);
-            // Cambiar aeropuerto, estatus (despegando), entrar en aerovia destino
-            Aeropuerto temp = aeropuerto;
-            aeropuerto = destino;
-            destino = temp;
-            despegando = false;
-            this.aeropuerto.entrarAerovia(this, despegando);
-            // Trayecto
-            Thread.sleep(r.nextInt(15000) + 15000);
-            // Buscar pista -> espera activa?
-            /*
-            while(pistas ocupadas){
+            while (true) {
+                
+                numViajes ++;
+
+                // Eliminar el avion del hangar:
+                this.aeropuerto.quitarAvionDeHangar(this);
+
+                // Añadir el avion al area de estacionamiento:
+                this.aeropuerto.incluirAvionEnAreaEst(this);
+                this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
+
+                // Añadir el avion a las puertas de embarque
+                this.aeropuerto.insertarPuertasEmbarque(this, despegando);
+
+                // Llenar el avión de pasajeros:
+                recogerPasajeros();
+
+                // Abandona la puerta de embarque
+                this.aeropuerto.quitarPuertasEmbarque(this);
+
+                // Area de rodaje
+                this.aeropuerto.entrarAreaDeRodaje(this);
+                this.aeropuerto.salirAreaDeRodaje(this, despegando);
+
+                // Pista
+                this.aeropuerto.entrarPista(this);
+                Thread.sleep(r.nextInt(2000) + 1000);
                 Thread.sleep(r.nextInt(4000) + 1000);
+                this.aeropuerto.salirPista(this);
+
+                // Aerovía
+                this.aeropuerto.entrarAerovia(this, despegando);
+                // Cambiar aeropuerto, estatus (despegando), entrar en aerovia destino
+                Aeropuerto temp = aeropuerto;
+                aeropuerto = destino;
+                destino = temp;
+                despegando = false;
+                this.aeropuerto.entrarAerovia(this, despegando);
+                // Trayecto
+                Thread.sleep(r.nextInt(15000) + 15000);
+                // Buscar pista -> espera activa?
+                /*
+                while(pistas ocupadas){
+                    Thread.sleep(r.nextInt(4000) + 1000);
+                }
+                */
+                // Salir aerovias
+                this.destino.salirAerovia(this);
+                this.aeropuerto.salirAerovia(this);
+
+                // Pista
+                this.aeropuerto.entrarPista(this);
+                Thread.sleep(r.nextInt(4000) + 1000);
+                this.aeropuerto.salirPista(this);
+
+                // Area de rodaje
+                this.aeropuerto.entrarAreaDeRodaje(this);
+                Thread.sleep(r.nextInt(2000) + 3000);
+                this.aeropuerto.salirAreaDeRodaje(this, despegando);
+
+                // Añadir el avion a las puertas de embarque
+                this.aeropuerto.insertarPuertasEmbarque(this, despegando);
+                Thread.sleep(r.nextInt(4000) + 1000);
+                this.aeropuerto.sumarViajerosAvion(numPasajeros);
+                numPasajeros = 0;
+                this.aeropuerto.quitarPuertasEmbarque(this);
+
+                // Añadir el avion al area de estacionamiento:
+                this.aeropuerto.incluirAvionEnAreaEst(this);
+                Thread.sleep(r.nextInt(4000) + 1000);
+                this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
+
+                // Añadir el avion al taller
+                this.aeropuerto.entrarTaller(this);
+                Thread.sleep(1000);
+
+                // Elegir tipo de revision
+                if ((numViajes % 15) == 0) {
+                    // Inspeccion en profuncidad
+                    Thread.sleep(r.nextInt(5000) + 5000);
+                } else {
+                    // Inspeccion rutinaria
+                    Thread.sleep(r.nextInt(4000) + 1000);
+                }
+
+                this.aeropuerto.salirTaller(this);
+
+                // Añadir avion al hangar y decirdir si esperar o continar
+                this.aeropuerto.incluirAvionEnHangar(this);
+                double decision = r.nextDouble();
+                if (decision < 0.5){
+                    Thread.sleep(r.nextInt(15000) + 15000);
+                }
+                else {
+                    continue;
+                }
             }
-            */
-            // Salir aerovias
-            this.destino.salirAerovia(this);
-            this.aeropuerto.salirAerovia(this);
-            
-            // Pista
-            this.aeropuerto.entrarPista(this);
-            Thread.sleep(r.nextInt(4000) + 1000);
-            this.aeropuerto.salirPista(this);
-            
-            // Area de rodaje
-            this.aeropuerto.entrarAreaDeRodaje(this);
-            this.aeropuerto.salirAreaDeRodaje(this, despegando);
-            
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
