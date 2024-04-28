@@ -33,7 +33,8 @@ public class Aeropuerto {
     //public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
     
     // MECANISMOS PARA PROTEGER LAS ESTRUCTURAS DE DATOS:
-    private final Lock lockViajeros = new ReentrantLock();
+    private final Lock lockViajerosBus = new ReentrantLock();
+    private final Lock lockViajerosAvion = new ReentrantLock();
     private final Lock lockHangar = new ReentrantLock();
     private final Lock lockAreaEst = new ReentrantLock();
     private final Lock lockPuertasEmb = new ReentrantLock();
@@ -45,78 +46,14 @@ public class Aeropuerto {
     private final Condition esperarPistas = lockPistas.newCondition();
     private final Lock lockAerovias = new ReentrantLock();
     
-    //
+    // Metodos para obtener información sobre el aeropuerto
 
     public synchronized String getNombre() {
         return nombre;
     }
 
-    public synchronized void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public synchronized int getViajeros() {
         return viajeros;
-    }
-
-    public synchronized void setViajeros(int viajeros) {
-        this.viajeros = viajeros;
-    }
-
-    public void insertarPuertasEmbarque(Avion avion, boolean embarque) throws InterruptedException {
-        semPuertasEmb.acquire();
-        lockPuertasEmb.lock();
-        try {
-            for (int i = 1; i <= 6; i++){
-                // La puerta 1 solo vale para embarques y la 2 solo vale para desembarques:
-                if (((i == 1) && (!embarque)) || ((i == 2) && (embarque))){
-                    continue;                        
-                }
-                // Elige puerta
-                if (puertasEmbarque[i] == null ) {
-                    this.puertasEmbarque[i] = avion;
-                    break;
-                }
-            }
-        } finally { lockPuertasEmb.unlock(); }
-    }
-    
-    public void quitarPuertasEmbarque(Avion avion) throws InterruptedException {
-        lockPuertasEmb.lock();
-        try {
-            for (int i = 1; i <= 6; i++){
-                if (this.puertasEmbarque[i] == avion) {
-                    this.puertasEmbarque[i] = null;
-                    break;
-                }
-            }
-            esperarPuertasEmb.signal();
-        } finally { lockPuertasEmb.unlock(); }
-        semPuertasEmb.release();
-    }
-    
-    public Aeropuerto(String nombre){
-        this.nombre = nombre;
-    }
-    
-    public void sumarViajerosBus(int pasajerosBus){ 
-        try {
-            lockViajeros.lock();
-            viajeros += pasajerosBus;  
-        }
-        finally {
-            lockViajeros.unlock();
-        }
-    }
-    
-    public void restarViajerosBus(int pasajerosBus){
-        try {
-            lockViajeros.lock();
-            viajeros -= pasajerosBus;  
-        }
-        finally {
-            lockViajeros.unlock();
-        }
     }
     
     public int contarAvionesHangar(){
@@ -126,7 +63,31 @@ public class Aeropuerto {
     public int contarAvionesAreaEst(){
         return areaEstacionamiento.size();
     }
-
+    
+    // Metodos usados por los autobuses
+    
+    public void sumarViajerosBus(int pasajerosBus){ 
+        try {
+            lockViajerosBus.lock();
+            viajeros += pasajerosBus;  
+        }
+        finally {
+            lockViajerosBus.unlock();
+        }
+    }
+    
+    public void restarViajerosBus(int pasajerosBus){
+        try {
+            lockViajerosBus.lock();
+            viajeros -= pasajerosBus;  
+        }
+        finally {
+            lockViajerosBus.unlock();
+        }
+    }
+    
+    // Metodos usados por los aviones
+    
     public void incluirAvionEnHangar(Avion avion){
         try {
             lockHangar.lock();
@@ -170,6 +131,62 @@ public class Aeropuerto {
         finally {
             lockAreaEst.unlock();
         }  
+    }
+    
+    public void insertarPuertasEmbarque(Avion avion, boolean embarque) throws InterruptedException {
+        semPuertasEmb.acquire();
+        lockPuertasEmb.lock();
+        try {
+            for (int i = 1; i <= 6; i++){
+                // La puerta 1 solo vale para embarques y la 2 solo vale para desembarques:
+                if (((i == 1) && (!embarque)) || ((i == 2) && (embarque))){
+                    continue;                        
+                }
+                // Elige puerta
+                if (puertasEmbarque[i] == null ) {
+                    this.puertasEmbarque[i] = avion;
+                    break;
+                }
+            }
+        } finally { lockPuertasEmb.unlock(); }
+    }
+    
+    public void sumarViajerosAvion(int pasajerosAvion){ 
+        try {
+            lockViajerosAvion.lock();
+            viajeros += pasajerosAvion;  
+        }
+        finally {
+            lockViajerosAvion.unlock();
+        }
+    }
+    
+    public void restarViajerosAvion(int pasajerosAvion){
+        try {
+            lockViajerosAvion.lock();
+            viajeros -= pasajerosAvion;  
+        }
+        finally {
+            lockViajerosAvion.unlock();
+        }
+    }
+    
+    public void quitarPuertasEmbarque(Avion avion) throws InterruptedException {
+        lockPuertasEmb.lock();
+        try {
+            for (int i = 1; i <= 6; i++){
+                if (this.puertasEmbarque[i] == avion) {
+                    this.puertasEmbarque[i] = null;
+                    break;
+                }
+            }
+            esperarPuertasEmb.signal();
+        } finally { lockPuertasEmb.unlock(); }
+        semPuertasEmb.release();
+    }
+    
+    public Aeropuerto(String nombre){
+        this.nombre = nombre;
     }
     
     public void areaDeRodaje(Avion avion){

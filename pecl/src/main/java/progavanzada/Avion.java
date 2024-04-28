@@ -65,7 +65,7 @@ public class Avion extends Thread {
             
             // Llenar el avión de pasajeros:
             if (this.maxPasajeros <= this.aeropuerto.getViajeros()){ // Hay suficientes
-                this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - this.maxPasajeros);
+                this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - this.maxPasajeros);
                 this.numPasajeros = this.maxPasajeros;
                 Thread.sleep(r.nextInt(2000) + 1000);
             }
@@ -84,7 +84,7 @@ public class Avion extends Thread {
                         numViajerosRecogidosTotales = numViajerosIteracion - (this.maxPasajeros - this.numPasajeros);
                     }
                     // Actualizar viajeros del aeropuerto y del avión
-                    this.aeropuerto.setViajeros(this.aeropuerto.getViajeros() - numViajerosRecogidosTotales);
+                    this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - numViajerosRecogidosTotales);
                     this.numPasajeros += numViajerosRecogidosTotales;
                     Thread.sleep(r.nextInt(2000) + 1000);
                     if (this.numPasajeros == this.maxPasajeros) {
