@@ -62,52 +62,63 @@ public class Avion extends Thread {
             this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
             
             // Añadir el avion a las puertas de embarque
-            this.aeropuerto.insertarPuertasEmbarque(this, true);
+            this.aeropuerto.insertarPuertasEmbarque(this, despegando);
             
             // Llenar el avión de pasajeros:
-            if (this.maxPasajeros <= this.aeropuerto.getViajeros()){ // Hay suficientes
-                this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - this.maxPasajeros);
-                this.numPasajeros = this.maxPasajeros;
-                Thread.sleep(r.nextInt(2000) + 1000);
-            }
-            else { // No hay suficientes
-                int numViajerosRecogidosTotales = 0;
-                for (int i = 1; i <= 3; i++) {
-                    int numViajerosIteracion = this.aeropuerto.getViajeros();
-                    // El numero de viajeros disponibles no permite llenar el avión
-                    if (numViajerosIteracion <= (this.maxPasajeros - this.numPasajeros)) {
-                        // Recoger todos los viajeros disponibles
-                        numViajerosRecogidosTotales = numViajerosIteracion;
-                    }
-                    // El numero de viajeros disponibles hace que se llene el avión
-                    else {
-                        // Recoger viajeros hasta llenar avion
-                        numViajerosRecogidosTotales = numViajerosIteracion - (this.maxPasajeros - this.numPasajeros);
-                    }
-                    // Actualizar viajeros del aeropuerto y del avión
-                    this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - numViajerosRecogidosTotales);
-                    this.numPasajeros += numViajerosRecogidosTotales;
-                    Thread.sleep(r.nextInt(2000) + 1000);
-                    if (this.numPasajeros == this.maxPasajeros) {
-                        break;
-                    }
-                    Thread.sleep(r.nextInt(4000) + 1000);
-                }
-            }
+            recogerPasajeros();
             
             // Abandona la puerta de embarque
             this.aeropuerto.quitarPuertasEmbarque(this);
             
-            // Area de rodaje y pista
+            // Area de rodaje
             this.aeropuerto.entrarAreaDeRodaje(this);
             this.aeropuerto.salirAreaDeRodaje(this, despegando);
+            
+            // Pista
             this.aeropuerto.entrarPista(this);
+            Thread.sleep(r.nextInt(2000) + 1000);
+            Thread.sleep(r.nextInt(4000) + 1000);
             this.aeropuerto.salirPista(this);
             
-            // Entrar en aerovía
+            // Aerovía
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
         }
     }
+    
+    // Metodos utiles para el ciclo de vida del avion
+    
+    private void recogerPasajeros() throws InterruptedException {
+        if (this.maxPasajeros <= this.aeropuerto.getViajeros()){ // Hay suficientes
+                this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - this.maxPasajeros);
+                this.numPasajeros = this.maxPasajeros;
+                Thread.sleep(r.nextInt(2000) + 1000);
+        }
+        else { // No hay suficientes
+            int numViajerosRecogidosTotales = 0;
+            for (int i = 1; i <= 3; i++) {
+                int numViajerosIteracion = this.aeropuerto.getViajeros();
+                // El numero de viajeros disponibles no permite llenar el avión
+                if (numViajerosIteracion <= (this.maxPasajeros - this.numPasajeros)) {
+                    // Recoger todos los viajeros disponibles
+                    numViajerosRecogidosTotales = numViajerosIteracion;
+                }
+                // El numero de viajeros disponibles hace que se llene el avión
+                else {
+                    // Recoger viajeros hasta llenar avion
+                    numViajerosRecogidosTotales = numViajerosIteracion - (this.maxPasajeros - this.numPasajeros);
+                }
+                // Actualizar viajeros del aeropuerto y del avión
+                this.aeropuerto.restarViajerosAvion(this.aeropuerto.getViajeros() - numViajerosRecogidosTotales);
+                this.numPasajeros += numViajerosRecogidosTotales;
+                Thread.sleep(r.nextInt(2000) + 1000);
+                if (this.numPasajeros == this.maxPasajeros) {
+                    break;
+                }
+                Thread.sleep(r.nextInt(4000) + 1000);
+            }
+        }
+    }
+    
 }
