@@ -5,7 +5,8 @@ import java.util.Random;
 public class Avion extends Thread {
     
     // Recurso compartido
-    private Aeropuerto aeropuerto; 
+    private Aeropuerto aeropuerto;
+    private Aeropuerto destino;
     
     // Resto de atributos:
     private final String id;
@@ -41,10 +42,11 @@ public class Avion extends Thread {
     }
     
     // Constructor del objeto Avion:
-    public Avion(Aeropuerto aeropuerto, int numCompartido){
+    public Avion(Aeropuerto aeropuerto, int numCompartido, Aeropuerto aeropuertoDestino){
         this.id = generarIdAvion(numCompartido);
         this.maxPasajeros = r.nextInt(201) + 100;
         this.aeropuerto = aeropuerto;
+        this.destino = aeropuertoDestino;
         
         // Inclur el avion al hangar del aeropuerto:
         this.aeropuerto.incluirAvionEnHangar(this);
@@ -81,6 +83,34 @@ public class Avion extends Thread {
             this.aeropuerto.salirPista(this);
             
             // Aerovía
+            this.aeropuerto.entrarAerovia(this, despegando);
+            // Cambiar aeropuerto, estatus (despegando), entrar en aerovia destino
+            Aeropuerto temp = aeropuerto;
+            aeropuerto = destino;
+            destino = temp;
+            despegando = false;
+            this.aeropuerto.entrarAerovia(this, despegando);
+            // Trayecto
+            Thread.sleep(r.nextInt(15000) + 15000);
+            // Buscar pista -> espera activa?
+            /*
+            while(pistas ocupadas){
+                Thread.sleep(r.nextInt(4000) + 1000);
+            }
+            */
+            // Salir aerovias
+            this.destino.salirAerovia(this);
+            this.aeropuerto.salirAerovia(this);
+            
+            // Pista
+            this.aeropuerto.entrarPista(this);
+            Thread.sleep(r.nextInt(4000) + 1000);
+            this.aeropuerto.salirPista(this);
+            
+            // Area de rodaje
+            this.aeropuerto.entrarAreaDeRodaje(this);
+            this.aeropuerto.salirAreaDeRodaje(this, despegando);
+            
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");

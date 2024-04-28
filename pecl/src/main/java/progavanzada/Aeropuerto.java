@@ -281,21 +281,47 @@ public class Aeropuerto {
         semPistas.release();
     }
     
-    public void aerovia(Avion avion){
-        lockAerovias.lock();
-        try {
-            
-            avion.getAeropuerto().aerovias[0].add(avion);
-            
-            long viaje = (long) ((16000 * Math.random()) + 15000);
-            Thread.sleep(viaje);
-            
-            
-        } catch (InterruptedException e) {}
-        finally {
-            lockAerovias.unlock();
+    public void entrarAerovia(Avion avion, boolean despegando){
+        if (despegando) {
+            lockAerovias.lock();
+            try {
+                avion.getAeropuerto().aerovias[0].add(avion);
+            } 
+            finally {
+                lockAerovias.unlock();
+            }
+        }
+        else {
+            lockAerovias.lock();
+            try {
+                avion.getAeropuerto().aerovias[1].add(avion);
+            } 
+            finally {
+                lockAerovias.unlock();
+            }
         }
     }
+    
+    public void salirAerovia(Avion avion){
+        Avion avionBuscado = null;
+        for(Avion a : aerovias[0]){
+            if (a == avion){
+                avionBuscado = a;
+                aerovias[0].remove(a);
+                break;
+            }
+        }
+        if(avionBuscado != avion){
+            for(Avion a : aerovias[1]){
+                if (a == avion){
+                    avionBuscado = a;
+                    aerovias[1].remove(a);
+                    break;
+                }
+            }
+        }
+    }
+    
     // Para comporbar si el taller esta completo (el nombre es raro xd)
     public boolean esTallerCompleto(){ 
         return true;

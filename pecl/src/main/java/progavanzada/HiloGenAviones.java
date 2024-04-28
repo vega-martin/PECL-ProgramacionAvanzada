@@ -35,11 +35,11 @@ public class HiloGenAviones extends Thread {
             
             // Decidir a qué aeropuerto va:
             if (i % 2 == 0) {
-                avion = new Avion(barajas, contadorAviones.getAndIncrement()); // Barajas
+                avion = new Avion(barajas, contadorAviones.getAndIncrement(), prat); // Barajas
             }
             
             else {
-                avion = new Avion(prat, contadorAviones.getAndIncrement()); // El Prat
+                avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas); // El Prat
             }
             
             // TEST:
