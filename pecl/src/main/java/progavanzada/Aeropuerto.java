@@ -53,6 +53,9 @@ public class Aeropuerto {
     
     public Aeropuerto(String nombre){
         this.nombre = nombre;
+        for (int i = 0; i < aerovias.length; i++) {
+            aerovias[i] = new ArrayList<>();
+        } 
     }
     
     public synchronized String getNombre() {
