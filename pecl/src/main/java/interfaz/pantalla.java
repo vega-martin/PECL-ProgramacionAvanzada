@@ -5,14 +5,16 @@ import java.util.logging.Logger;
 import javax.swing.JTextField;
 import progavanzada.*;
 
-public class pantalla extends javax.swing.JFrame {
+public class Pantalla extends javax.swing.JFrame {
     
     private Paso paso = new Paso();
+    private JTextField[] coleccion1 = new JTextField[16];
+    private JTextField[] coleccion2 = new JTextField[16];
 
     /**
      * Creates new form pantalla
      */
-    public pantalla() {
+    public Pantalla() {
         initComponents();
         
         jButton1.setEnabled(true);
@@ -53,32 +55,20 @@ public class pantalla extends javax.swing.JFrame {
         jTextField31.setEditable(false);
         jTextField32.setEditable(false);
         
-        JTextField[] coleccion1 = new JTextField[16];
-        JTextField[] coleccion2 = new JTextField[16];
+        
         
         for (int i = 0; i < 16; i++){
             try {
                 coleccion1[i] = textField(i+1);
                 coleccion2[i] = textField(i+17);
             } catch (NoSuchFieldException ex) {
-                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Pantalla.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IllegalArgumentException ex) {
-                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Pantalla.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IllegalAccessException ex) {
-                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Pantalla.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
-        // Declarar los aeropuertos del sistema:
-        Aeropuerto barajas = new Aeropuerto("Barajas", coleccion1);
-        Aeropuerto prat = new Aeropuerto("Prat", coleccion2);
-        
-        // Crear e iniciar el hilo de generación de aviones y buses con ambos aeropuertos
-        HiloGenAviones hiloGenAviones = new HiloGenAviones(barajas, prat);
-        HiloGenBuses hiloGenBuses = new HiloGenBuses(barajas, prat);
-        
-        hiloGenAviones.start();
-        hiloGenBuses.start();
         
     }
 
@@ -653,6 +643,14 @@ public class pantalla extends javax.swing.JFrame {
         return (JTextField) Main.class.getDeclaredField("textField" + index).get(null);
     }
     
+    public JTextField[] getColeccion1(){
+        return this.coleccion1;
+    }
+    
+    public JTextField[] getColeccion2(){
+        return this.coleccion2;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -670,20 +668,21 @@ public class pantalla extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pantalla.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pantalla().setVisible(true);
+                new Pantalla().setVisible(true);
             }
         });
     }

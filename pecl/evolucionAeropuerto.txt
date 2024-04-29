@@ -7788,3 +7788,8 @@
 [28-04-2024 20:12:14] BUS B-0033 viajando al aeropuerto.
 [28-04-2024 20:12:14] BUS B-0051 recoge 30 pasajeros.
 [28-04-2024 20:12:14] BUS B-0051 viajando al aeropuerto.
+[29-04-2024 17:05:22] BUS 0 creado, va a Barajas. Su id es B-0000
+[29-04-2024 17:05:22] BUS B-0000 llega a la ciudad.
+[29-04-2024 17:05:24] AVION 0 creado, va a Barajas. Su id es XA-0000
+[29-04-2024 17:05:24] AVION XA-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[29-04-2024 17:05:24] AVION XA-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.

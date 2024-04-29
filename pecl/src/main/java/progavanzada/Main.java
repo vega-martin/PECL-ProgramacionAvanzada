@@ -1,8 +1,13 @@
 package progavanzada;
 
+import interfaz.Pantalla;
+
 public class Main {
 
     public static void main(String[] args) {
+        
+        // Interfaz grafica
+        Pantalla p = new Pantalla();
         
         // Declarar los aeropuertos del sistema:
         Aeropuerto barajas = new Aeropuerto("Barajas");
