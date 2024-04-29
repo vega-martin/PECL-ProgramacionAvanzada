@@ -7,12 +7,14 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import javax.swing.JTextField;
 
 public class Aeropuerto {
     
     private String nombre;
     private int viajeros;
     
+    private JTextField[] textos = new JTextField[16];
     
     /* Estructuras de datos para las zonas de cada avión
         - ARRAYLIST --> CAPACIDAD ILIMITADA
@@ -53,6 +55,14 @@ public class Aeropuerto {
     
     public Aeropuerto(String nombre){
         this.nombre = nombre;
+        for (int i = 0; i < aerovias.length; i++) {
+            aerovias[i] = new ArrayList<>();
+        } 
+    }
+    
+    public Aeropuerto(String nombre, JTextField[] texto){
+        this.nombre = nombre;
+        this.textos = texto;
         for (int i = 0; i < aerovias.length; i++) {
             aerovias[i] = new ArrayList<>();
         } 

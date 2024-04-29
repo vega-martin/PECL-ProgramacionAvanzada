@@ -1,6 +1,9 @@
 package interfaz;
 
-import progavanzada.Paso;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTextField;
+import progavanzada.*;
 
 public class pantalla extends javax.swing.JFrame {
     
@@ -11,10 +14,72 @@ public class pantalla extends javax.swing.JFrame {
      */
     public pantalla() {
         initComponents();
+        
         jButton1.setEnabled(true);
         jButton2.setEnabled(false);
         jButton1.setFocusable(false);
         jButton2.setFocusable(false);
+        
+        jTextField1.setEditable(false);
+        jTextField2.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField4.setEditable(false);
+        jTextField5.setEditable(false);
+        jTextField6.setEditable(false);
+        jTextField7.setEditable(false);
+        jTextField8.setEditable(false);
+        jTextField9.setEditable(false);
+        jTextField10.setEditable(false);
+        jTextField11.setEditable(false);
+        jTextField12.setEditable(false);
+        jTextField13.setEditable(false);
+        jTextField14.setEditable(false);
+        jTextField15.setEditable(false);
+        jTextField16.setEditable(false);
+        jTextField17.setEditable(false);
+        jTextField18.setEditable(false);
+        jTextField19.setEditable(false);
+        jTextField20.setEditable(false);
+        jTextField21.setEditable(false);
+        jTextField22.setEditable(false);
+        jTextField23.setEditable(false);
+        jTextField24.setEditable(false);
+        jTextField25.setEditable(false);
+        jTextField26.setEditable(false);
+        jTextField27.setEditable(false);
+        jTextField28.setEditable(false);
+        jTextField29.setEditable(false);
+        jTextField30.setEditable(false);
+        jTextField31.setEditable(false);
+        jTextField32.setEditable(false);
+        
+        JTextField[] coleccion1 = new JTextField[16];
+        JTextField[] coleccion2 = new JTextField[16];
+        
+        for (int i = 0; i < 16; i++){
+            try {
+                coleccion1[i] = textField(i+1);
+                coleccion2[i] = textField(i+17);
+            } catch (NoSuchFieldException ex) {
+                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalArgumentException ex) {
+                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalAccessException ex) {
+                Logger.getLogger(pantalla.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        // Declarar los aeropuertos del sistema:
+        Aeropuerto barajas = new Aeropuerto("Barajas", coleccion1);
+        Aeropuerto prat = new Aeropuerto("Prat", coleccion2);
+        
+        // Crear e iniciar el hilo de generación de aviones y buses con ambos aeropuertos
+        HiloGenAviones hiloGenAviones = new HiloGenAviones(barajas, prat);
+        HiloGenBuses hiloGenBuses = new HiloGenBuses(barajas, prat);
+        
+        hiloGenAviones.start();
+        hiloGenBuses.start();
+        
     }
 
     /**
@@ -582,7 +647,12 @@ public class pantalla extends javax.swing.JFrame {
         paso.abrir();
         jButton1.setEnabled(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    
+    // Metodo para obtener los JTextFields por su nombre
+    private static JTextField textField(int index) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
+        return (JTextField) Main.class.getDeclaredField("textField" + index).get(null);
+    }
+    
     /**
      * @param args the command line arguments
      */
