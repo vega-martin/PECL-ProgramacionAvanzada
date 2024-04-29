@@ -10,6 +10,8 @@ public class Paso {
     private Lock control = new ReentrantLock();
     private Condition parar = control.newCondition();
     
+    Log log = new Log("evolucionAeropuerto.txt");
+    
     public void mirar(){
         try {
             control.lock();
@@ -27,6 +29,7 @@ public class Paso {
         try {
             control.lock();
             cerrado = false;
+            log.escribirEvento("*****  REANUDANDO EL SIMULADOR  *****");
             parar.signalAll();
         }
         finally {
@@ -38,6 +41,7 @@ public class Paso {
         try {
             control.lock();
             cerrado = true;
+            log.escribirEvento("*****  PARANDO EL SIMULADOR  *****");
         }
         finally {
             control.unlock();
