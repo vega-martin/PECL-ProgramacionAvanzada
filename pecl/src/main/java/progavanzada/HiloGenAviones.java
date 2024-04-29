@@ -13,6 +13,8 @@ public class HiloGenAviones extends Thread {
     
     Log log = new Log("evolucionAeropuerto.txt");
     
+    private Paso paso;
+    
     // Constructor que recibe Barajas y Prat:
     public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat) {
         this.barajas = barajas;
@@ -52,7 +54,10 @@ public class HiloGenAviones extends Thread {
             log.escribirEvento(str);
             
             // Iniciar el hilo:
-            avion.start();  
+            avion.start(); 
+            
+            // Cada vez que termina de generar un avion mira si se tiene que parar
+            paso.mirar();
             
         }
     } 
