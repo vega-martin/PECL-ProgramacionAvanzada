@@ -7831,3 +7831,582 @@
 [01-05-2024 19:41:18] *****  REANUDANDO EL SIMULADOR  *****
 [01-05-2024 19:41:19] *****  PARANDO EL SIMULADOR  *****
 [01-05-2024 19:41:19] *****  REANUDANDO EL SIMULADOR  *****
+[01-05-2024 20:04:26] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:04:26] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:04:27] AVION 0 creado, va a Barajas. Su id es GJ-0000
+[01-05-2024 20:04:27] AVION GJ-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:04:27] AVION GJ-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:04:29] BUS B-0000 recoge 35 pasajeros.
+[01-05-2024 20:04:29] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:04:37] BUS B-0000 deja 35 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:04:40] BUS B-0000 se llena.
+[01-05-2024 20:04:40] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:04:45] AVION GJ-0000 accede a una puerta de embarque y recoge 35 pasajeros.
+[01-05-2024 20:04:45] AVION GJ-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:04:45] AVION GJ-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:04:45] BUS B-0000 deja 16 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:04:45] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:04:48] BUS B-0000 recoge 22 pasajeros.
+[01-05-2024 20:04:48] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:04:49] AVION GJ-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:04:58] BUS B-0000 deja 22 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:05:01] BUS B-0000 se llena.
+[01-05-2024 20:05:01] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:05:11] BUS B-0000 deja 22 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:05:11] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:05:17] BUS B-0000 recoge 23 pasajeros.
+[01-05-2024 20:05:17] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:05:19] AVION GJ-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:05:23] AVION GJ-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:10:09] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:10:09] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:10:10] AVION 0 creado, va a Barajas. Su id es SK-0000
+[01-05-2024 20:10:10] AVION SK-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:10:10] AVION SK-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:10:14] BUS B-0000 recoge 14 pasajeros.
+[01-05-2024 20:10:14] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:10:25] BUS B-0000 deja 14 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:10:27] AVION SK-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:10:27] AVION SK-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:10:27] AVION SK-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:10:30] BUS B-0000 se llena.
+[01-05-2024 20:10:30] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:10:34] AVION SK-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:12:15] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:12:15] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:12:17] AVION 0 creado, va a Barajas. Su id es CL-0000
+[01-05-2024 20:12:17] AVION CL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:12:17] AVION CL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:12:21] BUS B-0000 recoge 27 pasajeros.
+[01-05-2024 20:12:21] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:12:31] BUS B-0000 deja 27 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:12:33] AVION CL-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:12:33] AVION CL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:12:33] AVION CL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:16:55] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:16:55] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:16:57] AVION 0 creado, va a Barajas. Su id es PC-0000
+[01-05-2024 20:16:57] AVION PC-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:16:57] AVION PC-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:16:58] BUS B-0000 recoge 19 pasajeros.
+[01-05-2024 20:16:58] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:17:07] BUS B-0000 deja 19 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:18:11] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:18:11] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:18:12] AVION 0 creado, va a Barajas. Su id es QD-0000
+[01-05-2024 20:18:12] AVION QD-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:18:12] AVION QD-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:18:13] BUS B-0000 recoge 46 pasajeros.
+[01-05-2024 20:18:13] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:18:19] BUS B-0000 deja 46 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:18:24] BUS B-0000 se llena.
+[01-05-2024 20:18:24] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:18:29] AVION QD-0000 accede a una puerta de embarque y recoge 40 pasajeros.
+[01-05-2024 20:18:29] AVION QD-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:18:29] AVION QD-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:18:33] BUS B-0000 deja 6 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:18:33] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:18:34] AVION QD-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:18:35] BUS B-0000 recoge 11 pasajeros.
+[01-05-2024 20:18:35] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:19:05] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:19:05] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:19:05] AVION 0 creado, va a Barajas. Su id es HX-0000
+[01-05-2024 20:19:05] AVION HX-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:19:05] AVION HX-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:19:09] BUS B-0000 recoge 34 pasajeros.
+[01-05-2024 20:19:09] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:19:15] BUS B-0000 deja 34 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:19:19] AVION HX-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:19:19] AVION HX-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:19:19] AVION HX-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:19:21] BUS B-0000 se llena.
+[01-05-2024 20:19:21] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:19:24] AVION HX-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:19:32] BUS B-0000 deja 39 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:19:32] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:19:37] BUS B-0000 recoge 49 pasajeros.
+[01-05-2024 20:19:37] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:19:40] AVION HX-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:19:44] AVION HX-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:19:46] BUS B-0000 deja 49 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:19:49] AVION HX-0000 desembarca 0 pasajeros.
+[01-05-2024 20:19:51] BUS B-0000 se llena.
+[01-05-2024 20:19:51] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:19:53] AVION HX-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:19:55] AVION HX-0000 entrando al taller.
+[01-05-2024 20:19:56] AVION HX-0000 tiene 1 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:19:58] AVION HX-0000 saliendo del taller.
+[01-05-2024 20:19:59] AVION HX-0000 entrando en el hangar de Prat.
+[01-05-2024 20:19:59] AVION HX-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:19:59] AVION HX-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:20:00] BUS B-0000 deja 42 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:20:00] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:20:02] BUS B-0000 recoge 19 pasajeros.
+[01-05-2024 20:20:02] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:20:09] BUS B-0000 deja 19 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:20:14] BUS B-0000 se llena.
+[01-05-2024 20:20:14] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:20:16] AVION HX-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:20:16] AVION HX-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:20:16] AVION HX-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:20:21] BUS B-0000 deja 48 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:20:21] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:20:22] BUS B-0000 recoge 49 pasajeros.
+[01-05-2024 20:20:22] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:20:23] AVION HX-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:20:29] BUS B-0000 deja 49 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:21:30] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:21:30] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:21:31] AVION 0 creado, va a Barajas. Su id es EL-0000
+[01-05-2024 20:21:31] AVION EL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:21:31] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:21:34] BUS B-0000 recoge 20 pasajeros.
+[01-05-2024 20:21:34] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:21:40] BUS B-0000 deja 20 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:21:46] BUS B-0000 se llena.
+[01-05-2024 20:21:46] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:21:50] AVION EL-0000 accede a una puerta de embarque y recoge 20 pasajeros.
+[01-05-2024 20:21:50] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:21:50] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:21:56] AVION EL-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:21:56] BUS B-0000 deja 47 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:21:56] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:22:02] BUS B-0000 recoge 21 pasajeros.
+[01-05-2024 20:22:02] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:22:12] BUS B-0000 deja 21 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:22:13] AVION EL-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:22:14] BUS B-0000 se llena.
+[01-05-2024 20:22:14] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:22:18] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:22:22] AVION EL-0000 desembarca 20 pasajeros.
+[01-05-2024 20:22:24] BUS B-0000 deja 22 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:22:24] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:22:27] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:22:30] BUS B-0000 recoge 50 pasajeros.
+[01-05-2024 20:22:30] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:22:30] AVION EL-0000 entrando al taller.
+[01-05-2024 20:22:31] AVION EL-0000 tiene 1 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:22:33] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:22:34] AVION EL-0000 entrando en el hangar de Prat.
+[01-05-2024 20:22:34] AVION EL-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:22:34] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:22:39] BUS B-0000 deja 50 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:22:43] BUS B-0000 se llena.
+[01-05-2024 20:22:43] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:22:49] AVION EL-0000 accede a una puerta de embarque y recoge 60 pasajeros.
+[01-05-2024 20:22:49] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:22:49] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:22:51] AVION EL-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:22:53] BUS B-0000 deja 12 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:22:53] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:22:57] BUS B-0000 recoge 46 pasajeros.
+[01-05-2024 20:22:57] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:23:05] BUS B-0000 deja 46 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:23:10] BUS B-0000 se llena.
+[01-05-2024 20:23:10] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:23:11] AVION EL-0000 ha aterrizado exitosamente en Barajas.
+[01-05-2024 20:23:12] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:23:16] BUS B-0000 deja 0 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:23:16] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:23:17] AVION EL-0000 desembarca 60 pasajeros.
+[01-05-2024 20:23:19] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:23:21] BUS B-0000 recoge 9 pasajeros.
+[01-05-2024 20:23:21] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:23:22] AVION EL-0000 entrando al taller.
+[01-05-2024 20:23:23] AVION EL-0000 tiene 2 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:23:24] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:23:25] AVION EL-0000 entrando en el hangar de Barajas.
+[01-05-2024 20:23:25] AVION EL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:23:25] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:23:28] BUS B-0000 deja 9 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:23:34] BUS B-0000 se llena.
+[01-05-2024 20:23:34] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:23:41] AVION EL-0000 accede a una puerta de embarque y recoge 272 pasajeros.
+[01-05-2024 20:23:41] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:23:41] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:23:41] BUS B-0000 deja 46 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:23:41] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:23:43] BUS B-0000 recoge 28 pasajeros.
+[01-05-2024 20:23:43] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:23:47] AVION EL-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:23:54] BUS B-0000 deja 28 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:23:56] BUS B-0000 se llena.
+[01-05-2024 20:23:56] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:24:04] BUS B-0000 deja 36 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:24:04] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:24:10] BUS B-0000 recoge 14 pasajeros.
+[01-05-2024 20:24:10] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:24:12] AVION EL-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:24:15] BUS B-0000 deja 14 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:24:16] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:24:20] BUS B-0000 se llena.
+[01-05-2024 20:24:20] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:24:20] AVION EL-0000 desembarca 272 pasajeros.
+[01-05-2024 20:24:24] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:24:26] AVION EL-0000 entrando al taller.
+[01-05-2024 20:24:27] AVION EL-0000 tiene 3 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:24:28] BUS B-0000 deja 0 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:24:28] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:24:30] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:24:31] AVION EL-0000 entrando en el hangar de Prat.
+[01-05-2024 20:24:31] AVION EL-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:24:31] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:24:33] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:24:33] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:24:33] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:24:33] BUS B-0000 recoge 0 pasajeros.
+[01-05-2024 20:24:33] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:24:38] AVION EL-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:24:43] BUS B-0000 deja 0 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:24:48] BUS B-0000 se llena.
+[01-05-2024 20:24:48] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:24:58] BUS B-0000 deja 25 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:24:58] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:25:01] BUS B-0000 recoge 8 pasajeros.
+[01-05-2024 20:25:01] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:25:04] AVION EL-0000 ha aterrizado exitosamente en Barajas.
+[01-05-2024 20:25:08] BUS B-0000 deja 8 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:25:09] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:25:13] AVION EL-0000 desembarca 289 pasajeros.
+[01-05-2024 20:25:13] BUS B-0000 se llena.
+[01-05-2024 20:25:13] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:25:16] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:25:20] BUS B-0000 deja 47 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:25:20] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:25:21] AVION EL-0000 entrando al taller.
+[01-05-2024 20:25:22] AVION EL-0000 tiene 4 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:25:23] BUS B-0000 recoge 39 pasajeros.
+[01-05-2024 20:25:23] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:25:24] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:25:25] AVION EL-0000 entrando en el hangar de Barajas.
+[01-05-2024 20:25:25] AVION EL-0000 reposa en el hangar de Barajas.
+[01-05-2024 20:25:30] BUS B-0000 deja 39 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:25:36] BUS B-0000 se llena.
+[01-05-2024 20:25:36] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:25:41] BUS B-0000 deja 4 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:25:41] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:25:45] BUS B-0000 recoge 1 pasajeros.
+[01-05-2024 20:25:45] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:25:51] AVION EL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:25:51] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:25:53] BUS B-0000 deja 1 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:25:53] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:25:53] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:25:53] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:25:55] BUS B-0000 se llena.
+[01-05-2024 20:25:55] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:26:00] AVION EL-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:26:03] BUS B-0000 deja 11 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:26:03] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:26:07] BUS B-0000 recoge 33 pasajeros.
+[01-05-2024 20:26:07] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:26:16] AVION EL-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:26:16] BUS B-0000 deja 33 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:26:20] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:26:21] BUS B-0000 se llena.
+[01-05-2024 20:26:21] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:26:24] AVION EL-0000 desembarca 289 pasajeros.
+[01-05-2024 20:26:27] BUS B-0000 deja 16 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:26:27] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:26:29] BUS B-0000 recoge 6 pasajeros.
+[01-05-2024 20:26:29] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:26:29] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:26:32] AVION EL-0000 entrando al taller.
+[01-05-2024 20:26:33] AVION EL-0000 tiene 5 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:26:34] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:26:35] AVION EL-0000 entrando en el hangar de Prat.
+[01-05-2024 20:26:35] AVION EL-0000 reposa en el hangar de Prat.
+[01-05-2024 20:26:35] BUS B-0000 deja 6 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:26:40] BUS B-0000 se llena.
+[01-05-2024 20:26:40] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:26:48] BUS B-0000 deja 6 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:26:48] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:26:52] BUS B-0000 recoge 48 pasajeros.
+[01-05-2024 20:26:52] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:26:58] AVION EL-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:26:58] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:27:00] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:27:00] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:27:00] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:27:01] BUS B-0000 deja 48 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:27:04] AVION EL-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:27:05] BUS B-0000 se llena.
+[01-05-2024 20:27:05] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:27:15] BUS B-0000 deja 18 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:27:15] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:27:18] BUS B-0000 recoge 11 pasajeros.
+[01-05-2024 20:27:18] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:27:21] AVION EL-0000 ha aterrizado exitosamente en Barajas.
+[01-05-2024 20:27:25] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:27:28] AVION EL-0000 desembarca 289 pasajeros.
+[01-05-2024 20:27:29] BUS B-0000 deja 11 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:27:30] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:27:33] AVION EL-0000 entrando al taller.
+[01-05-2024 20:27:34] AVION EL-0000 tiene 6 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:27:35] BUS B-0000 se llena.
+[01-05-2024 20:27:35] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:27:38] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:27:39] AVION EL-0000 entrando en el hangar de Barajas.
+[01-05-2024 20:27:39] AVION EL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:27:39] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:27:40] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:27:40] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:27:40] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:27:41] BUS B-0000 deja 10 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:27:41] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:27:43] AVION EL-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:27:44] BUS B-0000 recoge 1 pasajeros.
+[01-05-2024 20:27:44] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:27:54] BUS B-0000 deja 1 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:27:59] BUS B-0000 se llena.
+[01-05-2024 20:27:59] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:28:08] BUS B-0000 deja 11 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:28:08] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:28:09] AVION EL-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:28:12] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:28:13] BUS B-0000 recoge 30 pasajeros.
+[01-05-2024 20:28:13] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:28:15] AVION EL-0000 desembarca 289 pasajeros.
+[01-05-2024 20:28:17] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:28:19] BUS B-0000 deja 30 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:28:20] AVION EL-0000 entrando al taller.
+[01-05-2024 20:28:21] AVION EL-0000 tiene 7 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:28:21] BUS B-0000 se llena.
+[01-05-2024 20:28:21] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:28:26] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:28:27] AVION EL-0000 entrando en el hangar de Prat.
+[01-05-2024 20:28:27] AVION EL-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:28:27] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:28:29] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:28:29] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:28:29] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:28:32] BUS B-0000 deja 46 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:28:32] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:28:33] AVION EL-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:28:38] BUS B-0000 recoge 39 pasajeros.
+[01-05-2024 20:28:38] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:28:47] BUS B-0000 deja 39 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:28:51] BUS B-0000 se llena.
+[01-05-2024 20:28:51] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:28:58] BUS B-0000 deja 12 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:28:58] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:28:59] BUS B-0000 recoge 4 pasajeros.
+[01-05-2024 20:28:59] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:28:59] AVION EL-0000 ha aterrizado exitosamente en Barajas.
+[01-05-2024 20:29:03] AVION EL-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:29:04] BUS B-0000 deja 4 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:29:07] AVION EL-0000 desembarca 289 pasajeros.
+[01-05-2024 20:29:10] BUS B-0000 se llena.
+[01-05-2024 20:29:10] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:29:10] AVION EL-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:29:14] AVION EL-0000 entrando al taller.
+[01-05-2024 20:29:15] AVION EL-0000 tiene 8 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:29:17] BUS B-0000 deja 35 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:29:17] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:29:19] AVION EL-0000 saliendo del taller.
+[01-05-2024 20:29:20] AVION EL-0000 entrando en el hangar de Barajas.
+[01-05-2024 20:29:20] AVION EL-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:29:20] AVION EL-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:29:20] BUS B-0000 recoge 26 pasajeros.
+[01-05-2024 20:29:20] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:29:22] AVION EL-0000 accede a una puerta de embarque y recoge 289 pasajeros.
+[01-05-2024 20:29:22] AVION EL-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:29:22] AVION EL-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:29:27] AVION EL-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:29:28] BUS B-0000 deja 26 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:29:30] BUS B-0000 se llena.
+[01-05-2024 20:29:30] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:29:37] BUS B-0000 deja 46 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:29:37] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:36:20] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:36:20] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:36:21] BUS B-0000 recoge 27 pasajeros.
+[01-05-2024 20:36:21] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:36:22] AVION 0 creado, va a Barajas. Su id es KC-0000
+[01-05-2024 20:36:22] AVION KC-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:36:22] AVION KC-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:36:31] BUS B-0000 deja 27 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:36:33] BUS B-0000 se llena.
+[01-05-2024 20:36:33] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:36:38] AVION KC-0000 accede a una puerta de embarque y recoge 26 pasajeros.
+[01-05-2024 20:36:38] AVION KC-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:36:38] AVION KC-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:37:23] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:37:23] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:37:24] AVION 0 creado, va a Barajas. Su id es MI-0000
+[01-05-2024 20:37:24] AVION MI-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:37:24] AVION MI-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:37:29] BUS B-0000 recoge 48 pasajeros.
+[01-05-2024 20:37:29] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:37:36] BUS B-0000 deja 48 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:37:39] AVION MI-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:37:39] AVION MI-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:37:39] AVION MI-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:37:42] BUS B-0000 se llena.
+[01-05-2024 20:37:42] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:37:44] AVION MI-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:37:53] BUS B-0000 deja 38 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:37:53] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:37:54] BUS B-0000 recoge 21 pasajeros.
+[01-05-2024 20:37:54] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:38:05] BUS B-0000 deja 21 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:47:57] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:47:57] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:47:58] AVION 0 creado, va a Barajas. Su id es AQ-0000
+[01-05-2024 20:47:58] AVION AQ-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:47:58] AVION AQ-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:48:01] BUS B-0000 recoge 28 pasajeros.
+[01-05-2024 20:48:01] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:48:09] BUS B-0000 deja 28 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:48:13] BUS B-0000 se llena.
+[01-05-2024 20:48:13] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:48:15] AVION AQ-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:48:15] AVION AQ-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:48:15] AVION AQ-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:48:22] AVION AQ-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:48:24] BUS B-0000 deja 3 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:48:24] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:48:28] BUS B-0000 recoge 25 pasajeros.
+[01-05-2024 20:48:28] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:56:41] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 20:56:41] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:56:42] AVION 0 creado, va a Barajas. Su id es TI-0000
+[01-05-2024 20:56:42] AVION TI-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 20:56:42] AVION TI-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:56:45] BUS B-0000 recoge 27 pasajeros.
+[01-05-2024 20:56:45] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:56:54] AVION TI-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:56:54] AVION TI-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:56:54] AVION TI-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:56:56] BUS B-0000 deja 27 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:56:59] AVION TI-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 20:57:01] BUS B-0000 se llena.
+[01-05-2024 20:57:01] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:57:08] BUS B-0000 deja 46 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:57:08] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:57:11] BUS B-0000 recoge 5 pasajeros.
+[01-05-2024 20:57:11] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:57:17] BUS B-0000 deja 5 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:57:21] BUS B-0000 se llena.
+[01-05-2024 20:57:21] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:57:26] AVION TI-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 20:57:27] AVION TI-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 20:57:31] BUS B-0000 deja 31 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:57:31] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:57:32] AVION TI-0000 desembarca 0 pasajeros.
+[01-05-2024 20:57:34] BUS B-0000 recoge 30 pasajeros.
+[01-05-2024 20:57:34] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:57:35] AVION TI-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 20:57:38] AVION TI-0000 entrando al taller.
+[01-05-2024 20:57:39] AVION TI-0000 tiene 1 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 20:57:40] AVION TI-0000 saliendo del taller.
+[01-05-2024 20:57:41] AVION TI-0000 entrando en el hangar de Prat.
+[01-05-2024 20:57:41] AVION TI-0000 reposa en el hangar de Prat.
+[01-05-2024 20:57:43] BUS B-0000 deja 30 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:57:48] BUS B-0000 se llena.
+[01-05-2024 20:57:48] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:57:55] BUS B-0000 deja 27 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:57:55] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:58:00] BUS B-0000 recoge 25 pasajeros.
+[01-05-2024 20:58:00] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:58:07] BUS B-0000 deja 25 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:58:09] AVION TI-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 20:58:09] AVION TI-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 20:58:11] BUS B-0000 se llena.
+[01-05-2024 20:58:11] BUS B-0000 viajando a la ciudad.
+[01-05-2024 20:58:18] BUS B-0000 deja 39 pasajeros y queda vacío en la ciudad.
+[01-05-2024 20:58:18] BUS B-0000 llega a la ciudad.
+[01-05-2024 20:58:22] BUS B-0000 recoge 14 pasajeros.
+[01-05-2024 20:58:22] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 20:58:22] AVION TI-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 20:58:22] AVION TI-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 20:58:22] AVION TI-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 20:58:28] AVION TI-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 20:58:29] BUS B-0000 deja 14 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 20:58:33] BUS B-0000 se llena.
+[01-05-2024 20:58:33] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:04:44] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 21:04:44] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:04:45] AVION 0 creado, va a Barajas. Su id es PC-0000
+[01-05-2024 21:04:45] AVION PC-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 21:04:45] AVION PC-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 21:04:50] BUS B-0000 recoge 9 pasajeros.
+[01-05-2024 21:04:50] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:04:58] BUS B-0000 deja 9 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:05:01] BUS B-0000 se llena.
+[01-05-2024 21:05:01] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:05:01] AVION PC-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 21:05:01] AVION PC-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 21:05:01] AVION PC-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 21:05:07] AVION PC-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 21:05:10] BUS B-0000 deja 3 pasajeros y queda vacío en la ciudad.
+[01-05-2024 21:05:10] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:05:11] BUS B-0000 recoge 25 pasajeros.
+[01-05-2024 21:05:11] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:05:35] BUS 0 creado, va a Barajas. Su id es B-0000
+[01-05-2024 21:05:35] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:05:36] AVION 0 creado, va a Barajas. Su id es NP-0000
+[01-05-2024 21:05:36] AVION NP-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 21:05:36] AVION NP-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 21:05:39] BUS B-0000 recoge 26 pasajeros.
+[01-05-2024 21:05:39] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:05:48] BUS B-0000 deja 26 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:05:49] AVION NP-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 21:05:49] AVION NP-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 21:05:49] AVION NP-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 21:05:51] BUS B-0000 se llena.
+[01-05-2024 21:05:51] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:05:52] AVION NP-0000 en el aire, aerovía Barajas-Prat.
+[01-05-2024 21:06:01] BUS B-0000 deja 49 pasajeros y queda vacío en la ciudad.
+[01-05-2024 21:06:01] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:06:05] BUS B-0000 recoge 22 pasajeros.
+[01-05-2024 21:06:05] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:06:11] BUS B-0000 deja 22 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:06:14] AVION NP-0000 ha aterrizado exitosamente en Prat.
+[01-05-2024 21:06:17] BUS B-0000 se llena.
+[01-05-2024 21:06:17] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:06:18] AVION NP-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 21:06:23] AVION NP-0000 desembarca 0 pasajeros.
+[01-05-2024 21:06:26] AVION NP-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 21:06:26] BUS B-0000 deja 1 pasajeros y queda vacío en la ciudad.
+[01-05-2024 21:06:26] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:06:28] AVION NP-0000 entrando al taller.
+[01-05-2024 21:06:29] AVION NP-0000 tiene 1 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 21:06:30] AVION NP-0000 saliendo del taller.
+[01-05-2024 21:06:31] AVION NP-0000 entrando en el hangar de Prat.
+[01-05-2024 21:06:31] AVION NP-0000 sale del hangar de Prat y se dirige al área de estacionamiento.
+[01-05-2024 21:06:31] AVION NP-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 21:06:31] BUS B-0000 recoge 34 pasajeros.
+[01-05-2024 21:06:31] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:06:39] BUS B-0000 deja 34 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:06:43] BUS B-0000 se llena.
+[01-05-2024 21:06:43] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:06:47] AVION NP-0000 accede a una puerta de embarque y recoge 0 pasajeros.
+[01-05-2024 21:06:47] AVION NP-0000 accede a un area de rodaje y espera pista para despegue.
+[01-05-2024 21:06:47] AVION NP-0000 accede a una pista y se prepara para despegar.
+[01-05-2024 21:06:52] AVION NP-0000 en el aire, aerovía Prat-Barajas.
+[01-05-2024 21:06:53] BUS B-0000 deja 29 pasajeros y queda vacío en la ciudad.
+[01-05-2024 21:06:53] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:06:56] BUS B-0000 recoge 19 pasajeros.
+[01-05-2024 21:06:56] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:07:02] BUS B-0000 deja 19 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:07:07] AVION NP-0000 ha aterrizado exitosamente en Barajas.
+[01-05-2024 21:07:08] BUS B-0000 se llena.
+[01-05-2024 21:07:08] BUS B-0000 viajando a la ciudad.
+[01-05-2024 21:07:08] AVION NP-0000 accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.
+[01-05-2024 21:07:12] AVION NP-0000 desembarca 0 pasajeros.
+[01-05-2024 21:07:14] BUS B-0000 deja 28 pasajeros y queda vacío en la ciudad.
+[01-05-2024 21:07:14] BUS B-0000 llega a la ciudad.
+[01-05-2024 21:07:15] AVION NP-0000 se dirije al área de estacionamiento y se pone a la cola para entrar al taller.
+[01-05-2024 21:07:18] AVION NP-0000 entrando al taller.
+[01-05-2024 21:07:18] BUS B-0000 recoge 1 pasajeros.
+[01-05-2024 21:07:18] BUS B-0000 viajando al aeropuerto.
+[01-05-2024 21:07:19] AVION NP-0000 tiene 2 viajes totales. Llevando a cabo una inspección rutinaria.
+[01-05-2024 21:07:21] AVION NP-0000 saliendo del taller.
+[01-05-2024 21:07:22] AVION NP-0000 entrando en el hangar de Barajas.
+[01-05-2024 21:07:22] AVION NP-0000 sale del hangar de Barajas y se dirige al área de estacionamiento.
+[01-05-2024 21:07:22] AVION NP-0000 entra al área de estacionamiento y espera a que haya una puerta de embarque libre.
+[01-05-2024 21:07:28] BUS B-0000 deja 1 pasajeros en el aeropuerto y queda vacío.
+[01-05-2024 21:07:30] BUS B-0000 se llena.
+[01-05-2024 21:07:30] BUS B-0000 viajando a la ciudad.

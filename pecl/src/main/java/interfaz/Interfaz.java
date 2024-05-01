@@ -60,40 +60,40 @@ public class Interfaz extends JFrame implements ActionListener{
     
     // Cuadros de texto
     // Aeropuerto Barajas
-    private JTextField info_numPas_Bar = new JTextField();
-    private JTextField info_hangar_Bar = new JTextField();
-    private JTextField info_taller_Bar = new JTextField();
-    private JTextField info_est_Bar = new JTextField();
-    private JTextField info_pEmb1_Bar = new JTextField();
-    private JTextField info_pEmb2_Bar = new JTextField();
-    private JTextField info_pEmb3_Bar = new JTextField();
-    private JTextField info_pEmb4_Bar = new JTextField();
-    private JTextField info_pEmb5_Bar = new JTextField();
-    private JTextField info_pEmb6_Bar = new JTextField();
-    private JTextField info_rodaje_Bar = new JTextField();
-    private JTextField info_pista1_Bar = new JTextField();
-    private JTextField info_pista2_Bar = new JTextField();
-    private JTextField info_pista3_Bar = new JTextField();
-    private JTextField info_pista4_Bar = new JTextField();
+    public JTextField info_numPas_Bar = new JTextField();
+    public JTextField info_hangar_Bar = new JTextField();
+    public JTextField info_taller_Bar = new JTextField();
+    public JTextField info_est_Bar = new JTextField();
+    public JTextField info_pEmb1_Bar = new JTextField();
+    public JTextField info_pEmb2_Bar = new JTextField();
+    public JTextField info_pEmb3_Bar = new JTextField();
+    public JTextField info_pEmb4_Bar = new JTextField();
+    public JTextField info_pEmb5_Bar = new JTextField();
+    public JTextField info_pEmb6_Bar = new JTextField();
+    public JTextField info_rodaje_Bar = new JTextField();
+    public JTextField info_pista1_Bar = new JTextField();
+    public JTextField info_pista2_Bar = new JTextField();
+    public JTextField info_pista3_Bar = new JTextField();
+    public JTextField info_pista4_Bar = new JTextField();
     // Aerovías
-    private JTextField info_ae_Bar_Prat = new JTextField();
-    private JTextField info_ae_Prat_Bar = new JTextField();
+    public JTextField info_ae_Bar_Prat = new JTextField();
+    public JTextField info_ae_Prat_Bar = new JTextField();
     // Aeropuerto Prat
-    private JTextField info_numPas_Prat = new JTextField();
-    private JTextField info_hangar_Prat = new JTextField();
-    private JTextField info_taller_Prat = new JTextField();
-    private JTextField info_est_Prat = new JTextField();
-    private JTextField info_pEmb1_Prat = new JTextField();
-    private JTextField info_pEmb2_Prat = new JTextField();
-    private JTextField info_pEmb3_Prat = new JTextField();
-    private JTextField info_pEmb4_Prat = new JTextField();
-    private JTextField info_pEmb5_Prat = new JTextField();
-    private JTextField info_pEmb6_Prat = new JTextField();
-    private JTextField info_rodaje_Prat = new JTextField();
-    private JTextField info_pista1_Prat = new JTextField();
-    private JTextField info_pista2_Prat = new JTextField();
-    private JTextField info_pista3_Prat = new JTextField();
-    private JTextField info_pista4_Prat = new JTextField();
+    public JTextField info_numPas_Prat = new JTextField();
+    public JTextField info_hangar_Prat = new JTextField();
+    public JTextField info_taller_Prat = new JTextField();
+    public JTextField info_est_Prat = new JTextField();
+    public JTextField info_pEmb1_Prat = new JTextField();
+    public JTextField info_pEmb2_Prat = new JTextField();
+    public JTextField info_pEmb3_Prat = new JTextField();
+    public JTextField info_pEmb4_Prat = new JTextField();
+    public JTextField info_pEmb5_Prat = new JTextField();
+    public JTextField info_pEmb6_Prat = new JTextField();
+    public JTextField info_rodaje_Prat = new JTextField();
+    public JTextField info_pista1_Prat = new JTextField();
+    public JTextField info_pista2_Prat = new JTextField();
+    public JTextField info_pista3_Prat = new JTextField();
+    public JTextField info_pista4_Prat = new JTextField();
     
     private Paso paso = new Paso();
     

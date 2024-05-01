@@ -1,5 +1,6 @@
 package progavanzada;
 
+import interfaz.Interfaz;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,7 +15,7 @@ public class Aeropuerto {
     private String nombre;
     private int viajeros;
     
-    private JTextField[] textos = new JTextField[16];
+    private Interfaz interfaz;
     
     /* Estructuras de datos para las zonas de cada avión
         - ARRAYLIST --> CAPACIDAD ILIMITADA
@@ -60,12 +61,12 @@ public class Aeropuerto {
         } 
     }
     
-    public Aeropuerto(String nombre, JTextField[] texto){
+    public Aeropuerto(String nombre, Interfaz ui){
         this.nombre = nombre;
-        this.textos = texto;
+        this.interfaz = ui;
         for (int i = 0; i < aerovias.length; i++) {
             aerovias[i] = new ArrayList<>();
-        } 
+        }
     }
     
     public synchronized String getNombre() {
@@ -89,7 +90,13 @@ public class Aeropuerto {
     public void sumarViajerosBus(int pasajerosBus){ 
         try {
             lockViajerosBus.lock();
-            viajeros += pasajerosBus;  
+            viajeros += pasajerosBus;
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+            }
         }
         finally {
             lockViajerosBus.unlock();
@@ -99,7 +106,13 @@ public class Aeropuerto {
     public void restarViajerosBus(int pasajerosBus){
         try {
             lockViajerosBus.lock();
-            viajeros -= pasajerosBus;  
+            viajeros -= pasajerosBus;
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+            }
         }
         finally {
             lockViajerosBus.unlock();
@@ -112,6 +125,16 @@ public class Aeropuerto {
         try {
             lockHangar.lock();
             avion.getAeropuerto().hangar.add(avion);
+            String str = "";
+            for (int i = 0; i < hangar.size(); i++) {
+                str += hangar.get(i).getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_hangar_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_hangar_Prat.setText(str);
+            }
         }
         finally {
             lockHangar.unlock();
@@ -122,6 +145,16 @@ public class Aeropuerto {
         try {
             lockHangar.lock();
             avion.getAeropuerto().hangar.remove(avion);
+            String str = "";
+            for (int i = 0; i < this.hangar.size(); i++) {
+                str += this.hangar.get(i).getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_hangar_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_hangar_Prat.setText(str);
+            }
         }
         finally {
             lockHangar.unlock();
@@ -132,6 +165,16 @@ public class Aeropuerto {
         try {
             lockAreaEst.lock();
             avion.getAeropuerto().areaEstacionamiento.add(avion);
+            String str = "";
+            for (Avion a : areaEstacionamiento) {
+                str += a.getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_est_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_est_Prat.setText(str);
+            }
         } 
         finally {
             lockAreaEst.unlock();
@@ -167,6 +210,16 @@ public class Aeropuerto {
                 lockAreaEst.unlock();
             }
         }
+        String str = "";
+        for (Avion a : areaEstacionamiento) {
+            str += a.getIdAvion() + ", ";
+        }
+        if("Barajas".equals(this.nombre)) {
+            this.interfaz.info_est_Bar.setText(str);
+        }
+        else if("Prat".equals(this.nombre)) {
+            this.interfaz.info_est_Prat.setText(str);
+        }
     }
     
     public void insertarPuertasEmbarque(Avion avion, boolean embarcando) throws InterruptedException {
@@ -181,16 +234,61 @@ public class Aeropuerto {
                 // Elige puerta
                 if (puertasEmbarque[i] == null ) {
                     this.puertasEmbarque[i] = avion;
+                    String str = "";
+                    if (embarcando == true){
+                        str = "Embarcando:";
+                    }
+                    else {
+                        str = "Desembarcando:";
+                    }
+                    if("Barajas".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pEmb1_Bar.setText(str + avion.getIdAvion());
+                        } else if (i == 2) {
+                            this.interfaz.info_pEmb2_Bar.setText(str + avion.getIdAvion());
+                        } else if (i == 3) {
+                            this.interfaz.info_pEmb3_Bar.setText(str + avion.getIdAvion());
+                        } else if (i == 4) {
+                            this.interfaz.info_pEmb4_Bar.setText(str + avion.getIdAvion());
+                        } else if (i == 5) {
+                            this.interfaz.info_pEmb5_Bar.setText(str + avion.getIdAvion());
+                        } else {
+                            this.interfaz.info_pEmb6_Bar.setText(str + avion.getIdAvion());
+                        }
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pEmb1_Prat.setText(str + avion.getIdAvion());
+                        } else if (i == 2) {
+                            this.interfaz.info_pEmb2_Prat.setText(str + avion.getIdAvion());
+                        } else if (i == 3) {
+                            this.interfaz.info_pEmb3_Prat.setText(str + avion.getIdAvion());
+                        } else if (i == 4) {
+                            this.interfaz.info_pEmb4_Prat.setText(str + avion.getIdAvion());
+                        } else if (i == 5) {
+                            this.interfaz.info_pEmb5_Prat.setText(str + avion.getIdAvion());
+                        } else {
+                            this.interfaz.info_pEmb6_Prat.setText(str + avion.getIdAvion());
+                        }
+                    }
                     break;
                 }
             }
-        } finally { lockPuertasEmb.unlock(); }
+        } finally {
+            lockPuertasEmb.unlock();
+        }
     }
     
     public void sumarViajerosAvion(int pasajerosAvion){ 
         try {
             lockViajerosAvion.lock();
-            viajeros += pasajerosAvion;  
+            viajeros += pasajerosAvion;
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+            }
         }
         finally {
             lockViajerosAvion.unlock();
@@ -200,7 +298,13 @@ public class Aeropuerto {
     public void restarViajerosAvion(int pasajerosAvion){
         try {
             lockViajerosAvion.lock();
-            viajeros -= pasajerosAvion;  
+            viajeros -= pasajerosAvion;
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+            }
         }
         finally {
             lockViajerosAvion.unlock();
@@ -213,6 +317,36 @@ public class Aeropuerto {
             for (int i = 0; i < 6; i++){
                 if (this.puertasEmbarque[i] == avion) {
                     this.puertasEmbarque[i] = null;
+                    if("Barajas".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pEmb1_Bar.setText("");
+                        } else if (i == 2) {
+                            this.interfaz.info_pEmb2_Bar.setText("");
+                        } else if (i == 3) {
+                            this.interfaz.info_pEmb3_Bar.setText("");
+                        } else if (i == 4) {
+                            this.interfaz.info_pEmb4_Bar.setText("");
+                        } else if (i == 5) {
+                            this.interfaz.info_pEmb5_Bar.setText("");
+                        } else {
+                            this.interfaz.info_pEmb6_Bar.setText("");
+                        }
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pEmb1_Prat.setText("");
+                        } else if (i == 2) {
+                            this.interfaz.info_pEmb2_Prat.setText("");
+                        } else if (i == 3) {
+                            this.interfaz.info_pEmb3_Prat.setText("");
+                        } else if (i == 4) {
+                            this.interfaz.info_pEmb4_Prat.setText("");
+                        } else if (i == 5) {
+                            this.interfaz.info_pEmb5_Prat.setText("");
+                        } else {
+                            this.interfaz.info_pEmb6_Prat.setText("");
+                        }
+                    }
                     break;
                 }
             }
@@ -225,6 +359,16 @@ public class Aeropuerto {
         try {
             lockAreaRod.lock();
             avion.getAeropuerto().areaRodaje.add(avion);
+            String str = "";
+            for (int i = 0; i < this.areaRodaje.size(); i++) {
+                str += this.areaRodaje.get(i).getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_rodaje_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_rodaje_Prat.setText(str);
+            }
         } 
         finally {
             lockAreaRod.unlock();
@@ -261,7 +405,17 @@ public class Aeropuerto {
                 lockAreaRod.unlock();
             }
         }
-    }
+        String str = "";
+        for (int i = 0; i < this.areaRodaje.size(); i++) {
+            str += this.areaRodaje.get(i).getIdAvion() + ", ";
+        }
+        if("Barajas".equals(this.nombre)) {
+            this.interfaz.info_rodaje_Bar.setText(str);
+        }
+        else if("Prat".equals(this.nombre)) {
+            this.interfaz.info_rodaje_Prat.setText(str);
+        }
+}
     
     public void entrarPista(Avion avion) throws InterruptedException {
         semPistas.acquire();
@@ -274,6 +428,28 @@ public class Aeropuerto {
                 // Elige pista
                 if (pistas[i] == null) {
                     this.pistas[i] = avion;
+                    if("Barajas".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pista1_Bar.setText(avion.getIdAvion());
+                        } else if (i == 2) {
+                            this.interfaz.info_pista2_Bar.setText(avion.getIdAvion());
+                        } else if (i == 3) {
+                            this.interfaz.info_pista3_Bar.setText(avion.getIdAvion());
+                        } else {
+                            this.interfaz.info_pista4_Bar.setText(avion.getIdAvion());
+                        }
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pista1_Prat.setText(avion.getIdAvion());
+                        } else if (i == 2) {
+                            this.interfaz.info_pista2_Prat.setText(avion.getIdAvion());
+                        } else if (i == 3) {
+                            this.interfaz.info_pista3_Prat.setText(avion.getIdAvion());
+                        } else {
+                            this.interfaz.info_pista4_Prat.setText(avion.getIdAvion());
+                        }
+                    }
                     break;
                 }
             }
@@ -286,6 +462,28 @@ public class Aeropuerto {
             for (int i = 0; i < 4; i++){
                 if (this.pistas[i] == avion) {
                     this.pistas[i] = null;
+                    if("Barajas".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pista1_Bar.setText("");
+                        } else if (i == 2) {
+                            this.interfaz.info_pista2_Bar.setText("");
+                        } else if (i == 3) {
+                            this.interfaz.info_pista3_Bar.setText("");
+                        } else {
+                            this.interfaz.info_pista4_Bar.setText("");
+                        }
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        if (i == 1) {
+                            this.interfaz.info_pista1_Prat.setText("");
+                        } else if (i == 2) {
+                            this.interfaz.info_pista2_Prat.setText("");
+                        } else if (i == 3) {
+                            this.interfaz.info_pista3_Prat.setText("");
+                        } else {
+                            this.interfaz.info_pista4_Prat.setText("");
+                        }
+                    }
                     break;
                 }
             }
@@ -299,6 +497,17 @@ public class Aeropuerto {
             lockAerovias.lock();
             try {
                 avion.getAeropuerto().aerovias[0].add(avion);
+                
+                String str = "";
+                for (int i = 0; i < this.aerovias[0].size(); i++) {
+                    str += this.aerovias[0].get(i).getIdAvion() + ", ";
+                }
+                if("Barajas".equals(this.nombre)) {
+                    this.interfaz.info_ae_Bar_Prat.setText(str);
+                }
+                else if("Prat".equals(this.nombre)) {
+                    this.interfaz.info_ae_Prat_Bar.setText(str);
+                }
             } 
             finally {
                 lockAerovias.unlock();
@@ -321,6 +530,16 @@ public class Aeropuerto {
             if (a == avion){
                 avionBuscado = a;
                 aerovias[0].remove(a);
+                String str = "";
+                for (int i = 0; i < this.aerovias[0].size(); i++) {
+                    str += this.aerovias[0].get(i).getIdAvion() + ", ";
+                }
+                if("Barajas".equals(this.nombre)) {
+                    this.interfaz.info_ae_Bar_Prat.setText(str);
+                }
+                else if("Prat".equals(this.nombre)) {
+                    this.interfaz.info_ae_Prat_Bar.setText(str);
+                }
                 break;
             }
         }
@@ -343,6 +562,21 @@ public class Aeropuerto {
                 // Elige puesto en el taller
                 if (taller[i] == null) {
                     this.taller[i] = avion;
+                    String str = "";
+                    for (int j = 0; i < 20; i++) {
+                        if(taller[i] == null) {
+                            continue;
+                        } else {
+                            str += taller[i].getIdAvion() + ", ";
+                        }
+                    }
+                    
+                    if("Barajas".equals(this.nombre)) {
+                        this.interfaz.info_taller_Bar.setText(str);
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        this.interfaz.info_taller_Prat.setText(str);
+                    }
                     break;
                 }
             }
@@ -355,6 +589,21 @@ public class Aeropuerto {
             for (int i = 0; i < 20; i++){
                 if (this.taller[i] == avion) {
                     this.taller[i] = null;
+                    String str = "";
+                    for (int j = 0; i < 20; i++) {
+                        if(taller[i] == null) {
+                            continue;
+                        } else {
+                            str += taller[i].getIdAvion() + ", ";
+                        }
+                    }
+                    
+                    if("Barajas".equals(this.nombre)) {
+                        this.interfaz.info_taller_Bar.setText(str);
+                    }
+                    else if("Prat".equals(this.nombre)) {
+                        this.interfaz.info_taller_Prat.setText(str);
+                    }
                     break;
                 }
             }
