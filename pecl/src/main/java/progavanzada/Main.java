@@ -1,14 +1,15 @@
 package progavanzada;
 
-import interfaz.Pantalla;
+import interfaz.Interfaz;
 
 public class Main {
 
     public static void main(String[] args) {
         
         // Interfaz grafica
-        Pantalla p = new Pantalla();
-        
+        Interfaz p = new Interfaz();
+        //Pantalla p1 = new Pantalla();
+        /*
         // Declarar los aeropuertos del sistema:
         Aeropuerto barajas = new Aeropuerto("Barajas");
         Aeropuerto prat = new Aeropuerto("Prat");
@@ -19,8 +20,7 @@ public class Main {
         
         hiloGenAviones.start();
         hiloGenBuses.start();
-        
-        
+        */
         
     }
 }
