@@ -309,33 +309,23 @@ public class Aeropuerto {
                 if (this.puertasEmbarque[i] == avion) {
                     this.puertasEmbarque[i] = null;
                     if("Barajas".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pEmb1_Bar.setText("");
-                        } else if (i == 2) {
-                            this.interfaz.info_pEmb2_Bar.setText("");
-                        } else if (i == 3) {
-                            this.interfaz.info_pEmb3_Bar.setText("");
-                        } else if (i == 4) {
-                            this.interfaz.info_pEmb4_Bar.setText("");
-                        } else if (i == 5) {
-                            this.interfaz.info_pEmb5_Bar.setText("");
-                        } else {
-                            this.interfaz.info_pEmb6_Bar.setText("");
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pEmb1_Bar.setText("");
+                            case 1 -> this.interfaz.info_pEmb2_Bar.setText("");
+                            case 2 -> this.interfaz.info_pEmb3_Bar.setText("");
+                            case 3 -> this.interfaz.info_pEmb4_Bar.setText("");
+                            case 4 -> this.interfaz.info_pEmb5_Bar.setText("");
+                            case 5 -> this.interfaz.info_pEmb6_Bar.setText("");
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pEmb1_Prat.setText("");
-                        } else if (i == 2) {
-                            this.interfaz.info_pEmb2_Prat.setText("");
-                        } else if (i == 3) {
-                            this.interfaz.info_pEmb3_Prat.setText("");
-                        } else if (i == 4) {
-                            this.interfaz.info_pEmb4_Prat.setText("");
-                        } else if (i == 5) {
-                            this.interfaz.info_pEmb5_Prat.setText("");
-                        } else {
-                            this.interfaz.info_pEmb6_Prat.setText("");
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pEmb1_Prat.setText("");
+                            case 1 -> this.interfaz.info_pEmb2_Prat.setText("");
+                            case 2 -> this.interfaz.info_pEmb3_Prat.setText("");
+                            case 3 -> this.interfaz.info_pEmb4_Prat.setText("");
+                            case 4 -> this.interfaz.info_pEmb5_Prat.setText("");
+                            case 5 -> this.interfaz.info_pEmb6_Prat.setText("");
                         }
                     }
                     break;
@@ -420,25 +410,19 @@ public class Aeropuerto {
                 if (pistas[i] == null) {
                     this.pistas[i] = avion;
                     if("Barajas".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pista1_Bar.setText(avion.getIdAvion());
-                        } else if (i == 2) {
-                            this.interfaz.info_pista2_Bar.setText(avion.getIdAvion());
-                        } else if (i == 3) {
-                            this.interfaz.info_pista3_Bar.setText(avion.getIdAvion());
-                        } else {
-                            this.interfaz.info_pista4_Bar.setText(avion.getIdAvion());
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pista1_Bar.setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.info_pista2_Bar.setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.info_pista3_Bar.setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.info_pista4_Bar.setText(avion.getIdAvion());
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pista1_Prat.setText(avion.getIdAvion());
-                        } else if (i == 2) {
-                            this.interfaz.info_pista2_Prat.setText(avion.getIdAvion());
-                        } else if (i == 3) {
-                            this.interfaz.info_pista3_Prat.setText(avion.getIdAvion());
-                        } else {
-                            this.interfaz.info_pista4_Prat.setText(avion.getIdAvion());
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pista1_Prat.setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.info_pista2_Prat.setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.info_pista3_Prat.setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.info_pista4_Prat.setText(avion.getIdAvion());
                         }
                     }
                     break;
@@ -454,25 +438,19 @@ public class Aeropuerto {
                 if (this.pistas[i] == avion) {
                     this.pistas[i] = null;
                     if("Barajas".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pista1_Bar.setText("");
-                        } else if (i == 2) {
-                            this.interfaz.info_pista2_Bar.setText("");
-                        } else if (i == 3) {
-                            this.interfaz.info_pista3_Bar.setText("");
-                        } else {
-                            this.interfaz.info_pista4_Bar.setText("");
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pista1_Bar.setText("");
+                            case 1 -> this.interfaz.info_pista2_Bar.setText("");
+                            case 2 -> this.interfaz.info_pista3_Bar.setText("");
+                            case 3 -> this.interfaz.info_pista4_Bar.setText("");
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pista1_Prat.setText("");
-                        } else if (i == 2) {
-                            this.interfaz.info_pista2_Prat.setText("");
-                        } else if (i == 3) {
-                            this.interfaz.info_pista3_Prat.setText("");
-                        } else {
-                            this.interfaz.info_pista4_Prat.setText("");
+                        switch (i) {
+                            case 0 -> this.interfaz.info_pista1_Prat.setText("");
+                            case 1 -> this.interfaz.info_pista2_Prat.setText("");
+                            case 2 -> this.interfaz.info_pista3_Prat.setText("");
+                            case 3 -> this.interfaz.info_pista4_Prat.setText("");
                         }
                     }
                     break;
