@@ -69,7 +69,7 @@ public class Aeropuerto {
         }
     }
     
-    public synchronized String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -270,7 +270,7 @@ public class Aeropuerto {
         }
     }
     
-    public void sumarViajerosAvion(int pasajerosAvion){ 
+    public void sumarViajerosAvion(int pasajerosAvion){
         try {
             lockViajerosAvion.lock();
             viajeros += pasajerosAvion;
@@ -279,7 +279,7 @@ public class Aeropuerto {
             }
             else if("Prat".equals(this.nombre)) {
                 this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
-            }
+            }   
         }
         finally {
             lockViajerosAvion.unlock();

@@ -60,7 +60,7 @@ public class Interfaz extends JFrame implements ActionListener{
     
     // Cuadros de texto
     // Aeropuerto Barajas
-    public JTextField info_numPas_Bar = new JTextField();
+    public JTextField info_numPas_Bar = new JTextField("0");
     public JTextField info_hangar_Bar = new JTextField();
     public JTextField info_taller_Bar = new JTextField();
     public JTextField info_est_Bar = new JTextField();
@@ -79,7 +79,7 @@ public class Interfaz extends JFrame implements ActionListener{
     public JTextField info_ae_Bar_Prat = new JTextField();
     public JTextField info_ae_Prat_Bar = new JTextField();
     // Aeropuerto Prat
-    public JTextField info_numPas_Prat = new JTextField();
+    public JTextField info_numPas_Prat = new JTextField("0");
     public JTextField info_hangar_Prat = new JTextField();
     public JTextField info_taller_Prat = new JTextField();
     public JTextField info_est_Prat = new JTextField();

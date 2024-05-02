@@ -79,6 +79,9 @@ public class Bus extends Thread {
                 // Esperar y llenar el bus:
                 Thread.sleep(r.nextInt(4000) + 2000);
                 this.pasajeros = r.nextInt(51);
+                while(this.pasajeros > this.aeropuerto.getViajeros()){
+                    this.pasajeros --;
+                }
                 this.aeropuerto.restarViajerosBus(this.pasajeros); // Restar pasajeros del aeropuerto
                 log.escribirEvento("BUS " + this.getIdBus() + " se llena.");
                 

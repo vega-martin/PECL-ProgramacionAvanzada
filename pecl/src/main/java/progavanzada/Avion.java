@@ -75,6 +75,7 @@ public class Avion extends Thread {
                 this.aeropuerto.insertarPuertasEmbarque(this, despegando);
                 
                 // Llenar el avión de pasajeros:
+                //numPasajeros = this.aeropuerto.embarcarViajerosAvion(this.maxPasajeros);
                 recogerPasajeros();
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede a una puerta de embarque y recoge " + this.numPasajeros + " pasajeros.");
                 // Abandona la puerta de embarque
