@@ -13,7 +13,7 @@ public class HiloGenAviones extends Thread {
     
     Log log = new Log("evolucionAeropuerto.txt");
     
-    private Paso paso;
+    private final Paso paso = new Paso();
     
     // Constructor que recibe Barajas y Prat:
     public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat) {
