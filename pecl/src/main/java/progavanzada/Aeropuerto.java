@@ -226,55 +226,46 @@ public class Aeropuerto {
         semPuertasEmb.acquire();
         lockPuertasEmb.lock();
         try {
+            int puertaDisponible = -1; // Inicialmente no se ha encontrado ninguna puerta disponible
             for (int i = 0; i < 6; i++){
                 // La puerta 1 solo vale para embarques y la 2 solo vale para desembarques:
                 if (((i == 0) && (!embarcando)) || ((i == 1) && (embarcando))){
                     continue;                        
                 }
-                // Elige puerta
-                if (puertasEmbarque[i] == null ) {
-                    this.puertasEmbarque[i] = avion;
-                    String str = "";
-                    if (embarcando == true){
-                        str = "Embarcando:";
-                    }
-                    else {
-                        str = "Desembarcando:";
-                    }
-                    if("Barajas".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pEmb1_Bar.setText(str + avion.getIdAvion());
-                        } else if (i == 2) {
-                            this.interfaz.info_pEmb2_Bar.setText(str + avion.getIdAvion());
-                        } else if (i == 3) {
-                            this.interfaz.info_pEmb3_Bar.setText(str + avion.getIdAvion());
-                        } else if (i == 4) {
-                            this.interfaz.info_pEmb4_Bar.setText(str + avion.getIdAvion());
-                        } else if (i == 5) {
-                            this.interfaz.info_pEmb5_Bar.setText(str + avion.getIdAvion());
-                        } else {
-                            this.interfaz.info_pEmb6_Bar.setText(str + avion.getIdAvion());
-                        }
-                    }
-                    else if("Prat".equals(this.nombre)) {
-                        if (i == 1) {
-                            this.interfaz.info_pEmb1_Prat.setText(str + avion.getIdAvion());
-                        } else if (i == 2) {
-                            this.interfaz.info_pEmb2_Prat.setText(str + avion.getIdAvion());
-                        } else if (i == 3) {
-                            this.interfaz.info_pEmb3_Prat.setText(str + avion.getIdAvion());
-                        } else if (i == 4) {
-                            this.interfaz.info_pEmb4_Prat.setText(str + avion.getIdAvion());
-                        } else if (i == 5) {
-                            this.interfaz.info_pEmb5_Prat.setText(str + avion.getIdAvion());
-                        } else {
-                            this.interfaz.info_pEmb6_Prat.setText(str + avion.getIdAvion());
-                        }
-                    }
+                // Si la puerta está disponible, la marcamos como elegida y salimos:
+                if (puertasEmbarque[i] == null) {
+                    puertaDisponible = i;
                     break;
                 }
             }
-        } finally {
+
+            // Si se encontró una puerta disponible, se asigna el avión a esa puerta:
+            if (puertaDisponible != -1) {
+                this.puertasEmbarque[puertaDisponible] = avion;
+                String str = embarcando ? "Embarcando:" : "Desembarcando:";
+                if("Barajas".equals(this.nombre)) {
+                    switch (puertaDisponible) {
+                        case 0 -> this.interfaz.info_pEmb1_Bar.setText(str + avion.getIdAvion());
+                        case 1 -> this.interfaz.info_pEmb2_Bar.setText(str + avion.getIdAvion());
+                        case 2 -> this.interfaz.info_pEmb3_Bar.setText(str + avion.getIdAvion());
+                        case 3 -> this.interfaz.info_pEmb4_Bar.setText(str + avion.getIdAvion());
+                        case 4 -> this.interfaz.info_pEmb5_Bar.setText(str + avion.getIdAvion());
+                        case 5 -> this.interfaz.info_pEmb6_Bar.setText(str + avion.getIdAvion());
+                    }
+                }
+                else if("Prat".equals(this.nombre)) {
+                    switch (puertaDisponible) {
+                        case 0 -> this.interfaz.info_pEmb1_Prat.setText(str + avion.getIdAvion());
+                        case 1 -> this.interfaz.info_pEmb2_Prat.setText(str + avion.getIdAvion());
+                        case 2 -> this.interfaz.info_pEmb3_Prat.setText(str + avion.getIdAvion());
+                        case 3 -> this.interfaz.info_pEmb4_Prat.setText(str + avion.getIdAvion());
+                        case 4 -> this.interfaz.info_pEmb5_Prat.setText(str + avion.getIdAvion());
+                        case 5 -> this.interfaz.info_pEmb6_Prat.setText(str + avion.getIdAvion());
+                    }
+                }
+            }  
+        } 
+        finally {
             lockPuertasEmb.unlock();
         }
     }
