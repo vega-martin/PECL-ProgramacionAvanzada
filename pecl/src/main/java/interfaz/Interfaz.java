@@ -95,12 +95,13 @@ public class Interfaz extends JFrame implements ActionListener{
     public JTextField info_pista3_Prat = new JTextField();
     public JTextField info_pista4_Prat = new JTextField();
     
-    private Paso paso = new Paso();
+    private Paso paso;
     
     
-    public Interfaz() {
+    public Interfaz(Paso p) {
         
         super("Simulador de Aeropuertos");
+        this.paso = p;
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.initComponents();
         this.setSize(1000, 600);

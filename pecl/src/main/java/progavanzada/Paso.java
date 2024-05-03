@@ -16,7 +16,7 @@ public class Paso {
         try {
             control.lock();
             while (cerrado) {
-                parar.wait();
+                parar.await();
             }
         }
         catch (InterruptedException e) {}

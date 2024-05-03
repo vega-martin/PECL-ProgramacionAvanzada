@@ -13,12 +13,13 @@ public class HiloGenAviones extends Thread {
     
     Log log = new Log("evolucionAeropuerto.txt");
     
-    private final Paso paso = new Paso();
+    private final Paso paso;
     
     // Constructor que recibe Barajas y Prat:
-    public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat) {
+    public HiloGenAviones(Aeropuerto barajas, Aeropuerto prat, Paso p) {
         this.barajas = barajas;
         this.prat = prat;
+        this.paso = p;
     }
     
     public void run(){
@@ -39,11 +40,11 @@ public class HiloGenAviones extends Thread {
             
             // Decidir a qué aeropuerto va:
             if (i % 2 == 0) {
-                avion = new Avion(barajas, contadorAviones.getAndIncrement(), prat); // Barajas
+                avion = new Avion(barajas, contadorAviones.getAndIncrement(), prat, paso); // Barajas
             }
             
             else {
-                avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas); // El Prat
+                avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas, paso); // El Prat
             }
             
             // Registrar en el log

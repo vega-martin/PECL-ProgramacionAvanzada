@@ -19,6 +19,8 @@ public class Avion extends Thread {
     Random r = new Random();
     
     Log log = new Log("evolucionAeropuerto.txt");
+    
+    private final Paso paso;
 
     public String getIdAvion() {
         return id;
@@ -45,11 +47,12 @@ public class Avion extends Thread {
     }
     
     // Constructor del objeto Avion:
-    public Avion(Aeropuerto aeropuerto, int numCompartido, Aeropuerto aeropuertoDestino){
+    public Avion(Aeropuerto aeropuerto, int numCompartido, Aeropuerto aeropuertoDestino, Paso p){
         this.id = generarIdAvion(numCompartido);
         this.maxPasajeros = r.nextInt(201) + 100;
         this.aeropuerto = aeropuerto;
         this.destino = aeropuertoDestino;
+        this.paso = p;
         
         // Inclur el avion al hangar del aeropuerto:
         this.aeropuerto.incluirAvionEnHangar(this);
@@ -65,24 +68,29 @@ public class Avion extends Thread {
                 // Eliminar el avion del hangar:
                 this.aeropuerto.quitarAvionDeHangar(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " sale del hangar de " + this.aeropuerto.getNombre() + " y se dirige al área de estacionamiento.");
-
+                paso.mirar();
+                  
                 // Añadir el avion al area de estacionamiento:
                 this.aeropuerto.incluirAvionEnAreaEst(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " entra al área de estacionamiento y espera a que haya una puerta de embarque libre.");
+                paso.mirar();
                 this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
 
                 // Añadir el avion a las puertas de embarque
                 this.aeropuerto.insertarPuertasEmbarque(this, despegando);
+                paso.mirar();
                 
                 // Llenar el avión de pasajeros:
                 recogerPasajeros();
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede a una puerta de embarque y recoge " + this.numPasajeros + " pasajeros.");
+                paso.mirar();
                 // Abandona la puerta de embarque
                 this.aeropuerto.quitarPuertasEmbarque(this);
 
                 // Area de rodaje
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede a un area de rodaje y espera pista para despegue.");
                 this.aeropuerto.entrarAreaDeRodaje(this);
+                paso.mirar();
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 
                 // Pista
@@ -90,6 +98,7 @@ public class Avion extends Thread {
                 this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(2000) + 1000);
                 Thread.sleep(r.nextInt(4000) + 1000);
+                paso.mirar();
                 this.aeropuerto.salirPista(this);
 
                 // Aerovía
@@ -103,6 +112,7 @@ public class Avion extends Thread {
                 this.aeropuerto.entrarAerovia(this, despegando);
                 // Trayecto
                 Thread.sleep(r.nextInt(15000) + 15000);
+                paso.mirar();
                 // Buscar pista -> espera activa?
                 /*
                 log.escribirEvento("AVION " + this.getIdAvion() + " busca una pista libre en " + this.aeropuerto.getNombre() + ".");
@@ -119,57 +129,69 @@ public class Avion extends Thread {
                 log.escribirEvento("AVION " + this.getIdAvion() + " ha aterrizado exitosamente en " + this.aeropuerto.getNombre() + ".");
                 this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(4000) + 1000);
+                paso.mirar();
                 this.aeropuerto.salirPista(this);
 
                 // Area de rodaje
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.");
                 this.aeropuerto.entrarAreaDeRodaje(this);
                 Thread.sleep(r.nextInt(2000) + 3000);
+                paso.mirar();
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 
                 // Añadir el avion a las puertas de embarque
                 this.aeropuerto.insertarPuertasEmbarque(this, despegando);
                 log.escribirEvento("AVION " + this.getIdAvion() + " desembarca " + this.numPasajeros + " pasajeros.");
                 Thread.sleep(r.nextInt(4000) + 1000);
+                paso.mirar();
                 this.aeropuerto.sumarViajeros(numPasajeros);
                 numPasajeros = 0;
+                paso.mirar();
                 this.aeropuerto.quitarPuertasEmbarque(this);
 
                 // Añadir el avion al area de estacionamiento:
                 this.aeropuerto.incluirAvionEnAreaEst(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " se dirije al área de estacionamiento y se pone a la cola para entrar al taller.");
                 Thread.sleep(r.nextInt(4000) + 1000);
+                paso.mirar();
                 this.aeropuerto.quitarAvionDeAreaEst(this, despegando);
 
                 // Añadir el avion al taller
                 this.aeropuerto.entrarTaller(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " entrando al taller.");
                 Thread.sleep(1000);
+                paso.mirar();
 
                 // Elegir tipo de revision
                 if ((numViajes % 15) == 0) {
                     // Inspeccion en profuncidad
                     log.escribirEvento("AVION " + this.getIdAvion() + " tiene " + this.numViajes + " viajes totales. Llevando a cabo una inspección en profuncidad.");
                     Thread.sleep(r.nextInt(5000) + 5000);
+                    paso.mirar();
                 } else {
                     // Inspeccion rutinaria
                     log.escribirEvento("AVION " + this.getIdAvion() + " tiene " + this.numViajes + " viajes totales. Llevando a cabo una inspección rutinaria.");
                     Thread.sleep(r.nextInt(4000) + 1000);
+                    paso.mirar();
                 }
                 
                 log.escribirEvento("AVION " + this.getIdAvion() + " saliendo del taller.");
                 Thread.sleep(1000);
+                paso.mirar();
                 this.aeropuerto.salirTaller(this);
 
                 // Añadir avion al hangar y decirdir si esperar o continar
                 this.aeropuerto.incluirAvionEnHangar(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " entrando en el hangar de " + this.aeropuerto.getNombre() + ".");
+                paso.mirar();
                 double decision = r.nextDouble();
                 if (decision < 0.5){
+                    paso.mirar();
                     log.escribirEvento("AVION " + this.getIdAvion() + " reposa en el hangar de " + this.aeropuerto.getNombre() + ".");
                     Thread.sleep(r.nextInt(15000) + 15000);
                 }
                 else {
+                    paso.mirar();
                     continue;
                 }
             }
@@ -185,14 +207,17 @@ public class Avion extends Thread {
         
         numPasajeros = this.aeropuerto.getMaxViajeros(maxPasajeros);
         Thread.sleep(r.nextInt(2000) + 1000);
+        paso.mirar();
         
         if (numPasajeros != maxPasajeros) {
             Thread.sleep(r.nextInt(4000) + 1000);
+            paso.mirar();
             int pas = 0;
             for (int i = 1; i < 3; i++) {
                 pas = maxPasajeros - numPasajeros;
                 numPasajeros += this.aeropuerto.getMaxViajeros(pas);
                 Thread.sleep(r.nextInt(2000) + 1000);
+                paso.mirar();
                 if (this.numPasajeros == this.maxPasajeros) {
                     break;
                 }
