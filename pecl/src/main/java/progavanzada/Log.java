@@ -29,7 +29,7 @@ public class Log {
             } catch (IOException e) {}
         }
     }
-}
+} // Fin clase Log
 
 
 

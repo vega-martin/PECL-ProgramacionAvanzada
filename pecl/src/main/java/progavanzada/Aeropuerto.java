@@ -8,7 +8,6 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import javax.swing.JTextField;
 
 public class Aeropuerto {
     
@@ -89,10 +88,10 @@ public class Aeropuerto {
             lockViajerosBus.lock();
             viajeros += pasajerosBus;
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+                this.interfaz.getInfo_numPas_Bar().setText(Integer.toString(viajeros));
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+                this.interfaz.getInfo_numPas_Prat().setText(Integer.toString(viajeros));
             }
         }
         finally {
@@ -105,10 +104,10 @@ public class Aeropuerto {
             lockViajerosBus.lock();
             viajeros -= pasajerosBus;
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
+                this.interfaz.getInfo_numPas_Bar().setText(Integer.toString(viajeros));
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
+                this.interfaz.getInfo_numPas_Prat().setText(Integer.toString(viajeros));
             }
         }
         finally {
@@ -140,10 +139,10 @@ public class Aeropuerto {
                 str += hangar.get(i).getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_hangar_Bar.setText(str);
+                this.interfaz.getInfo_hangar_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_hangar_Prat.setText(str);
+                this.interfaz.getInfo_hangar_Prat().setText(str);
             }
         }
         finally {
@@ -160,10 +159,10 @@ public class Aeropuerto {
                 str += this.hangar.get(i).getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_hangar_Bar.setText(str);
+                this.interfaz.getInfo_hangar_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_hangar_Prat.setText(str);
+                this.interfaz.getInfo_hangar_Prat().setText(str);
             }
         }
         finally {
@@ -180,10 +179,10 @@ public class Aeropuerto {
                 str += a.getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_est_Bar.setText(str);
+                this.interfaz.getInfo_est_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_est_Prat.setText(str);
+                this.interfaz.getInfo_est_Prat().setText(str);
             }
         } 
         finally {
@@ -227,10 +226,10 @@ public class Aeropuerto {
                 str += a.getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_est_Bar.setText(str);
+                this.interfaz.getInfo_est_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_est_Prat.setText(str);
+                this.interfaz.getInfo_est_Prat().setText(str);
             }
         } finally {
             lockAreaEst.unlock();
@@ -260,22 +259,22 @@ public class Aeropuerto {
                 String str = embarcando ? "Embarcando:" : "Desembarcando:";
                 if("Barajas".equals(this.nombre)) {
                     switch (puertaDisponible) {
-                        case 0 -> this.interfaz.info_pEmb1_Bar.setText(str + avion.getIdAvion());
-                        case 1 -> this.interfaz.info_pEmb2_Bar.setText(str + avion.getIdAvion());
-                        case 2 -> this.interfaz.info_pEmb3_Bar.setText(str + avion.getIdAvion());
-                        case 3 -> this.interfaz.info_pEmb4_Bar.setText(str + avion.getIdAvion());
-                        case 4 -> this.interfaz.info_pEmb5_Bar.setText(str + avion.getIdAvion());
-                        case 5 -> this.interfaz.info_pEmb6_Bar.setText(str + avion.getIdAvion());
+                        case 0 -> this.interfaz.getInfo_pEmb1_Bar().setText(str + avion.getIdAvion());
+                        case 1 -> this.interfaz.getInfo_pEmb2_Bar().setText(str + avion.getIdAvion());
+                        case 2 -> this.interfaz.getInfo_pEmb3_Bar().setText(str + avion.getIdAvion());
+                        case 3 -> this.interfaz.getInfo_pEmb4_Bar().setText(str + avion.getIdAvion());
+                        case 4 -> this.interfaz.getInfo_pEmb5_Bar().setText(str + avion.getIdAvion());
+                        case 5 -> this.interfaz.getInfo_pEmb6_Bar().setText(str + avion.getIdAvion());
                     }
                 }
                 else if("Prat".equals(this.nombre)) {
                     switch (puertaDisponible) {
-                        case 0 -> this.interfaz.info_pEmb1_Prat.setText(str + avion.getIdAvion());
-                        case 1 -> this.interfaz.info_pEmb2_Prat.setText(str + avion.getIdAvion());
-                        case 2 -> this.interfaz.info_pEmb3_Prat.setText(str + avion.getIdAvion());
-                        case 3 -> this.interfaz.info_pEmb4_Prat.setText(str + avion.getIdAvion());
-                        case 4 -> this.interfaz.info_pEmb5_Prat.setText(str + avion.getIdAvion());
-                        case 5 -> this.interfaz.info_pEmb6_Prat.setText(str + avion.getIdAvion());
+                        case 0 -> this.interfaz.getInfo_pEmb1_Prat().setText(str + avion.getIdAvion());
+                        case 1 -> this.interfaz.getInfo_pEmb2_Prat().setText(str + avion.getIdAvion());
+                        case 2 -> this.interfaz.getInfo_pEmb3_Prat().setText(str + avion.getIdAvion());
+                        case 3 -> this.interfaz.getInfo_pEmb4_Prat().setText(str + avion.getIdAvion());
+                        case 4 -> this.interfaz.getInfo_pEmb5_Prat().setText(str + avion.getIdAvion());
+                        case 5 -> this.interfaz.getInfo_pEmb6_Prat().setText(str + avion.getIdAvion());
                     }
                 }
             }  
@@ -293,22 +292,22 @@ public class Aeropuerto {
                     this.puertasEmbarque[i] = null;
                     if("Barajas".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pEmb1_Bar.setText("");
-                            case 1 -> this.interfaz.info_pEmb2_Bar.setText("");
-                            case 2 -> this.interfaz.info_pEmb3_Bar.setText("");
-                            case 3 -> this.interfaz.info_pEmb4_Bar.setText("");
-                            case 4 -> this.interfaz.info_pEmb5_Bar.setText("");
-                            case 5 -> this.interfaz.info_pEmb6_Bar.setText("");
+                            case 0 -> this.interfaz.getInfo_pEmb1_Bar().setText("");
+                            case 1 -> this.interfaz.getInfo_pEmb2_Bar().setText("");
+                            case 2 -> this.interfaz.getInfo_pEmb3_Bar().setText("");
+                            case 3 -> this.interfaz.getInfo_pEmb4_Bar().setText("");
+                            case 4 -> this.interfaz.getInfo_pEmb5_Bar().setText("");
+                            case 5 -> this.interfaz.getInfo_pEmb6_Bar().setText("");
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pEmb1_Prat.setText("");
-                            case 1 -> this.interfaz.info_pEmb2_Prat.setText("");
-                            case 2 -> this.interfaz.info_pEmb3_Prat.setText("");
-                            case 3 -> this.interfaz.info_pEmb4_Prat.setText("");
-                            case 4 -> this.interfaz.info_pEmb5_Prat.setText("");
-                            case 5 -> this.interfaz.info_pEmb6_Prat.setText("");
+                            case 0 -> this.interfaz.getInfo_pEmb1_Prat().setText("");
+                            case 1 -> this.interfaz.getInfo_pEmb2_Prat().setText("");
+                            case 2 -> this.interfaz.getInfo_pEmb3_Prat().setText("");
+                            case 3 -> this.interfaz.getInfo_pEmb4_Prat().setText("");
+                            case 4 -> this.interfaz.getInfo_pEmb5_Prat().setText("");
+                            case 5 -> this.interfaz.getInfo_pEmb6_Prat().setText("");
                         }
                     }
                     break;
@@ -328,10 +327,10 @@ public class Aeropuerto {
                 str += this.areaRodaje.get(i).getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_rodaje_Bar.setText(str);
+                this.interfaz.getInfo_rodaje_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_rodaje_Prat.setText(str);
+                this.interfaz.getInfo_rodaje_Prat().setText(str);
             }
         } 
         finally {
@@ -376,10 +375,10 @@ public class Aeropuerto {
                 str += this.areaRodaje.get(i).getIdAvion() + ", ";
             }
             if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_rodaje_Bar.setText(str);
+                this.interfaz.getInfo_rodaje_Bar().setText(str);
             }
             else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_rodaje_Prat.setText(str);
+                this.interfaz.getInfo_rodaje_Prat().setText(str);
             }
         } finally {
             lockAreaRod.unlock();
@@ -399,18 +398,18 @@ public class Aeropuerto {
                     this.pistas[i] = avion;
                     if("Barajas".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pista1_Bar.setText(avion.getIdAvion());
-                            case 1 -> this.interfaz.info_pista2_Bar.setText(avion.getIdAvion());
-                            case 2 -> this.interfaz.info_pista3_Bar.setText(avion.getIdAvion());
-                            case 3 -> this.interfaz.info_pista4_Bar.setText(avion.getIdAvion());
+                            case 0 -> this.interfaz.getInfo_pista1_Bar().setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.getInfo_pista2_Bar().setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.getInfo_pista3_Bar().setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.getInfo_pista4_Bar().setText(avion.getIdAvion());
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pista1_Prat.setText(avion.getIdAvion());
-                            case 1 -> this.interfaz.info_pista2_Prat.setText(avion.getIdAvion());
-                            case 2 -> this.interfaz.info_pista3_Prat.setText(avion.getIdAvion());
-                            case 3 -> this.interfaz.info_pista4_Prat.setText(avion.getIdAvion());
+                            case 0 -> this.interfaz.getInfo_pista1_Prat().setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.getInfo_pista2_Prat().setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.getInfo_pista3_Prat().setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.getInfo_pista4_Prat().setText(avion.getIdAvion());
                         }
                     }
                     break;
@@ -427,18 +426,18 @@ public class Aeropuerto {
                     this.pistas[i] = null;
                     if("Barajas".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pista1_Bar.setText("");
-                            case 1 -> this.interfaz.info_pista2_Bar.setText("");
-                            case 2 -> this.interfaz.info_pista3_Bar.setText("");
-                            case 3 -> this.interfaz.info_pista4_Bar.setText("");
+                            case 0 -> this.interfaz.getInfo_pista1_Bar().setText("");
+                            case 1 -> this.interfaz.getInfo_pista2_Bar().setText("");
+                            case 2 -> this.interfaz.getInfo_pista3_Bar().setText("");
+                            case 3 -> this.interfaz.getInfo_pista4_Bar().setText("");
                         }
                     }
                     else if("Prat".equals(this.nombre)) {
                         switch (i) {
-                            case 0 -> this.interfaz.info_pista1_Prat.setText("");
-                            case 1 -> this.interfaz.info_pista2_Prat.setText("");
-                            case 2 -> this.interfaz.info_pista3_Prat.setText("");
-                            case 3 -> this.interfaz.info_pista4_Prat.setText("");
+                            case 0 -> this.interfaz.getInfo_pista1_Prat().setText("");
+                            case 1 -> this.interfaz.getInfo_pista2_Prat().setText("");
+                            case 2 -> this.interfaz.getInfo_pista3_Prat().setText("");
+                            case 3 -> this.interfaz.getInfo_pista4_Prat().setText("");
                         }
                     }
                     break;
@@ -460,10 +459,10 @@ public class Aeropuerto {
                     str += this.aerovias[0].get(i).getIdAvion() + ", ";
                 }
                 if("Barajas".equals(this.nombre)) {
-                    this.interfaz.info_ae_Bar_Prat.setText(str);
+                    this.interfaz.getInfo_ae_Bar_Prat().setText(str);
                 }
                 else if("Prat".equals(this.nombre)) {
-                    this.interfaz.info_ae_Prat_Bar.setText(str);
+                    this.interfaz.getInfo_ae_Prat_Bar().setText(str);
                 }
             } 
             finally {
@@ -492,10 +491,10 @@ public class Aeropuerto {
                     str += this.aerovias[0].get(i).getIdAvion() + ", ";
                 }
                 if("Barajas".equals(this.nombre)) {
-                    this.interfaz.info_ae_Bar_Prat.setText(str);
+                    this.interfaz.getInfo_ae_Bar_Prat().setText(str);
                 }
                 else if("Prat".equals(this.nombre)) {
-                    this.interfaz.info_ae_Prat_Bar.setText(str);
+                    this.interfaz.getInfo_ae_Prat_Bar().setText(str);
                 }
                 break;
             }
@@ -529,10 +528,10 @@ public class Aeropuerto {
                     }
                     
                     if("Barajas".equals(this.nombre)) {
-                        this.interfaz.info_taller_Bar.setText(str);
+                        this.interfaz.getInfo_taller_Bar().setText(str);
                     }
                     else if("Prat".equals(this.nombre)) {
-                        this.interfaz.info_taller_Prat.setText(str);
+                        this.interfaz.getInfo_taller_Prat().setText(str);
                     }
                     break;
                 }
@@ -556,10 +555,10 @@ public class Aeropuerto {
                     }
                     
                     if("Barajas".equals(this.nombre)) {
-                        this.interfaz.info_taller_Bar.setText(str);
+                        this.interfaz.getInfo_taller_Bar().setText(str);
                     }
                     else if("Prat".equals(this.nombre)) {
-                        this.interfaz.info_taller_Prat.setText(str);
+                        this.interfaz.getInfo_taller_Prat().setText(str);
                     }
                     break;
                 }
@@ -583,4 +582,4 @@ public class Aeropuerto {
         return completo;
     }
     
-}
+} // Fin clase Aeropuerto
