@@ -37,7 +37,6 @@ public class Aeropuerto {
     
     // MECANISMOS PARA PROTEGER LAS ESTRUCTURAS DE DATOS:
     private final Lock lockViajerosBus = new ReentrantLock();
-    private final Lock lockViajerosAvion = new ReentrantLock();
     private final Lock lockHangar = new ReentrantLock();
     private final Lock lockAreaEst = new ReentrantLock();
     private final Lock lockPuertasEmb = new ReentrantLock();
@@ -72,10 +71,6 @@ public class Aeropuerto {
     public String getNombre() {
         return nombre;
     }
-
-    public synchronized int getViajeros() {
-        return viajeros;
-    }
     
     public int contarAvionesHangar(){
         return hangar.size();
@@ -85,9 +80,11 @@ public class Aeropuerto {
         return areaEstacionamiento.size();
     }
     
-    // Metodos usados por los autobuses
+    public int getViajeros() {
+        return viajeros;
+    }
     
-    public void sumarViajerosBus(int pasajerosBus){ 
+    public void sumarViajeros(int pasajerosBus){ 
         try {
             lockViajerosBus.lock();
             viajeros += pasajerosBus;
@@ -103,7 +100,7 @@ public class Aeropuerto {
         }
     }
     
-    public void restarViajerosBus(int pasajerosBus){
+    public void restarViajeros(int pasajerosBus){
         try {
             lockViajerosBus.lock();
             viajeros -= pasajerosBus;
@@ -117,6 +114,19 @@ public class Aeropuerto {
         finally {
             lockViajerosBus.unlock();
         }
+    }
+    
+    public int getMaxViajeros(int maxPasajeros) {
+        int pasajeros = 0;
+        if(maxPasajeros <= this.viajeros){
+            pasajeros = maxPasajeros;
+            restarViajeros(pasajeros);
+        }
+        else {
+            pasajeros = this.viajeros;
+            restarViajeros(pasajeros);
+        }
+        return pasajeros; 
     }
     
     // Metodos usados por los aviones
@@ -182,43 +192,48 @@ public class Aeropuerto {
     }
     
     public void quitarAvionDeAreaEst(Avion avion, boolean despegando){
-        // Si el avion va a despegar espera para puertas de embarque
-        if (despegando) {
-            try {
-                lockAreaEst.lock();
-                while ((puertasEmbarque[0] != null) && (puertasEmbarque[1] != null) &&
-                       (puertasEmbarque[2] != null) && (puertasEmbarque[3] != null) &&
-                       (puertasEmbarque[4] != null) && (puertasEmbarque[5] != null)){
-                    esperarPuertasEmb.await();
+        lockAreaEst.lock();
+        try {
+            // Si el avion va a despegar espera para puertas de embarque
+            if (despegando) {
+                try {
+                    lockPuertasEmb.lock();
+                    while ((puertasEmbarque[0] != null) && (puertasEmbarque[1] != null) &&
+                            (puertasEmbarque[2] != null) && (puertasEmbarque[3] != null) &&
+                            (puertasEmbarque[4] != null) && (puertasEmbarque[5] != null)){
+                        esperarPuertasEmb.await();
+                    }
+                    avion.getAeropuerto().areaEstacionamiento.remove(avion);
+                } catch (InterruptedException e) {}
+                finally {
+                    lockPuertasEmb.unlock();
                 }
-                avion.getAeropuerto().areaEstacionamiento.remove(avion);
-            } catch (InterruptedException e) {}
-            finally {
-                lockAreaEst.unlock();
             }
-        }
-        // Si el avion acaba de aterrizar espera para el taller
-        else {
-            try {
-                lockAreaEst.lock();
-                while (this.esTallerCompleto()){
-                    esperarTaller.await();
+            // Si el avion acaba de aterrizar espera para el taller
+            else {
+                try {
+                    lockTaller.lock();
+                    while (this.esTallerCompleto()){
+                        esperarTaller.await();
+                    }
+                    avion.getAeropuerto().areaEstacionamiento.remove(avion);
+                } catch (InterruptedException e) {}
+                finally {
+                    lockTaller.unlock();
                 }
-                avion.getAeropuerto().areaEstacionamiento.remove(avion);
-            } catch (InterruptedException e) {}
-            finally {
-                lockAreaEst.unlock();
             }
-        }
-        String str = "";
-        for (Avion a : areaEstacionamiento) {
-            str += a.getIdAvion() + ", ";
-        }
-        if("Barajas".equals(this.nombre)) {
-            this.interfaz.info_est_Bar.setText(str);
-        }
-        else if("Prat".equals(this.nombre)) {
-            this.interfaz.info_est_Prat.setText(str);
+            String str = "";
+            for (Avion a : areaEstacionamiento) {
+                str += a.getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_est_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_est_Prat.setText(str);
+            }
+        } finally {
+            lockAreaEst.unlock();
         }
     }
     
@@ -267,38 +282,6 @@ public class Aeropuerto {
         } 
         finally {
             lockPuertasEmb.unlock();
-        }
-    }
-    
-    public void sumarViajerosAvion(int pasajerosAvion){
-        try {
-            lockViajerosAvion.lock();
-            viajeros += pasajerosAvion;
-            if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
-            }
-            else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
-            }   
-        }
-        finally {
-            lockViajerosAvion.unlock();
-        }
-    }
-    
-    public void restarViajerosAvion(int pasajerosAvion){
-        try {
-            lockViajerosAvion.lock();
-            viajeros -= pasajerosAvion;
-            if("Barajas".equals(this.nombre)) {
-                this.interfaz.info_numPas_Bar.setText(Integer.toString(viajeros));
-            }
-            else if("Prat".equals(this.nombre)) {
-                this.interfaz.info_numPas_Prat.setText(Integer.toString(viajeros));
-            }
-        }
-        finally {
-            lockViajerosAvion.unlock();
         }
     }
     
@@ -357,46 +340,51 @@ public class Aeropuerto {
     }
     
     public void salirAreaDeRodaje(Avion avion, boolean despegando){
-        // Si el avion va a despegar espera para pistas
-        if (despegando) {
-            try {
-                lockAreaRod.lock();
-                while ((pistas[0] != null) && (pistas[1] != null) &&
-                       (pistas[2] != null) && (pistas[3] != null) ){
-                    esperarPistas.await();
+        lockAreaRod.lock();
+        try {
+            // Si el avion va a despegar espera para pistas
+            if (despegando) {
+                try {
+                    lockPistas.lock();
+                    while ((pistas[0] != null) && (pistas[1] != null) &&
+                            (pistas[2] != null) && (pistas[3] != null) ){
+                        esperarPistas.await();
+                    }
+                    avion.getAeropuerto().areaRodaje.remove(avion);
+                } catch (InterruptedException e) {}
+                finally {
+                    lockPistas.unlock();
                 }
-                avion.getAeropuerto().areaRodaje.remove(avion);
-            } catch (InterruptedException e) {}
-            finally {
-                lockAreaRod.unlock();
             }
-        }
-        // Si el avion acaba de aterrizar espera para puertas de embarque
-        else {
-            try {
-                lockAreaRod.lock();
-                while ((puertasEmbarque[0] != null) && (puertasEmbarque[1] != null) &&
-                       (puertasEmbarque[2] != null) && (puertasEmbarque[3] != null) &&
-                       (puertasEmbarque[4] != null) && (puertasEmbarque[5] != null)){
-                    esperarPuertasEmb.await();
+            // Si el avion acaba de aterrizar espera para puertas de embarque
+            else {
+                try {
+                    lockPuertasEmb.lock();
+                    while ((puertasEmbarque[0] != null) && (puertasEmbarque[1] != null) &&
+                            (puertasEmbarque[2] != null) && (puertasEmbarque[3] != null) &&
+                            (puertasEmbarque[4] != null) && (puertasEmbarque[5] != null)){
+                        esperarPuertasEmb.await();
+                    }
+                    avion.getAeropuerto().areaRodaje.remove(avion);
+                } catch (InterruptedException e) {}
+                finally {
+                    lockPuertasEmb.unlock();
                 }
-                avion.getAeropuerto().areaRodaje.remove(avion);
-            } catch (InterruptedException e) {}
-            finally {
-                lockAreaRod.unlock();
             }
+            String str = "";
+            for (int i = 0; i < this.areaRodaje.size(); i++) {
+                str += this.areaRodaje.get(i).getIdAvion() + ", ";
+            }
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.info_rodaje_Bar.setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.info_rodaje_Prat.setText(str);
+            }
+        } finally {
+            lockAreaRod.unlock();
         }
-        String str = "";
-        for (int i = 0; i < this.areaRodaje.size(); i++) {
-            str += this.areaRodaje.get(i).getIdAvion() + ", ";
-        }
-        if("Barajas".equals(this.nombre)) {
-            this.interfaz.info_rodaje_Bar.setText(str);
-        }
-        else if("Prat".equals(this.nombre)) {
-            this.interfaz.info_rodaje_Prat.setText(str);
-        }
-}
+    }
     
     public void entrarPista(Avion avion) throws InterruptedException {
         semPistas.acquire();

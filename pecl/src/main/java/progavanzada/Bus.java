@@ -72,7 +72,7 @@ public class Bus extends Thread {
                 Thread.sleep(r.nextInt(6000) + 5000);
                 
                 // Llegar al aeropuerto y vaciar bus:
-                this.aeropuerto.sumarViajerosBus(this.pasajeros); // Incorporar pasajeros al aeropuerto
+                this.aeropuerto.sumarViajeros(this.pasajeros); // Incorporar pasajeros al aeropuerto
                 log.escribirEvento("BUS " + this.getIdBus() + " deja " + this.pasajeros + " pasajeros en el aeropuerto y queda vacío.");
                 this.pasajeros = 0;
 
@@ -82,7 +82,7 @@ public class Bus extends Thread {
                 while(this.pasajeros > this.aeropuerto.getViajeros()){
                     this.pasajeros --;
                 }
-                this.aeropuerto.restarViajerosBus(this.pasajeros); // Restar pasajeros del aeropuerto
+                this.aeropuerto.restarViajeros(this.pasajeros); // Restar pasajeros del aeropuerto
                 log.escribirEvento("BUS " + this.getIdBus() + " se llena.");
                 
                 // Viajar a la ciudad:
