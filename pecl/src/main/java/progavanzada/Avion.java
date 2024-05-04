@@ -1,6 +1,9 @@
 package progavanzada;
 
+import java.rmi.RemoteException;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Avion extends Thread {
     
@@ -198,12 +201,14 @@ public class Avion extends Thread {
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
+        } catch (RemoteException ex) {
+            Logger.getLogger(Avion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     // Metodos utiles para el ciclo de vida del avion
     
-    private void recogerPasajeros() throws InterruptedException {
+    private void recogerPasajeros() throws InterruptedException, RemoteException {
         
         numPasajeros = this.aeropuerto.getMaxViajeros(maxPasajeros);
         Thread.sleep(r.nextInt(2000) + 1000);

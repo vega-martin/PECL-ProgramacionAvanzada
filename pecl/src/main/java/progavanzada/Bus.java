@@ -1,6 +1,9 @@
 package progavanzada;
 
+import java.rmi.RemoteException;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Bus extends Thread {
     
@@ -108,6 +111,8 @@ public class Bus extends Thread {
         }
         catch (InterruptedException ie){
             System.out.println("Se ha interrumpido el sistema");
+        } catch (RemoteException ex) {
+            Logger.getLogger(Bus.class.getName()).log(Level.SEVERE, null, ex);
         }        
     }
     

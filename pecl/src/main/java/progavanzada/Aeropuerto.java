@@ -1,6 +1,9 @@
 package progavanzada;
 
 import UserInterface.Interfaz;
+import interfaces.IAeropuerto;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,7 +12,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Aeropuerto {
+public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
     private String nombre;
     private int viajeros;
@@ -52,14 +55,7 @@ public class Aeropuerto {
     
     // Metodos para obtener información sobre el aeropuerto
     
-    public Aeropuerto(String nombre){
-        this.nombre = nombre;
-        for (int i = 0; i < aerovias.length; i++) {
-            aerovias[i] = new ArrayList<>();
-        } 
-    }
-    
-    public Aeropuerto(String nombre, Interfaz ui){
+    public Aeropuerto(String nombre, Interfaz ui) throws RemoteException  {
         this.nombre = nombre;
         this.interfaz = ui;
         for (int i = 0; i < aerovias.length; i++) {

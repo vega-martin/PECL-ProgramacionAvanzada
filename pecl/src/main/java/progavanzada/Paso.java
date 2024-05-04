@@ -1,10 +1,13 @@
 package progavanzada;
 
+import interfaces.IPaso;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Paso {
+public class Paso extends UnicastRemoteObject implements IPaso {
     
     private boolean cerrado = false;
     private Lock control = new ReentrantLock();
@@ -12,7 +15,9 @@ public class Paso {
     
     Log log = new Log("evolucionAeropuerto.txt");
     
-    public void mirar(){
+    public Paso() throws RemoteException {}
+    
+    public void mirar() throws RemoteException {
         try {
             control.lock();
             while (cerrado) {
@@ -25,7 +30,7 @@ public class Paso {
         }
     }
     
-    public void abrir(){
+    public void abrir() {
         try {
             control.lock();
             cerrado = false;
@@ -37,7 +42,7 @@ public class Paso {
         }
     }
     
-    public void cerrar(){
+    public void cerrar() {
         try {
             control.lock();
             cerrado = true;

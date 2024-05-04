@@ -1,7 +1,10 @@
 package progavanzada;
 
+import java.rmi.RemoteException;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class HiloGenBuses extends Thread {
     
@@ -56,8 +59,12 @@ public class HiloGenBuses extends Thread {
             // Iniciar el hilo:
             bus.start();  
             
-            // Cada vez que termina de generar un bus mira si se tiene que parar
-            paso.mirar();
+            try {
+                // Cada vez que termina de generar un bus mira si se tiene que parar
+                paso.mirar();
+            } catch (RemoteException ex) {
+                Logger.getLogger(HiloGenBuses.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         }
     }

@@ -2,10 +2,15 @@ package progavanzada;
 
 import UserInterface.Interfaz;
 import UserInterface.InterfazCliente;
+import java.rmi.AccessException;
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
-public class Main {
+public class Servidor {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RemoteException, AccessException, AlreadyBoundException {
         
         // Control
         Paso paso = new Paso();
@@ -27,6 +32,11 @@ public class Main {
         hiloGenAviones.start();
         hiloGenBuses.start();
         
+        Registry registry = LocateRegistry.createRegistry(1099);
+        registry.bind("Paso", paso);
+        registry.bind("AeropuertoBarajas", barajas);
+        registry.bind("AeropuertoPrat", prat);
+        
         
     }
-} // Fin clase Main
+} // Fin clase Servidor
