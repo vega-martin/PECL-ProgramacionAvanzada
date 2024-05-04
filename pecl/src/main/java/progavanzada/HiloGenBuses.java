@@ -31,38 +31,40 @@ public class HiloGenBuses extends Thread {
         
         for (int i = 0; i < 4000; i++){
             
-            // Esperar de 0.5 a 1 segundos:
             try {
-                Thread.sleep(r.nextInt(500) + 500);
-            }
-            catch (InterruptedException ie) {}
-            
-            // Generar el bus
-            Bus bus;
-            
-            // Decidir a qué aeropuerto va:
-            if (i % 2 == 0) {
-                bus = new Bus(barajas, contadorBus.getAndIncrement(), paso); // Barajas
-            }
-            
-            else {
-                bus = new Bus(prat, contadorBus.getAndIncrement(), paso); // El Prat
-            }
-            
-            // Registrar en el log
-            
-            String str = ("BUS " + i + " creado, va a " + bus.getAeropuerto().getNombre()
-                    + ". Su id es " + bus.getIdBus());
-            
-            log.escribirEvento(str);
-            
-            // Iniciar el hilo:
-            bus.start();  
-            
-            try {
-                // Cada vez que termina de generar un bus mira si se tiene que parar
+
+                // Esperar de 0.5 a 1 segundos:
+                try {
+                    Thread.sleep(r.nextInt(500) + 500);
+                }
+                catch (InterruptedException ie) {}
+                
+                // Generar el bus
+                Bus bus;
+                
+                // Decidir a qué aeropuerto va:
+                if (i % 2 == 0) {
+                    bus = new Bus(barajas, contadorBus.getAndIncrement(), paso); // Barajas
+                }
+                
+                else {
+                    bus = new Bus(prat, contadorBus.getAndIncrement(), paso); // El Prat
+                }
+                
+                // Registrar en el log
+                
+                String str = ("BUS " + i + " creado, va a " + bus.getAeropuerto().getNombre()
+                        + ". Su id es " + bus.getIdBus());
+                
+                log.escribirEvento(str);
+                
+                // Iniciar el hilo:
+                bus.start();
+                
                 paso.mirar();
-            } catch (RemoteException ex) {
+                
+            }
+            catch (RemoteException ex) {
                 Logger.getLogger(HiloGenBuses.class.getName()).log(Level.SEVERE, null, ex);
             }
             

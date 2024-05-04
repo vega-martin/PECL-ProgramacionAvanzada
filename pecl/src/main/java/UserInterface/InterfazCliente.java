@@ -15,10 +15,7 @@ import javax.swing.*;
 import static javax.swing.LayoutStyle.ComponentPlacement.*;
 import progavanzada.Paso;
 
-/**
- *
- * @author Vega
- */
+
 public class InterfazCliente extends JFrame implements ActionListener {
     
     // COMPONENTES DE LA INTERFAZ

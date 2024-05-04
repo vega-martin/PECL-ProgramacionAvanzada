@@ -6,4 +6,12 @@ import java.rmi.RemoteException;
 
 public interface IAeropuerto extends Remote {
     // Metodos q se vayan a usar en el cliente
+    public String getNombre() throws RemoteException;
+    public int contarAvionesHangar() throws RemoteException;
+    public int contarAvionesTaller() throws RemoteException;
+    public int contarAvionesAreaEst() throws RemoteException;
+    public int contarAvionesAreaRod() throws RemoteException;
+    public int contarAvionesPuertasEmb() throws RemoteException;
+    public int contarAvionesPistas() throws RemoteException;
+    public int getViajeros() throws RemoteException;
 }

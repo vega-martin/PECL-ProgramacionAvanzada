@@ -31,39 +31,41 @@ public class HiloGenAviones extends Thread {
         
         for (int i = 0; i < 8000; i++){
             
-            // Esperamos de 1 a 3 segundos:
             try {
-                Thread.sleep(r.nextInt(2000) + 1000);
-            }
-            catch (InterruptedException ie) {}
-            
-            // Se genera el avión...
-            
-            Avion avion;
-            
-            // Decidir a qué aeropuerto va:
-            if (i % 2 == 0) {
-                avion = new Avion(barajas, contadorAviones.getAndIncrement(), prat, paso); // Barajas
-            }
-            
-            else {
-                avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas, paso); // El Prat
-            }
-            
-            // Registrar en el log
-            
-            String str = ("AVION " + i + " creado, va a " + avion.getAeropuerto().getNombre()
-                    + ". Su id es " + avion.getIdAvion());
-            
-            log.escribirEvento(str);
-            
-            // Iniciar el hilo:
-            avion.start(); 
-            
-            try {
-                // Cada vez que termina de generar un avion mira si se tiene que parar
+
+                // Esperamos de 1 a 3 segundos:
+                try {
+                    Thread.sleep(r.nextInt(2000) + 1000);
+                }
+                catch (InterruptedException ie) {}
+                
+                // Se genera el avión...
+                
+                Avion avion;
+                
+                // Decidir a qué aeropuerto va:
+                if (i % 2 == 0) {
+                    avion = new Avion(barajas, contadorAviones.getAndIncrement(), prat, paso); // Barajas
+                }
+                
+                else {
+                    avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas, paso); // El Prat
+                }
+                
+                // Registrar en el log
+                
+                String str = ("AVION " + i + " creado, va a " + avion.getAeropuerto().getNombre()
+                        + ". Su id es " + avion.getIdAvion());
+                
+                log.escribirEvento(str);
+                
+                // Iniciar el hilo:
+                avion.start();
+                
                 paso.mirar();
-            } catch (RemoteException ex) {
+                
+            }
+            catch (RemoteException ex) {
                 Logger.getLogger(HiloGenAviones.class.getName()).log(Level.SEVERE, null, ex);
             }
             

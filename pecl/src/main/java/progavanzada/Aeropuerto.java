@@ -55,7 +55,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
     // Metodos para obtener información sobre el aeropuerto
     
-    public Aeropuerto(String nombre, Interfaz ui) throws RemoteException  {
+    public Aeropuerto(String nombre, Interfaz ui) throws RemoteException {
         this.nombre = nombre;
         this.interfaz = ui;
         for (int i = 0; i < aerovias.length; i++) {
@@ -63,19 +63,53 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         }
     }
     
-    public String getNombre() {
+    public String getNombre() throws RemoteException {
         return nombre;
     }
     
-    public int contarAvionesHangar(){
+    public int contarAvionesHangar() throws RemoteException {
         return hangar.size();
     }
     
-    public int contarAvionesAreaEst(){
+    public int contarAvionesTaller() throws RemoteException {
+        int tamaño = 0;
+        for(int i = 0; i < taller.length; i++){
+            if(taller[i] != null){
+                tamaño ++;
+            }
+        }
+        return tamaño;
+    }
+    
+    public int contarAvionesAreaEst() throws RemoteException {
         return areaEstacionamiento.size();
     }
     
-    public int getViajeros() {
+    public int contarAvionesAreaRod() throws RemoteException {
+        return areaRodaje.size();
+    }
+    
+    public int contarAvionesPuertasEmb() throws RemoteException {
+        int tamaño = 0;
+        for(int i = 0; i < puertasEmbarque.length; i++){
+            if(puertasEmbarque[i] != null){
+                tamaño ++;
+            }
+        }
+        return tamaño;
+    }
+    
+    public int contarAvionesPistas() throws RemoteException {
+        int tamaño = 0;
+        for(int i = 0; i < pistas.length; i++){
+            if(pistas[i] != null){
+                tamaño ++;
+            }
+        }
+        return tamaño;
+    }
+    
+    public int getViajeros() throws RemoteException {
         return viajeros;
     }
     
