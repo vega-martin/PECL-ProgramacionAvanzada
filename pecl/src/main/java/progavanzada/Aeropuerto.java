@@ -31,6 +31,10 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private Avion[] puertasEmbarque = new Avion[6];
     private Avion[] pistas = new Avion[4];
     
+    // Estructura para la disponibilidad de las pistas:
+    private boolean[] pistasDisponibles = new boolean[]{true, true, true, true};
+    //
+    
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
     private ArrayList<Avion>[] aerovias = new ArrayList[2];
     
@@ -46,6 +50,10 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private final Semaphore semPuertasEmb = new Semaphore(6, true);
     private final Lock lockAreaRod = new ReentrantLock();
     private final Lock lockPistas = new ReentrantLock();
+    
+    //
+    private final Lock lockPistasDisponibles = new ReentrantLock();
+    //
     private final Semaphore semPistas = new Semaphore(4, true);
     private final Condition esperarPistas = lockPistas.newCondition();
     private final Lock lockAerovias = new ReentrantLock();
@@ -415,7 +423,33 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         }
     }
     
-
+    public int buscarPista() {
+        try {
+            lockPistasDisponibles.lock();
+            int pista = -1;
+            for (int i = 0; i < 4; i++){
+                if (pistasDisponibles[i]) {
+                    pistasDisponibles[i] = false;
+                    pista = i;
+                    break;
+                }
+            }
+            return pista;
+        }
+        finally {
+            lockPistasDisponibles.unlock();
+        }
+    }
+    
+    public void liberarPista(int pista) {
+        try {
+            lockPistasDisponibles.lock();
+            pistasDisponibles[pista] = true;
+        }
+        finally {
+            lockPistasDisponibles.unlock();
+        }
+    }
     public void entrarPista(Avion avion) throws InterruptedException {
         semPistas.acquire();
         lockPistas.lock();

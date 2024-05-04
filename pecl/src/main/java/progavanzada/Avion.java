@@ -117,13 +117,22 @@ public class Avion extends Thread {
                 Thread.sleep(r.nextInt(15000) + 15000);
                 paso.mirar();
                 // Buscar pista -> espera activa?
-                /*
+                // NUEVO INTENTO:
+                
                 log.escribirEvento("AVION " + this.getIdAvion() + " busca una pista libre en " + this.aeropuerto.getNombre() + ".");
-                while(pistas ocupadas){
-                    Thread.sleep(r.nextInt(4000) + 1000);
-                }
+                int pista = -1;
+                do {
+                    pista = this.aeropuerto.buscarPista();
+                    if (pista == -1) {
+                        log.escribirEvento(" ** AVION " + this.getIdAvion() + " no encuentra pista libre en " + this.aeropuerto.getNombre() + ".");
+                        Thread.sleep(r.nextInt(4000) + 1000);    
+                    }
+                }            
+                
+                while(pista == -1);                   
+                
                 log.escribirEvento("AVION " + this.getIdAvion() + " ha encontrado una pista libre en " + this.aeropuerto.getNombre() + ", procede a aterrizar.");
-                */
+                
                 // Salir aerovias
                 this.destino.salirAerovia(this);
                 this.aeropuerto.salirAerovia(this);
@@ -134,6 +143,7 @@ public class Avion extends Thread {
                 Thread.sleep(r.nextInt(4000) + 1000);
                 paso.mirar();
                 this.aeropuerto.salirPista(this);
+                this.aeropuerto.liberarPista(pista);
 
                 // Area de rodaje
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede al area de rodaje, hace comprobaciones y busca una puerta de embarque para desembarcar.");
