@@ -385,52 +385,37 @@ public class Aeropuerto {
         }
     }
     
-    public int buscarPista(Avion avion) {
-        lockPistas.lock();
-        int pista = -1;
-        try { 
-            for (int i = 0; i < 4; i++){
-                if (pistas[i] == null) { // Hay una pista disponible
-                    pista = i;
-                    break;
-                }
-            }
-            return pista; // Devuelve el valor de pista
-        } 
-        finally {
-            lockPistas.unlock();  
-        }
-    }
-
-    
-    public void entrarPista(Avion avion, int pista) throws InterruptedException {
+    public void entrarPista(Avion avion) throws InterruptedException {
         semPistas.acquire();
         lockPistas.lock();
         try {
-            
-        // COMO LA PISTA YA ESTÁ DECIDIDA EN EL MÉTODO BUSCAR PISTA, NO HAY QUE ITERAR SOBRE TODAS
-        // PARA PROGRAMACIÓN DISTRIBUIDA, HABRÍA QUE AÑADIR CONSIDERACIONES SOBRE SI ESTÁ ACTIVA LA PISTA O NO
-
-            this.pistas[pista] = avion;
-                if("Barajas".equals(this.nombre)) {
-                    switch (pista) {
-                        case 0 -> this.interfaz.getInfo_pista1_Bar().setText(avion.getIdAvion());
-                        case 1 -> this.interfaz.getInfo_pista2_Bar().setText(avion.getIdAvion());
-                        case 2 -> this.interfaz.getInfo_pista3_Bar().setText(avion.getIdAvion());
-                        case 3 -> this.interfaz.getInfo_pista4_Bar().setText(avion.getIdAvion());
+            for (int i = 0; i < 4; i++){
+                // Si la pista está desactivada se pasaría al siguiente
+                // todavia no está es opcion implementada
+                
+                // Elige pista
+                if (pistas[i] == null) {
+                    this.pistas[i] = avion;
+                    if("Barajas".equals(this.nombre)) {
+                        switch (i) {
+                            case 0 -> this.interfaz.getInfo_pista1_Bar().setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.getInfo_pista2_Bar().setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.getInfo_pista3_Bar().setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.getInfo_pista4_Bar().setText(avion.getIdAvion());
+                        }
                     }
-                }
-                else if("Prat".equals(this.nombre)) {
-                    switch (pista) {
-                        case 0 -> this.interfaz.getInfo_pista1_Prat().setText(avion.getIdAvion());
-                        case 1 -> this.interfaz.getInfo_pista2_Prat().setText(avion.getIdAvion());
-                        case 2 -> this.interfaz.getInfo_pista3_Prat().setText(avion.getIdAvion());
-                        case 3 -> this.interfaz.getInfo_pista4_Prat().setText(avion.getIdAvion());
+                    else if("Prat".equals(this.nombre)) {
+                        switch (i) {
+                            case 0 -> this.interfaz.getInfo_pista1_Prat().setText(avion.getIdAvion());
+                            case 1 -> this.interfaz.getInfo_pista2_Prat().setText(avion.getIdAvion());
+                            case 2 -> this.interfaz.getInfo_pista3_Prat().setText(avion.getIdAvion());
+                            case 3 -> this.interfaz.getInfo_pista4_Prat().setText(avion.getIdAvion());
+                        }
                     }
+                    break;
                 }
-        }
-        
-        finally { lockPistas.unlock(); }
+            }
+        } finally { lockPistas.unlock(); }
     }
     
     public void salirPista(Avion avion) throws InterruptedException {

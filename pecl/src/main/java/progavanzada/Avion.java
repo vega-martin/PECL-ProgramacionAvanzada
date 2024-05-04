@@ -94,9 +94,8 @@ public class Avion extends Thread {
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 
                 // Pista
-                int pista = this.aeropuerto.buscarPista(this);
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede a una pista y se prepara para despegar.");
-                this.aeropuerto.entrarPista(this, pista);
+                this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(2000) + 1000);
                 Thread.sleep(r.nextInt(4000) + 1000);
                 paso.mirar();
@@ -105,7 +104,7 @@ public class Avion extends Thread {
                 // Aerovía
                 log.escribirEvento("AVION " + this.getIdAvion() + " en el aire, aerovía " + this.aeropuerto.getNombre() + "-" + this.destino.getNombre() + ".");
                 this.aeropuerto.entrarAerovia(this, despegando);
-                // Cambiar aeropuerto, status (despegando), entrar en aerovia destino
+                // Cambiar aeropuerto, estatus (despegando), entrar en aerovia destino
                 Aeropuerto temp = aeropuerto;
                 aeropuerto = destino;
                 destino = temp;
@@ -114,30 +113,21 @@ public class Avion extends Thread {
                 // Trayecto
                 Thread.sleep(r.nextInt(15000) + 15000);
                 paso.mirar();
-                
-                // Buscar pista
+                // Buscar pista -> espera activa?
+                /*
                 log.escribirEvento("AVION " + this.getIdAvion() + " busca una pista libre en " + this.aeropuerto.getNombre() + ".");
-                //int pista;
-                do {
-                    pista = this.aeropuerto.buscarPista(this);
-                    if (pista == -1){
-                    log.escribirEvento("AVION " + this.getIdAvion() + " no ha encontrado una pista libre en " 
-                    + this.aeropuerto.getNombre() + ", va a dar un rodeo mientras espera");
-                    Thread.sleep(r.nextInt(4000) + 1000);    
-                    }
+                while(pistas ocupadas){
+                    Thread.sleep(r.nextInt(4000) + 1000);
                 }
-                while (pista == -1);
-
-                // Si sale del bucle do-while es porque ya ha encontrado una pista libre
                 log.escribirEvento("AVION " + this.getIdAvion() + " ha encontrado una pista libre en " + this.aeropuerto.getNombre() + ", procede a aterrizar.");
-                
+                */
                 // Salir aerovias
                 this.destino.salirAerovia(this);
                 this.aeropuerto.salirAerovia(this);
 
                 // Pista
                 log.escribirEvento("AVION " + this.getIdAvion() + " ha aterrizado exitosamente en " + this.aeropuerto.getNombre() + ".");
-                this.aeropuerto.entrarPista(this, pista);
+                this.aeropuerto.entrarPista(this);
                 Thread.sleep(r.nextInt(4000) + 1000);
                 paso.mirar();
                 this.aeropuerto.salirPista(this);
