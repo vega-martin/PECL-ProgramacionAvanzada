@@ -43,7 +43,8 @@ public class Aeropuerto {
     private final Semaphore semPuertasEmb = new Semaphore(6, true);
     private final Lock lockAreaRod = new ReentrantLock();
     private final Lock lockPistas = new ReentrantLock();
-    private final Semaphore semPistas = new Semaphore(4, true);
+    private final Semaphore semBuscarPistas = new Semaphore(4, true);
+    private final Semaphore semEntrarPistas = new Semaphore(4, true);
     private final Condition esperarPistas = lockPistas.newCondition();
     private final Lock lockAerovias = new ReentrantLock();
     private final Lock lockTaller = new ReentrantLock();
@@ -385,7 +386,8 @@ public class Aeropuerto {
         }
     }
     
-    public int buscarPista(Avion avion) {
+    public int buscarPista(Avion avion) throws InterruptedException {
+        semBuscarPistas.acquire();
         lockPistas.lock();
         int pista = -1;
         try { 
@@ -404,7 +406,8 @@ public class Aeropuerto {
 
     
     public void entrarPista(Avion avion, int pista) throws InterruptedException {
-        semPistas.acquire();
+        semBuscarPistas.release();
+        semEntrarPistas.acquire();
         lockPistas.lock();
         try {
             
@@ -460,7 +463,7 @@ public class Aeropuerto {
             }
             esperarPistas.signal();
         } finally { lockPistas.unlock(); }
-        semPistas.release();
+        semEntrarPistas.release();
     }
     
     public void entrarAerovia(Avion avion, boolean despegando){
