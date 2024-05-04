@@ -100,7 +100,7 @@ public class Interfaz extends JFrame implements ActionListener{
     
     public Interfaz(Paso p) {
         
-        super("Simulador de Aeropuertos");
+        super("Simulador de Aeropuertos : Servidor");
         this.paso = p;
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.initComponents();

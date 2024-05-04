@@ -548,9 +548,7 @@ public class Aeropuerto {
                     this.taller[i] = null;
                     String str = "";
                     for (int j = 0; i < 20; i++) {
-                        if(taller[i] == null) {
-                            continue;
-                        } else {
+                        if(taller[i] != null) {
                             str += taller[i].getIdAvion() + ", ";
                         }
                     }
