@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package interfaz;
+package UserInterface;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -93,15 +93,11 @@ public class InterfazCliente extends JFrame implements ActionListener {
     
     
     private Paso paso;
-    private Aeropuerto barajas;
-    private Aeropuerto prat;
     
-    public InterfazCliente(Paso p, Aeropuerto barajas, Aeropuerto Prat) {
+    public InterfazCliente(Paso p) {
         
         super("Simulador de Aeropuertos : Cliente");
         this.paso = p;
-        this.barajas = barajas;
-        this.prat = prat;
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.initComponents();
         this.setSize(1000, 600);
@@ -429,6 +425,72 @@ public class InterfazCliente extends JFrame implements ActionListener {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
     }
+
+    public JTextField getInfo_numPas_Bar() {
+        return info_numPas_Bar;
+    }
+
+    public JTextField getInfo_numHangar_Bar() {
+        return info_numHangar_Bar;
+    }
+
+    public JTextField getInfo_numTaller_Bar() {
+        return info_numTaller_Bar;
+    }
+
+    public JTextField getInfo_numArEst_Bar() {
+        return info_numArEst_Bar;
+    }
+
+    public JTextField getInfo_numArRod_Bar() {
+        return info_numArRod_Bar;
+    }
+
+    public JTextField getInfo_numPuerEmb_Bar() {
+        return info_numPuerEmb_Bar;
+    }
+
+    public JTextField getInfo_numPistas_Bar() {
+        return info_numPistas_Bar;
+    }
+
+    public JTextField getInfo_ae_Bar_Prat() {
+        return info_ae_Bar_Prat;
+    }
+
+    public JTextField getInfo_ae_Prat_Bar() {
+        return info_ae_Prat_Bar;
+    }
+
+    public JTextField getInfo_numPas_Prat() {
+        return info_numPas_Prat;
+    }
+
+    public JTextField getInfo_numHangar_Prat() {
+        return info_numHangar_Prat;
+    }
+
+    public JTextField getInfo_numTaller_Prat() {
+        return info_numTaller_Prat;
+    }
+
+    public JTextField getInfo_numArEst_Prat() {
+        return info_numArEst_Prat;
+    }
+
+    public JTextField getInfo_numArRod_Prat() {
+        return info_numArRod_Prat;
+    }
+
+    public JTextField getInfo_numPuerEmb_Prat() {
+        return info_numPuerEmb_Prat;
+    }
+
+    public JTextField getInfo_numPistas_Prat() {
+        return info_numPistas_Prat;
+    }
+    
+    
     
     @Override
     public void actionPerformed(ActionEvent evento) {                                         
@@ -436,83 +498,83 @@ public class InterfazCliente extends JFrame implements ActionListener {
         // Botones Aeropuerto Barajas
         if(boton == this.botonP1Abrir_Bar) {
             botonP1Abrir_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP1Cerrar_Bar.setEnabled(true);
         }
         else if (boton == botonP2Abrir_Bar) {
             botonP2Abrir_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP2Cerrar_Bar.setEnabled(true);
         }
         else if (boton == botonP3Abrir_Bar) {
             botonP3Abrir_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP3Cerrar_Bar.setEnabled(true);
         }
         else if (boton == botonP4Abrir_Bar) {
             botonP4Abrir_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP4Cerrar_Bar.setEnabled(true);
         }
         else if (boton == botonP1Cerrar_Bar) {
             botonP1Cerrar_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP1Abrir_Bar.setEnabled(true);
         }
         else if (boton == botonP2Cerrar_Bar) {
             botonP2Cerrar_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP2Abrir_Bar.setEnabled(true);
         }
         else if (boton == botonP3Cerrar_Bar) {
             botonP3Cerrar_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP3Abrir_Bar.setEnabled(true);
         }
         else if (boton == botonP4Cerrar_Bar) {
             botonP4Cerrar_Bar.setEnabled(false);
-            paso.cerrar();
+            
             botonP4Abrir_Bar.setEnabled(true);
         } 
         // Botones Aeropuerto Prat
         else if(boton == this.botonP1Abrir_Prat) {
             botonP1Abrir_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP1Cerrar_Prat.setEnabled(true);
         }
         else if (boton == botonP2Abrir_Prat) {
             botonP2Abrir_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP2Cerrar_Prat.setEnabled(true);
         }
         else if (boton == botonP3Abrir_Prat) {
             botonP3Abrir_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP3Cerrar_Prat.setEnabled(true);
         }
         else if (boton == botonP4Abrir_Prat) {
             botonP4Abrir_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP4Cerrar_Prat.setEnabled(true);
         }
         else if (boton == botonP1Cerrar_Prat) {
             botonP1Cerrar_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP1Abrir_Prat.setEnabled(true);
         }
         else if (boton == botonP2Cerrar_Prat) {
             botonP2Cerrar_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP2Abrir_Prat.setEnabled(true);
         }
         else if (boton == botonP3Cerrar_Prat) {
             botonP3Cerrar_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP3Abrir_Prat.setEnabled(true);
         }
         else if (boton == botonP4Cerrar_Prat) {
             botonP4Cerrar_Prat.setEnabled(false);
-            paso.cerrar();
+            
             botonP4Abrir_Prat.setEnabled(true);
         }
         

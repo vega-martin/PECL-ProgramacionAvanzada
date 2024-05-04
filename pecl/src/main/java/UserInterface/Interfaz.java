@@ -1,4 +1,4 @@
-package interfaz;
+package UserInterface;
 
 import java.awt.event.*;
 import javax.swing.*;

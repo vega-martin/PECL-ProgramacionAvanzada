@@ -1,6 +1,6 @@
 package progavanzada;
 
-import interfaz.Interfaz;
+import UserInterface.Interfaz;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
