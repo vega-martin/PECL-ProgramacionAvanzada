@@ -385,6 +385,7 @@ public class Aeropuerto {
         }
     }
     
+
     public void entrarPista(Avion avion) throws InterruptedException {
         semPistas.acquire();
         lockPistas.lock();
