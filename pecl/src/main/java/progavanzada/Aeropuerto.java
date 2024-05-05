@@ -482,8 +482,10 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         lockPistas.lock();
         try {
             for (int i = 0; i < 4; i++){
-                // Si la pista está desactivada se pasaría al siguiente
-                // todavia no está es opcion implementada
+                // Si la pista está cerrada pasa a la siguiente
+                if (pistasDisponibles[i] == false) {
+                    continue;
+                }
                 
                 // Elige pista
                 if (pistas[i] == null) {
