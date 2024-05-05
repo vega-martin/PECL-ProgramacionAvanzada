@@ -71,14 +71,17 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         }
     }
     
+    @Override
     public String getNombre() throws RemoteException {
         return nombre;
     }
     
+    @Override
     public int contarAvionesHangar() throws RemoteException {
         return hangar.size();
     }
     
+    @Override
     public int contarAvionesTaller() throws RemoteException {
         int tamaño = 0;
         for(int i = 0; i < taller.length; i++){
@@ -89,14 +92,17 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         return tamaño;
     }
     
+    @Override
     public int contarAvionesAreaEst() throws RemoteException {
         return areaEstacionamiento.size();
     }
     
+    @Override
     public int contarAvionesAreaRod() throws RemoteException {
         return areaRodaje.size();
     }
     
+    @Override
     public int contarAvionesPuertasEmb() throws RemoteException {
         int tamaño = 0;
         for(int i = 0; i < puertasEmbarque.length; i++){
@@ -107,6 +113,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         return tamaño;
     }
     
+    @Override
     public int contarAvionesPistas() throws RemoteException {
         int tamaño = 0;
         for(int i = 0; i < pistas.length; i++){
@@ -117,6 +124,26 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         return tamaño;
     }
     
+    @Override
+    public String getAvionesEnAerovia() throws RemoteException {
+        String str = "";
+        for (int i = 0; i < this.aerovias[0].size(); i++) {
+            str += this.aerovias[0].get(i).getIdAvion() + ", ";
+        }
+        return str;
+    }
+    
+    @Override
+    public void setEstadoPista(int numPista, boolean estado) throws RemoteException {
+        lockPistasDisponibles.lock();
+        try {
+            pistasDisponibles[numPista] = estado;
+        } finally {
+            lockPistasDisponibles.unlock();
+        }
+    }
+    
+    @Override
     public int getViajeros() throws RemoteException {
         return viajeros;
     }

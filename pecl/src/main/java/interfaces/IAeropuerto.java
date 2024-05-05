@@ -14,4 +14,6 @@ public interface IAeropuerto extends Remote {
     public int contarAvionesPuertasEmb() throws RemoteException;
     public int contarAvionesPistas() throws RemoteException;
     public int getViajeros() throws RemoteException;
+    public String getAvionesEnAerovia() throws RemoteException;
+    public void setEstadoPista(int numPista, boolean estado) throws RemoteException;
 }

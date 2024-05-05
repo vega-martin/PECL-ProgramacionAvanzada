@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package UserInterface;
 
+import interfaces.IAeropuerto;
+import interfaces.IPaso;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.rmi.RemoteException;
@@ -13,7 +11,6 @@ import static javax.swing.GroupLayout.Alignment.*;
 import static javax.swing.GroupLayout.*;
 import javax.swing.*;
 import static javax.swing.LayoutStyle.ComponentPlacement.*;
-import progavanzada.Paso;
 
 
 public class InterfazCliente extends JFrame implements ActionListener {
@@ -91,12 +88,15 @@ public class InterfazCliente extends JFrame implements ActionListener {
     private JButton botonP4Cerrar_Prat = new JButton("Cerrar");
     
     
-    private Paso paso;
+    private IPaso paso;
+    private IAeropuerto barajas, prat;
     
-    public InterfazCliente(Paso p) {
+    public InterfazCliente(IPaso p, IAeropuerto barajas, IAeropuerto prat) {
         
         super("Simulador de Aeropuertos : Cliente");
         this.paso = p;
+        this.barajas = barajas;
+        this.prat = prat;
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.initComponents();
         this.setSize(1000, 600);
@@ -499,83 +499,83 @@ public class InterfazCliente extends JFrame implements ActionListener {
             // Botones Aeropuerto Barajas
             if(boton == this.botonP1Abrir_Bar) {
                 botonP1Abrir_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(1, true);
                 botonP1Cerrar_Bar.setEnabled(true);
             }
             else if (boton == botonP2Abrir_Bar) {
                 botonP2Abrir_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(2, true);
                 botonP2Cerrar_Bar.setEnabled(true);
             }
             else if (boton == botonP3Abrir_Bar) {
                 botonP3Abrir_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(3, true);
                 botonP3Cerrar_Bar.setEnabled(true);
             }
             else if (boton == botonP4Abrir_Bar) {
                 botonP4Abrir_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(4, true);
                 botonP4Cerrar_Bar.setEnabled(true);
             }
             else if (boton == botonP1Cerrar_Bar) {
                 botonP1Cerrar_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(1, false);
                 botonP1Abrir_Bar.setEnabled(true);
             }
             else if (boton == botonP2Cerrar_Bar) {
                 botonP2Cerrar_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(2, false);
                 botonP2Abrir_Bar.setEnabled(true);
             }
             else if (boton == botonP3Cerrar_Bar) {
                 botonP3Cerrar_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(3, false);
                 botonP3Abrir_Bar.setEnabled(true);
             }
             else if (boton == botonP4Cerrar_Bar) {
                 botonP4Cerrar_Bar.setEnabled(false);
-                
+                barajas.setEstadoPista(4, false);
                 botonP4Abrir_Bar.setEnabled(true);
             }
             // Botones Aeropuerto Prat
             else if(boton == this.botonP1Abrir_Prat) {
                 botonP1Abrir_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(1, true);
                 botonP1Cerrar_Prat.setEnabled(true);
             }
             else if (boton == botonP2Abrir_Prat) {
                 botonP2Abrir_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(2, true);
                 botonP2Cerrar_Prat.setEnabled(true);
             }
             else if (boton == botonP3Abrir_Prat) {
                 botonP3Abrir_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(3, true);
                 botonP3Cerrar_Prat.setEnabled(true);
             }
             else if (boton == botonP4Abrir_Prat) {
                 botonP4Abrir_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(4, true);
                 botonP4Cerrar_Prat.setEnabled(true);
             }
             else if (boton == botonP1Cerrar_Prat) {
                 botonP1Cerrar_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(1, false);
                 botonP1Abrir_Prat.setEnabled(true);
             }
             else if (boton == botonP2Cerrar_Prat) {
                 botonP2Cerrar_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(2, false);
                 botonP2Abrir_Prat.setEnabled(true);
             }
             else if (boton == botonP3Cerrar_Prat) {
                 botonP3Cerrar_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(3, false);
                 botonP3Abrir_Prat.setEnabled(true);
             }
             else if (boton == botonP4Cerrar_Prat) {
                 botonP4Cerrar_Prat.setEnabled(false);
-                
+                prat.setEstadoPista(4, false);
                 botonP4Abrir_Prat.setEnabled(true);
             }
         } catch (RemoteException ex) {

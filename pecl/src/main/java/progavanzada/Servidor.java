@@ -1,22 +1,22 @@
 package progavanzada;
 
 import UserInterface.Interfaz;
-import UserInterface.InterfazCliente;
+import java.net.MalformedURLException;
 import java.rmi.AccessException;
 import java.rmi.AlreadyBoundException;
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Servidor {
 
-    public static void main(String[] args) throws RemoteException, AccessException, AlreadyBoundException {
+    public static void main(String[] args) throws RemoteException, AccessException, AlreadyBoundException, MalformedURLException {
         
         // Control
         Paso paso = new Paso();
         
         // Interfaz grafica
-        InterfazCliente ic = new InterfazCliente(paso);
         Interfaz ui = new Interfaz(paso);
         
         // Declarar los aeropuertos del sistema:
@@ -32,10 +32,10 @@ public class Servidor {
         hiloGenAviones.start();
         hiloGenBuses.start();
         
-        Registry registry = LocateRegistry.createRegistry(1099);
-        registry.bind("Paso", paso);
-        registry.bind("AeropuertoBarajas", barajas);
-        registry.bind("AeropuertoPrat", prat);
+        Registry registro = LocateRegistry.createRegistry(1099);
+        Naming.rebind("//localhost/ObjetoPaso", paso);
+        Naming.rebind("//localhost/ObjetoAeropuertoBarajas", barajas);
+        Naming.rebind("//localhost/ObjetoAeropuertoPrat", prat);
         
         
     }
