@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public class Bus extends Thread {
     
-    // Recurso compartido
+    // Recurso compartido:
     private Aeropuerto aeropuerto;
     
     // Resto de atributos:
@@ -17,10 +17,13 @@ public class Bus extends Thread {
     // Objeto random:
     Random r = new Random();
     
+    // Instancia de Log para registrar eventos:
     Log log = new Log("evolucionAeropuerto.txt");
     
+    // Instancia de Paso para pausar el programa:
     private final Paso paso;
 
+    // Getters y setters:
     public String getIdBus() {
         return id;
     }
@@ -45,12 +48,13 @@ public class Bus extends Thread {
         this.aeropuerto = aeropuerto;
     }
 
-    // Incrementa var. atómica, y la devuelve con ceros a la izquierda:
+    // Genera el ID completo del bus:
     private String generarIdBus(int numBus){
         String numString = String.format("%04d", numBus);
         return "B-" + numString;
     }
     
+    // Constructor del objeto Bus:
     public Bus(Aeropuerto aeropuerto, int numCompartido, Paso p){
         this.id = generarIdBus(numCompartido);
         this.pasajeros = 0;
@@ -90,7 +94,7 @@ public class Bus extends Thread {
                 Thread.sleep(r.nextInt(4000) + 2000);
                 this.pasajeros = r.nextInt(51);
                 while(this.pasajeros > this.aeropuerto.getViajeros()){
-                    this.pasajeros --;
+                    this.pasajeros--;
                 }
                 this.aeropuerto.restarViajeros(this.pasajeros); // Restar pasajeros del aeropuerto
                 log.escribirEvento("BUS " + this.getIdBus() + " se llena.");

@@ -11,14 +11,17 @@ public class Interfaz extends JFrame implements ActionListener{
     
     // COMPONENTES DE LA INTERFAZ
     
-    // Botones
+    // Botones:
     private JButton botonPausar = new JButton("Pausar");
     private JButton botonReanudar = new JButton("Reanudar");
     
-    // Etiquetas
+    // Etiquetas generales:
     private JLabel tituloAeropuertoBarajas = new JLabel("Aeropuerto de Madrid - Barajas");
     private JLabel tituloAeropuertoPrat = new JLabel("Aeropuerto de Barcelona - Prat");
-    // Aeropueto Barajas
+    private JLabel ae_Bar_Prat = new JLabel("Aerovía Barajas - Prat:");
+    private JLabel ae_Prat_Bar = new JLabel("Aerovía Prat - Barajas:");
+    
+    // Etiquetas propias del aeropueto Barajas:
     private JLabel numPas_Bar = new JLabel("Nº pasajeros en Aeropuerto:");
     private JLabel hangar_Bar = new JLabel("Hangar:");
     private JLabel taller_Bar = new JLabel("Taller:");
@@ -34,10 +37,8 @@ public class Interfaz extends JFrame implements ActionListener{
     private JLabel pista2_Bar = new JLabel("Pista 2:");
     private JLabel pista3_Bar = new JLabel("Pista 3:");
     private JLabel pista4_Bar = new JLabel("Pista 4:");
-    // Aerovías
-    private JLabel ae_Bar_Prat = new JLabel("Aerovía Barajas - Prat:");
-    private JLabel ae_Prat_Bar = new JLabel("Aerovía Prat - Barajas:");
-    // Aeropuerto Prat
+    
+    // Etiquetas propias del aeropueto El Prat:
     private JLabel numPas_Prat = new JLabel("Nº pasajeros en Aeropuerto:");
     private JLabel hangar_Prat = new JLabel("Hangar:");
     private JLabel taller_Prat = new JLabel("Taller:");
@@ -54,12 +55,13 @@ public class Interfaz extends JFrame implements ActionListener{
     private JLabel pista3_Prat = new JLabel("Pista 3:");
     private JLabel pista4_Prat = new JLabel("Pista 4:");
     
-    // Separadores
+    // Separadores:
     private final JSeparator s_superior = new JSeparator();
     private final JSeparator s_inferior = new JSeparator();
     
-    // Cuadros de texto
-    // Aeropuerto Barajas
+    // CUADROS DE TEXTO
+    
+    // Aeropuerto Barajas:
     private JTextField info_numPas_Bar = new JTextField("0");
     private JTextField info_hangar_Bar = new JTextField();
     private JTextField info_taller_Bar = new JTextField();
@@ -75,10 +77,12 @@ public class Interfaz extends JFrame implements ActionListener{
     private JTextField info_pista2_Bar = new JTextField();
     private JTextField info_pista3_Bar = new JTextField();
     private JTextField info_pista4_Bar = new JTextField();
-    // Aerovías
+    
+    // Aerovías:
     private JTextField info_ae_Bar_Prat = new JTextField();
     private JTextField info_ae_Prat_Bar = new JTextField();
-    // Aeropuerto Prat
+    
+    // Aeropuerto Prat:
     private JTextField info_numPas_Prat = new JTextField("0");
     private JTextField info_hangar_Prat = new JTextField();
     private JTextField info_taller_Prat = new JTextField();
@@ -95,9 +99,10 @@ public class Interfaz extends JFrame implements ActionListener{
     private JTextField info_pista3_Prat = new JTextField();
     private JTextField info_pista4_Prat = new JTextField();
     
+    // Instancia para pausar el programa:
     private Paso paso;
     
-    
+    // Constructor de la clase gráfica:
     public Interfaz(Paso p) {
         
         super("Simulador de Aeropuertos : Servidor");
@@ -111,6 +116,7 @@ public class Interfaz extends JFrame implements ActionListener{
         
     }
     
+    // Establecer diferentes parámetros a los componentes de Swing:
     private void initComponents() {
         
         botonPausar.addActionListener(this);
@@ -446,7 +452,7 @@ public class Interfaz extends JFrame implements ActionListener{
         
     }
     
-    // Getters para los JTextFields
+    // Getters para los JTextField:
 
     public JTextField getInfo_numPas_Bar() {
         return info_numPas_Bar;
@@ -576,6 +582,7 @@ public class Interfaz extends JFrame implements ActionListener{
         return info_pista4_Prat;
     }
     
+    // Método para PAUSAR la ejecución del programa con el correspondiente botón:
     @Override
     public void actionPerformed(ActionEvent evento) {                                         
         Object boton = evento.getSource();

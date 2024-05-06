@@ -9,50 +9,48 @@ import java.rmi.RemoteException;
 
 public class Cliente {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws RemoteException, NotBoundException, MalformedURLException {
         
-        //Registry registro = LocateRegistry.getRegistry("localhost", 1099);
+        // Buscar un objeto en el registro RMI utilizando la IP y nombre lógico correspondientes:
         IPaso paso = (IPaso) Naming.lookup("//127.0.0.1/ObjetoPaso");
         IAeropuerto barajas = (IAeropuerto) Naming.lookup("//127.0.0.1/ObjetoAeropuertoBarajas");
         IAeropuerto prat = (IAeropuerto) Naming.lookup("//127.0.0.1/ObjetoAeropuertoPrat");
-        // Interfaz grafica
+        
+        // Interfaz gráfica:
         InterfazCliente ic = new InterfazCliente(paso, barajas, prat);
         
         while(true) {
-            // Actualizar la informacion de los Aeropuertos "a la vez"
+            // Actualizar la información de los aeropuertos "a la vez":
             
-            // Numero de viajeros Aeropuertos
+            // Número de viajeros en los aeropuertos:
             ic.getInfo_numPas_Bar().setText(Integer.toString(barajas.getViajeros()));
             ic.getInfo_numPas_Prat().setText(Integer.toString(prat.getViajeros()));
             
-            // Numero de aviones en los Hangares
+            // Número de aviones en los hangares:
             ic.getInfo_numHangar_Bar().setText(Integer.toString(barajas.contarAvionesHangar()));
             ic.getInfo_numHangar_Prat().setText(Integer.toString(prat.contarAvionesHangar()));
             
-            // Numero de aviones en los Talleres
+            // Número de aviones en los talleres:
             ic.getInfo_numTaller_Bar().setText(Integer.toString(barajas.contarAvionesTaller()));
             ic.getInfo_numTaller_Prat().setText(Integer.toString(prat.contarAvionesTaller()));
             
-            // Numero de aviones en las Areas de Estacionamiento
+            // Número de aviones en las áreas de estacionamiento:
             ic.getInfo_numArEst_Bar().setText(Integer.toString(barajas.contarAvionesAreaEst()));
             ic.getInfo_numArEst_Prat().setText(Integer.toString(prat.contarAvionesAreaEst()));
             
-            // Numero de aviones en la Areas de Rodaje
+            // Número de aviones en las áreas de rodaje:
             ic.getInfo_numArRod_Bar().setText(Integer.toString(barajas.contarAvionesAreaRod()));
             ic.getInfo_numArRod_Prat().setText(Integer.toString(prat.contarAvionesAreaRod()));
             
-            // Numero de Puertas de Embarque ocupadas
+            // Número de puertas de embarque ocupadas:
             ic.getInfo_numPuerEmb_Bar().setText(Integer.toString(barajas.contarAvionesPuertasEmb()));
             ic.getInfo_numPuerEmb_Prat().setText(Integer.toString(prat.contarAvionesPuertasEmb()));
             
-            // Numero de Pistas ocupadas
+            // Número de pistas ocupadas:
             ic.getInfo_numPistas_Bar().setText(Integer.toString(barajas.contarAvionesPistas()));
             ic.getInfo_numPistas_Prat().setText(Integer.toString(prat.contarAvionesPistas()));
             
-            // Aerovias
+            // Aviones en las aerovías:
             ic.getInfo_ae_Bar_Prat().setText(barajas.getAvionesEnAerovia());
             ic.getInfo_ae_Prat_Bar().setText(prat.getAvionesEnAerovia());
             

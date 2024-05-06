@@ -8,14 +8,15 @@ import java.util.logging.Logger;
 
 public class HiloGenAviones extends Thread {
     
-    // Recursos compartidos
-    private static final AtomicInteger contadorAviones = new AtomicInteger(0);
-    
+    // Recursos compartidos:
+    private static final AtomicInteger contadorAviones = new AtomicInteger(0); // Variable atómica  
     private final Aeropuerto barajas;
     private final Aeropuerto prat;
     
+    // Instancia para registrar eventos:
     Log log = new Log("evolucionAeropuerto.txt");
     
+    // Instancia para pausar el programa:
     private final Paso paso;
     
     // Constructor que recibe Barajas y Prat:
@@ -39,8 +40,7 @@ public class HiloGenAviones extends Thread {
                 }
                 catch (InterruptedException ie) {}
                 
-                // Se genera el avión...
-                
+                // Se genera el avión:                
                 Avion avion;
                 
                 // Decidir a qué aeropuerto va:
@@ -52,16 +52,17 @@ public class HiloGenAviones extends Thread {
                     avion = new Avion(prat, contadorAviones.getAndIncrement(), barajas, paso); // El Prat
                 }
                 
-                // Registrar en el log
-                
+                // Generar el evento a registrar:               
                 String str = ("AVION " + i + " creado, va a " + avion.getAeropuerto().getNombre()
                         + ". Su id es " + avion.getIdAvion());
                 
+                // Registrar en el log:
                 log.escribirEvento(str);
                 
                 // Iniciar el hilo:
                 avion.start();
                 
+                // Comprobar si se debe pausar el programa:
                 paso.mirar();
                 
             }

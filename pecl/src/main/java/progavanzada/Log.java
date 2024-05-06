@@ -10,13 +10,15 @@ public class Log {
 
     private final String nombreArchivo;
     private final DateTimeFormatter formatter;
-    private final Object monitor = new Object();
+    private final Object monitor = new Object(); // Para establecer un bloqueo de acceso al fichero
 
     public Log(String nombreArchivo) {
         this.nombreArchivo = nombreArchivo;
+        
+        // Establecer el formateo de la fecha deseado:
         this.formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
-        // Crear el archivo de registro si no existe
+        // Crear el archivo de registro si no existe:
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo, true))) {
         } catch (IOException e) {}
     }

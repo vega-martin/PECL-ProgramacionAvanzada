@@ -14,14 +14,17 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
+    // Atributos identificadores:
     private String nombre;
     private int viajeros;
     
+    // Instancia de la clase Interfaz:
     private Interfaz interfaz;
     
     /* Estructuras de datos para las zonas de cada avión
-        - ARRAYLIST --> CAPACIDAD ILIMITADA
-        - ARRAY ESTATICO --> CAPACIDAD LIMITADA
+        - ArrayList --> capacidad ILIMITADA
+        - Array (estático) --> capacidad LIMITADA
+        - Queue --> estructura con FIFO
     */
     
     private final ArrayList<Avion> hangar = new ArrayList<>();
@@ -33,13 +36,10 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
     // Estructura para la disponibilidad de las pistas:
     private boolean[] pistasDisponibles = new boolean[]{true, true, true, true};
-    //
     
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
     private ArrayList<Avion>[] aerovias = new ArrayList[2];
     
-    // Cola (FIFO) para las puertas de embarque:
-    //public final Queue<Avion> colaEsperaPuertasEmbarque = new LinkedList<>();
     
     // MECANISMOS PARA PROTEGER LAS ESTRUCTURAS DE DATOS:
     private final Lock lockViajerosBus = new ReentrantLock();
@@ -50,10 +50,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private final Semaphore semPuertasEmb = new Semaphore(6, true);
     private final Lock lockAreaRod = new ReentrantLock();
     private final Lock lockPistas = new ReentrantLock();
-    
-    //
     private final Lock lockPistasDisponibles = new ReentrantLock();
-    //
     private final Semaphore semPistas = new Semaphore(4, true);
     private final Condition esperarPistas = lockPistas.newCondition();
     private final Lock lockAerovias = new ReentrantLock();
@@ -61,16 +58,17 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private final Semaphore semTaller = new Semaphore(20, true);
     private final Condition esperarTaller = lockTaller.newCondition();
     
-    // Metodos para obtener información sobre el aeropuerto
-    
+    // Constructor de la clase Aeropuerto:
     public Aeropuerto(String nombre, Interfaz ui) throws RemoteException {
         this.nombre = nombre;
         this.interfaz = ui;
+        // Crear dos ArrayList adicionales para las aerovías:
         for (int i = 0; i < aerovias.length; i++) {
             aerovias[i] = new ArrayList<>();
         }
     }
     
+    // Métodos para obtener información sobre el aeropuerto:
     @Override
     public String getNombre() throws RemoteException {
         return nombre;
@@ -86,7 +84,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         int tamaño = 0;
         for(int i = 0; i < taller.length; i++){
             if(taller[i] != null){
-                tamaño ++;
+                tamaño++;
             }
         }
         return tamaño;
@@ -193,7 +191,9 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         return pasajeros; 
     }
     
-    // Metodos usados por los aviones
+    /*  Métodos usados para manejar las estructuras de datos de los aviones:
+        introducir o eliminar los aviones de las diferentes zonas
+    */
     
     public void incluirAvionEnHangar(Avion avion){
         try {
@@ -258,7 +258,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     public void quitarAvionDeAreaEst(Avion avion, boolean despegando){
         lockAreaEst.lock();
         try {
-            // Si el avion va a despegar espera para puertas de embarque
+            // Si el avión va a despegar, debe esperar a una puerta de embarque libre:
             if (despegando) {
                 try {
                     lockPuertasEmb.lock();
@@ -273,11 +273,11 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
                     lockPuertasEmb.unlock();
                 }
             }
-            // Si el avion acaba de aterrizar espera para el taller
+            // Si el avión acaba de aterrizar, debe esperar para ir al taller:
             else {
                 try {
                     lockTaller.lock();
-                    while (this.esTallerCompleto()){
+                    while (this.tallerCompleto()){
                         esperarTaller.await();
                     }
                     avion.getAeropuerto().areaEstacionamiento.remove(avion);
@@ -305,9 +305,9 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         semPuertasEmb.acquire();
         lockPuertasEmb.lock();
         try {
-            int puertaDisponible = -1; // Inicialmente no se ha encontrado ninguna puerta disponible
+            int puertaDisponible = -1; // Inicialmente no hay ninguna puerta disponible
             for (int i = 0; i < 6; i++){
-                // La puerta 1 solo vale para embarques y la 2 solo vale para desembarques:
+                // La puerta 1 solo vale para embarques, y la 2 solo vale para desembarques:
                 if (((i == 0) && (!embarcando)) || ((i == 1) && (embarcando))){
                     continue;                        
                 }
@@ -318,10 +318,12 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
                 }
             }
 
-            // Si se encontró una puerta disponible, se asigna el avión a esa puerta:
+            // Si hay una puerta disponible, se asigna el avión a esa puerta:
             if (puertaDisponible != -1) {
                 this.puertasEmbarque[puertaDisponible] = avion;
                 String str = embarcando ? "Embarcando:" : "Desembarcando:";
+                
+                // Actualizar el JTextField:
                 if("Barajas".equals(this.nombre)) {
                     switch (puertaDisponible) {
                         case 0 -> this.interfaz.getInfo_pEmb1_Bar().setText(str + avion.getIdAvion());
@@ -406,7 +408,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     public void salirAreaDeRodaje(Avion avion, boolean despegando){
         lockAreaRod.lock();
         try {
-            // Si el avion va a despegar espera para pistas
+            // Si el avión va a despegar, debe esperar a una pist libre:
             if (despegando) {
                 try {
                     lockPistas.lock();
@@ -420,7 +422,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
                     lockPistas.unlock();
                 }
             }
-            // Si el avion acaba de aterrizar espera para puertas de embarque
+            // Si el avión acaba de aterrizar, debe esperar a una puerta de embarque libre:
             else {
                 try {
                     lockPuertasEmb.lock();
@@ -482,12 +484,13 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         lockPistas.lock();
         try {
             for (int i = 0; i < 4; i++){
-                // Si la pista está cerrada pasa a la siguiente
+                
+                // Si la pista está cerrada (parte de programación distribuida) pasa a la siguiente:
                 if (pistasDisponibles[i] == false) {
                     continue;
                 }
                 
-                // Elige pista
+                // Si encuentra una pista libre, la elige, actualiza su JTextField y salimosd de la búsqueda:
                 if (pistas[i] == null) {
                     this.pistas[i] = avion;
                     if("Barajas".equals(this.nombre)) {
@@ -614,13 +617,10 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
                     this.taller[i] = avion;
                     String str = "";
                     for (int j = 0; i < 20; i++) {
-                        if(taller[i] == null) {
-                            continue;
-                        } else {
+                        if(taller[i] != null) {
                             str += taller[i].getIdAvion() + ", ";
                         }
-                    }
-                    
+                    } 
                     if("Barajas".equals(this.nombre)) {
                         this.interfaz.getInfo_taller_Bar().setText(str);
                     }
@@ -660,8 +660,8 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         semTaller.release();
     }
     
-    // Para comporbar si el taller esta completo (el nombre es raro xd)
-    public boolean esTallerCompleto(){ 
+    // Para comprobar si el taller está completo:   
+    public boolean tallerCompleto(){ 
         boolean completo = true;
         
         for(Avion a : taller) {

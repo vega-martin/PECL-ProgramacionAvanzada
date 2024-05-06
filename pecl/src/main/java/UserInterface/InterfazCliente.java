@@ -17,7 +17,7 @@ public class InterfazCliente extends JFrame implements ActionListener {
     
     // COMPONENTES DE LA INTERFAZ
     
-    // Aeropuerto Barajas
+    // Aeropuerto Barajas:
     private JLabel tituloAeropuertoBarajas = new JLabel("Aeropuerto de Madrid - Barajas");
     
     private JLabel numPas_Bar = new JLabel("Nº pasajeros en Aeropuerto:");
@@ -49,13 +49,13 @@ public class InterfazCliente extends JFrame implements ActionListener {
     private JButton botonP4Abrir_Bar = new JButton("Abrir");
     private JButton botonP4Cerrar_Bar = new JButton("Cerrar");
     
-    // Aerovias
+    // Aerovías:
     private JLabel ae_Bar_Prat = new JLabel("Aerovía Barajas - Prat: ");
     private JLabel ae_Prat_Bar = new JLabel("Aerovía Prat - Barajas: ");
     private JTextField info_ae_Bar_Prat = new JTextField();
     private JTextField info_ae_Prat_Bar = new JTextField();
     
-    // Aeropuerto Prat
+    // Aeropuerto Prat:
     private JLabel tituloAeropuertoPrat = new JLabel("Aeropuerto de Barcelona - Prat");
     
     private JLabel numPas_Prat = new JLabel("Nº pasajeros en Aeropuerto:");
@@ -87,10 +87,10 @@ public class InterfazCliente extends JFrame implements ActionListener {
     private JButton botonP4Abrir_Prat = new JButton("Abrir");
     private JButton botonP4Cerrar_Prat = new JButton("Cerrar");
     
-    
     private IPaso paso;
     private IAeropuerto barajas, prat;
     
+    // Constructor de la clase gráfica:
     public InterfazCliente(IPaso p, IAeropuerto barajas, IAeropuerto prat) {
         
         super("Simulador de Aeropuertos : Cliente");
@@ -106,6 +106,7 @@ public class InterfazCliente extends JFrame implements ActionListener {
         
     }
     
+    // Establecer diferentes parámetros a los componentes de Swing:
     private void initComponents() {
         
         tituloAeropuertoBarajas.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
@@ -132,7 +133,7 @@ public class InterfazCliente extends JFrame implements ActionListener {
         info_numPistas_Prat.setEditable(false);
         info_numPas_Prat.setEditable(false);
         
-        // Botones
+        // Botones:
         botonP1Abrir_Bar.setFocusable(false);
         botonP2Abrir_Bar.setFocusable(false);
         botonP3Abrir_Bar.setFocusable(false);
@@ -425,6 +426,8 @@ public class InterfazCliente extends JFrame implements ActionListener {
         );
     }
 
+    // Getters para los JTextField:
+    
     public JTextField getInfo_numPas_Bar() {
         return info_numPas_Bar;
     }
@@ -489,7 +492,7 @@ public class InterfazCliente extends JFrame implements ActionListener {
         return info_numPistas_Prat;
     }
     
-    
+    // Método que habilita el cierre y apertura de pistas:
     
     @Override
     public void actionPerformed(ActionEvent evento) {                                         
@@ -537,7 +540,7 @@ public class InterfazCliente extends JFrame implements ActionListener {
                 barajas.setEstadoPista(3, false);
                 botonP4Abrir_Bar.setEnabled(true);
             }
-            // Botones Aeropuerto Prat
+            // Botones Aeropuerto Prat:
             else if(boton == this.botonP1Abrir_Prat) {
                 botonP1Abrir_Prat.setEnabled(false);
                 prat.setEstadoPista(0, true);
