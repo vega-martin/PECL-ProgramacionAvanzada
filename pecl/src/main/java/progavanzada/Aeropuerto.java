@@ -410,7 +410,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     public void salirAreaDeRodaje(Avion avion, boolean despegando){
         lockAreaRod.lock();
         try {
-            // Si el avión va a despegar, debe esperar a una pist libre:
+            // Si el avión va a despegar, debe esperar a una pista libre:
             if (despegando) {
                 try {
                     lockPistas.lock();
