@@ -98,6 +98,7 @@ public class Avion extends Thread {
                 // Área de rodaje:
                 log.escribirEvento("AVION " + this.getIdAvion() + " accede a un area de rodaje y espera pista para despegue.");
                 this.aeropuerto.entrarAreaDeRodaje(this);
+                Thread.sleep(r.nextInt(4000) + 1000);
                 paso.mirar();
                 this.aeropuerto.salirAreaDeRodaje(this, despegando);
 

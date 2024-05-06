@@ -36,6 +36,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
     // Estructura para la disponibilidad de las pistas:
     private boolean[] pistasDisponibles = new boolean[]{true, true, true, true};
+    private boolean[] pistasHabilitadas = new boolean[]{true, true, true, true};
     
     private ArrayList<Avion> areaRodaje = new ArrayList<>();
     private ArrayList<Avion>[] aerovias = new ArrayList[2];
@@ -51,6 +52,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private final Lock lockAreaRod = new ReentrantLock();
     private final Lock lockPistas = new ReentrantLock();
     private final Lock lockPistasDisponibles = new ReentrantLock();
+    private final Lock lockPistasHabilitadas = new ReentrantLock();
     private final Semaphore semPistas = new Semaphore(4, true);
     private final Condition esperarPistas = lockPistas.newCondition();
     private final Lock lockAerovias = new ReentrantLock();
@@ -133,11 +135,11 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     
     @Override
     public void setEstadoPista(int numPista, boolean estado) throws RemoteException {
-        lockPistasDisponibles.lock();
+        lockPistasHabilitadas.lock();
         try {
-            pistasDisponibles[numPista] = estado;
+            pistasHabilitadas[numPista] = estado;
         } finally {
-            lockPistasDisponibles.unlock();
+            lockPistasHabilitadas.unlock();
         }
     }
     
@@ -486,7 +488,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
             for (int i = 0; i < 4; i++){
                 
                 // Si la pista está cerrada (parte de programación distribuida) pasa a la siguiente:
-                if (pistasDisponibles[i] == false) {
+                if (pistasHabilitadas[i] == false) {
                     continue;
                 }
                 
@@ -611,24 +613,26 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
         semTaller.acquire();
         lockTaller.lock();
         try {
-            for (int i = 0; i < 20; i++){
+            String str = "";
+            for (int i = 0; i < taller.length; i++){
                 // Elige puesto en el taller
                 if (taller[i] == null) {
                     this.taller[i] = avion;
-                    String str = "";
-                    for (int j = 0; i < 20; i++) {
-                        if(taller[i] != null) {
-                            str += taller[i].getIdAvion() + ", ";
-                        }
-                    } 
-                    if("Barajas".equals(this.nombre)) {
-                        this.interfaz.getInfo_taller_Bar().setText(str);
-                    }
-                    else if("Prat".equals(this.nombre)) {
-                        this.interfaz.getInfo_taller_Prat().setText(str);
-                    }
                     break;
                 }
+            }
+            // Rellena el texto de información
+            for (int j = 0; j < taller.length; j++){
+                if(taller[j] != null) {
+                    str += taller[j].getIdAvion() + ", ";
+                }
+            }
+            // Imprime la información
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.getInfo_taller_Bar().setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.getInfo_taller_Prat().setText(str);
             }
         } finally { lockTaller.unlock(); }
     }
@@ -636,26 +640,26 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     public void salirTaller(Avion avion) throws InterruptedException {
         lockTaller.lock();
         try {
-            for (int i = 0; i < 20; i++){
+            String str = "";
+            for (int i = 0; i < taller.length; i++){
                 if (this.taller[i] == avion) {
                     this.taller[i] = null;
-                    String str = "";
-                    for (int j = 0; i < 20; i++) {
-                        if(taller[i] != null) {
-                            str += taller[i].getIdAvion() + ", ";
-                        }
-                    }
-                    
-                    if("Barajas".equals(this.nombre)) {
-                        this.interfaz.getInfo_taller_Bar().setText(str);
-                    }
-                    else if("Prat".equals(this.nombre)) {
-                        this.interfaz.getInfo_taller_Prat().setText(str);
-                    }
                     break;
                 }
             }
-            esperarTaller.signal();
+            // Rellena el texto de información
+            for (int j = 0; j < taller.length; j++){
+                if(taller[j] != null) {
+                    str += taller[j].getIdAvion() + ", ";
+                }
+            }
+            // Imprime la información
+            if("Barajas".equals(this.nombre)) {
+                this.interfaz.getInfo_taller_Bar().setText(str);
+            }
+            else if("Prat".equals(this.nombre)) {
+                this.interfaz.getInfo_taller_Prat().setText(str);
+            }
         } finally { lockTaller.unlock(); }
         semTaller.release();
     }
