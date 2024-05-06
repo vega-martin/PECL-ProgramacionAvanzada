@@ -1,6 +1,6 @@
 package interfaces;
 
-import UserInterface.Interfaz;
+import userInterfaces.InterfazServidor;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

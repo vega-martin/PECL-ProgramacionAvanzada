@@ -1,4 +1,4 @@
-package UserInterface;
+package userInterfaces;
 
 import interfaces.IAeropuerto;
 import interfaces.IPaso;

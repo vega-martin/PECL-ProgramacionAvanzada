@@ -1,6 +1,6 @@
 package progavanzada;
 
-import UserInterface.Interfaz;
+import userInterfaces.InterfazServidor;
 import java.net.MalformedURLException;
 import java.rmi.AccessException;
 import java.rmi.AlreadyBoundException;
@@ -16,8 +16,8 @@ public class Servidor {
         // Instancia para revisar el control del programa (si se debe pausar):
         Paso paso = new Paso();
         
-        // Interfaz gráfica:
-        Interfaz ui = new Interfaz(paso);
+        // InterfazServidor gráfica:
+        InterfazServidor ui = new InterfazServidor(paso);
         
         // Declarar los aeropuertos del sistema:
         Aeropuerto barajas = new Aeropuerto("Barajas", ui);

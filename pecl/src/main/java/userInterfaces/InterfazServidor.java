@@ -1,4 +1,4 @@
-package UserInterface;
+package userInterfaces;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -7,7 +7,7 @@ import static javax.swing.GroupLayout.*;
 import static javax.swing.LayoutStyle.ComponentPlacement.*;
 import progavanzada.Paso;
 
-public class Interfaz extends JFrame implements ActionListener{
+public class InterfazServidor extends JFrame implements ActionListener{
     
     // COMPONENTES DE LA INTERFAZ
     
@@ -103,7 +103,7 @@ public class Interfaz extends JFrame implements ActionListener{
     private Paso paso;
     
     // Constructor de la clase gráfica:
-    public Interfaz(Paso p) {
+    public InterfazServidor(Paso p) {
         
         super("Simulador de Aeropuertos : Servidor");
         this.paso = p;
@@ -600,4 +600,4 @@ public class Interfaz extends JFrame implements ActionListener{
         
     }   
     
-} // Fin clase Interfaz
+} // Fin clase InterfazServidor

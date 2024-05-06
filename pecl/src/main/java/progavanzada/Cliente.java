@@ -1,6 +1,6 @@
 package progavanzada;
 
-import UserInterface.InterfazCliente;
+import userInterfaces.InterfazCliente;
 import interfaces.*;
 import java.net.MalformedURLException;
 import java.rmi.Naming;

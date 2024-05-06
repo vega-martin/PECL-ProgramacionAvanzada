@@ -1,6 +1,6 @@
 package progavanzada;
 
-import UserInterface.Interfaz;
+import userInterfaces.InterfazServidor;
 import interfaces.IAeropuerto;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -18,8 +18,8 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private String nombre;
     private int viajeros;
     
-    // Instancia de la clase Interfaz:
-    private Interfaz interfaz;
+    // Instancia de la clase InterfazServidor:
+    private InterfazServidor interfaz;
     
     /* Estructuras de datos para las zonas de cada avión
         - ArrayList --> capacidad ILIMITADA
@@ -61,7 +61,7 @@ public class Aeropuerto extends UnicastRemoteObject implements IAeropuerto {
     private final Condition esperarTaller = lockTaller.newCondition();
     
     // Constructor de la clase Aeropuerto:
-    public Aeropuerto(String nombre, Interfaz ui) throws RemoteException {
+    public Aeropuerto(String nombre, InterfazServidor ui) throws RemoteException {
         this.nombre = nombre;
         this.interfaz = ui;
         // Crear dos ArrayList adicionales para las aerovías:
