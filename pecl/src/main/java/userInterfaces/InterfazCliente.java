@@ -588,4 +588,4 @@ public class InterfazCliente extends JFrame implements ActionListener {
     }
     
     
-}
+} // Fin clase InterfazCliente

@@ -5,4 +5,4 @@ import java.rmi.RemoteException;
 
 public interface IPaso extends Remote {
     public void mirar() throws RemoteException;
-}
+} // Fin interfaz Paso
